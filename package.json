@@ -1,0 +1,44 @@
+{
+  "name": "infineon-design-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "infineon design system",
+  "homepage": "https://github.com/kickstartDS/infineon-design-system#readme",
+  "bugs": {
+    "url": "https://github.com/kickstartDS/infineon-design-system/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kickstartDS/infineon-design-system.git"
+  },
+  "license": "ISC",
+  "author": "Lukas Mestel",
+  "scripts": {
+    "build-storybook": "build-storybook",
+    "start": "start-storybook -p 6006"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "classnames": "^2.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@storybook/addon-actions": "^6.4.8",
+    "@storybook/addon-essentials": "^6.4.8",
+    "@storybook/addon-links": "^6.4.8",
+    "@storybook/builder-webpack5": "^6.4.8",
+    "@storybook/manager-webpack5": "^6.4.8",
+    "@storybook/react": "^6.4.8",
+    "@whitespace/storybook-addon-html": "git+https://github.com/lmestel/storybook-addon-html.git",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "holderjs": "^2.9.9",
+    "sass": "^1.44.0",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0"
+  }
+}

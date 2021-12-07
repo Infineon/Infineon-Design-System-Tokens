@@ -1,0 +1,28 @@
+import { Meta, Canvas } from "@storybook/addon-docs";
+
+<Meta title="Typography/Blockquotes" />
+
+# Blockquotes
+
+For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote.
+
+<Canvas>
+<blockquote className="blockquote">
+  <p>A well-known quote, contained in a blockquote element.</p>
+</blockquote>
+</Canvas>
+
+## Naming a source
+
+The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well.
+
+<Canvas>
+<figure>
+  <blockquote className="blockquote">
+    <p>A well-known quote, contained in a blockquote element.</p>
+  </blockquote>
+  <figcaption className="blockquote-footer">
+    Someone famous in <cite title="Source Title">Source Title</cite>
+  </figcaption>
+</figure>
+</Canvas>

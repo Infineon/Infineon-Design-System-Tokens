@@ -1,7 +1,28 @@
+@use "./tokens/color";
+
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
+$min-contrast-ratio: 3.5;
+
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     color.$color-error;
+$orange:  #fd7e14;
+$yellow:  color.$color-warning;
+$green:   color.$color-success;
+$teal:    color.$color-primary;
+$cyan:    color.$color-info;
+
+$primary:    color.$color-primary;
+$secondary:  color.$color-secondary;
+$light:      color.$color-grey;
+$dark:       color.$color-black;
+
+$link-color: $blue;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
@@ -45,4 +66,4 @@
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 5. Add additional custom code here
-
+@import "./button/button";

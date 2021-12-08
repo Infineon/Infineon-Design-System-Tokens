@@ -3,15 +3,16 @@
 ## Requirements
 
 - [Node](https://nodejs.org/en/) >= v14 – if you have [nvm](https://github.com/creationix/nvm#node-version-manager---) installed, you can just run `nvm use` to select the right node version.
+- [Yarn](https://classic.yarnpkg.com/en/) >= 1.22.10
 
 ## Installation
 
-- `npm install`
+- `yarn install`
 
 ## Start Storybook
 
-- `npm start`
+- `yarn start`
 
 ## Build Storybook
 
-- `npm run build-storybook`
+- `yarn build-storybook`

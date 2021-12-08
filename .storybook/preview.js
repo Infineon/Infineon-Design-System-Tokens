@@ -7,6 +7,15 @@ const PreviewImageDecorator = (Story) => {
   return createElement(Story)
 };
 
+const tokenContext = require.context(
+  '!!raw-loader!../src/tokens',
+  true,
+  /.\.(css|less|scss|svg)$/
+);
+const tokenFiles = tokenContext.keys().map(function (filename) {
+  return { filename: filename, content: tokenContext(filename).default };
+});
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -19,6 +28,9 @@ export const parameters = {
     prettier: {
       tabWidth: 2,
     },
+  },
+  designToken: {
+    files: tokenFiles,
   },
 };
 

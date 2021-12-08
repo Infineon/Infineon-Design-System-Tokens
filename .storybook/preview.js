@@ -3,7 +3,7 @@ import { run as runHolder } from "holderjs/holder";
 import "../src/index.scss";
 
 const PreviewImageDecorator = (Story) => {
-  useEffect(runHolder, [])
+  useEffect(runHolder)
   return createElement(Story)
 };
 

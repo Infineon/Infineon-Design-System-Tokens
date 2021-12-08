@@ -8,11 +8,11 @@ export default {
 
 const DefaultTemplate = (args) => (
   <Teaser {...args}>
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">
+    <h5 className="card-title">Special title treatment</h5>
+    <p className="card-text">
       With supporting text below as a natural lead-in to additional content.
     </p>
-    <Button variant="primary" href="#">
+    <Button color="primary" href="#">
       Go somewhere
     </Button>
   </Teaser>

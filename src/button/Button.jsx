@@ -1,9 +1,12 @@
-import classNames from "classnames";
 import PropTypes from "prop-types";
+import BsButton from "react-bootstrap/Button";
 
-export const propTypes = {
+const propTypes = {
   /** Set button variant */
-  variant: PropTypes.oneOf([
+  variant: PropTypes.oneOf(["solid", "outline", "link"]),
+
+  /** Set button color */
+  color: PropTypes.oneOf([
     "primary",
     "secondary",
     "success",
@@ -12,15 +15,6 @@ export const propTypes = {
     "info",
     "dark",
     "light",
-    "link",
-    "outline-primary",
-    "outline-secondary",
-    "outline-success",
-    "outline-danger",
-    "outline-warning",
-    "outline-info",
-    "outline-dark",
-    "outline-light",
   ]),
 
   /** Specifies a large or small button */
@@ -36,20 +30,13 @@ export const propTypes = {
   href: PropTypes.string,
 };
 
-export const Button = ({ variant, size, active, className, ...props }) => {
-  const Component = props.href ? "a" : "button";
-  return (
-    <Component
-      className={classNames(
-        "btn",
-        active && "active",
-        variant && `btn-${variant}`,
-        size && `btn-${size}`,
-        props.href && props.disabled && "disabled",
-        className
-      )}
-      {...props}
-    />
-  );
+export const Button = ({ variant, color = "primary", ...props }) => {
+  const bsVariant =
+    variant === "link"
+      ? variant
+      : variant === "outline"
+      ? `outline-${color}`
+      : color;
+  return <BsButton variant={bsVariant} {...props} />;
 };
 Button.propTypes = propTypes;

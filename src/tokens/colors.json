@@ -1,0 +1,78 @@
+{
+  "color": {
+    "primary": {
+      "value": "#9bc3b7",
+      "docblock": ["@tokens Colors: Brand", "@presenter Color"]
+    },
+    "secondary": {
+      "value": "#928285",
+      "docblock": ["@tokens Colors: Brand", "@presenter Color"]
+    },
+    "terciary": {
+      "value": "#644f54",
+      "docblock": ["@tokens Colors: Brand", "@presenter Color"]
+    },
+    "white": {
+      "value": "#fff",
+      "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+    },
+    "gray": {
+      "1": {
+        "value": "#f6f7f7",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      },
+      "2": {
+        "value": "#f0f2f1",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      },
+      "3": {
+        "value": "#e6e9e8",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      },
+      "4": {
+        "value": "#d6dad9",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      },
+      "5": {
+        "value": "#b7bebc",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      },
+      "6": {
+        "value": "#929c9a",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      },
+      "7": {
+        "value": "#73807d",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      },
+      "8": {
+        "value": "#5e6865",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      },
+      "9": {
+        "value": "#4d5553",
+        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      }
+    },
+    "black": {
+      "value": "#1f2725",
+      "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+    },
+    "success": {
+      "value": "#8dc63f",
+      "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+    },
+    "warning": {
+      "value": "#ffc103",
+      "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+    },
+    "error": {
+      "value": "#e60201",
+      "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+    },
+    "info": {
+      "value": "#3ca8ff",
+      "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+    }
+  }
+}

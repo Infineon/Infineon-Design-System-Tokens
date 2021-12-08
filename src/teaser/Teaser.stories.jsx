@@ -23,4 +23,3 @@ Default.args = {
 };
 
 export const WithoutImage = DefaultTemplate.bind({});
-

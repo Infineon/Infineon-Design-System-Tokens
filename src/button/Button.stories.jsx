@@ -8,4 +8,3 @@ export default {
 const Template = (args) => <Button {...args}>Button</Button>;
 
 export const Default = Template.bind({});
-

@@ -1,14 +1,14 @@
-import { createElement, useEffect } from 'react';
+import { createElement, useEffect } from "react";
 import { run as runHolder } from "holderjs/holder";
 import "../src/index.scss";
 
 const PreviewImageDecorator = (Story) => {
-  useEffect(runHolder)
-  return createElement(Story)
+  useEffect(runHolder);
+  return createElement(Story);
 };
 
 const tokenContext = require.context(
-  '!!raw-loader!../src/tokens',
+  "!!raw-loader!../src/tokens",
   true,
   /.\.(css|less|scss|svg)$/
 );
@@ -34,6 +34,4 @@ export const parameters = {
   },
 };
 
-export const decorators = [
-  PreviewImageDecorator,
-];
+export const decorators = [PreviewImageDecorator];

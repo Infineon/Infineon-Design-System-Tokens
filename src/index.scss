@@ -1,4 +1,4 @@
-@use "./tokens/color";
+@use "./tokens/tokens";
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
@@ -6,23 +6,34 @@
 // 2. Include any default variable overrides here
 $min-contrast-ratio: 3.5;
 
-$blue:    #0d6efd;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #d63384;
-$red:     color.$color-error;
-$orange:  #fd7e14;
-$yellow:  color.$color-warning;
-$green:   color.$color-success;
-$teal:    color.$color-primary;
-$cyan:    color.$color-info;
+$primary: tokens.$color-primary;
+$secondary: tokens.$color-secondary;
 
-$primary:    color.$color-primary;
-$secondary:  color.$color-secondary;
-$light:      color.$color-grey;
-$dark:       color.$color-black;
+$white: tokens.$color-white;
+$black: tokens.$color-black;
 
-$link-color: $blue;
+$gray-100: tokens.$color-gray-1;
+$gray-200: tokens.$color-gray-2;
+$gray-300: tokens.$color-gray-3;
+$gray-400: tokens.$color-gray-4;
+$gray-500: tokens.$color-gray-5;
+$gray-600: tokens.$color-gray-6;
+$gray-700: tokens.$color-gray-7;
+$gray-800: tokens.$color-gray-8;
+$gray-900: tokens.$color-gray-9;
+
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: tokens.$color-error;
+$orange: #fd7e14;
+$yellow: tokens.$color-warning;
+$green: tokens.$color-success;
+$teal: tokens.$color-primary;
+$cyan: tokens.$color-info;
+
+$link-color: tokens.$color-terciary;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";

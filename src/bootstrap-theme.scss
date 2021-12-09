@@ -1,0 +1,70 @@
+@use "sass:math";
+@import "./tokens/tokens";
+
+//
+// Bootstrap 5 Theme
+//
+
+// Color system
+$primary: $color-primary;
+$secondary: $color-secondary;
+
+$white: $color-white;
+$black: $color-black;
+
+$gray-100: $color-gray-1;
+$gray-200: $color-gray-2;
+$gray-300: $color-gray-3;
+$gray-400: $color-gray-4;
+$gray-500: $color-gray-5;
+$gray-600: $color-gray-6;
+$gray-700: $color-gray-7;
+$gray-800: $color-gray-8;
+$gray-900: $color-gray-9;
+
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: $color-error;
+$orange: #fd7e14;
+$yellow: $color-warning;
+$green: $color-success;
+$teal: $color-primary;
+$cyan: $color-info;
+
+$min-contrast-ratio: 3.5;
+
+// Options
+$enable-shadows: true;
+
+// Links
+$link-color: $color-terciary;
+
+// Typography
+$font-family-sans-serif: $font-family-copy;
+$font-family-monospace: $font-family-mono;
+
+$font-size-base: $font-size-s;
+$font-size-sm: $font-size-xs;
+$font-size-lg: $font-size-m;
+
+$font-weight-light: $font-weight-light;
+$font-weight-normal: $font-weight-regular;
+$font-weight-bold: $font-weight-bold;
+
+$line-height-base: math.div($line-height-s, $font-size-s);
+$line-height-sm: math.div($line-height-xs, $font-size-xs);
+$line-height-lg: math.div($line-height-m, $font-size-m);
+
+$h1-font-size: $font-size-xxl;
+$h2-font-size: $font-size-xl;
+$h3-font-size: $font-size-l;
+$h4-font-size: $font-size-m;
+$h5-font-size: $font-size-m;
+$h6-font-size: $font-size-s;
+
+$headings-font-family: $font-family-heading;
+
+// Cards
+$card-box-shadow: $teaser-box-shadow;

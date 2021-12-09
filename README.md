@@ -16,3 +16,9 @@
 ## Build Storybook
 
 - `yarn build-storybook`
+
+## Compile
+
+- `yarn compile`
+
+Generates a `bootstrap-theme.scss` variable file to use in any bootstrap project and `index.min.css` with custom styles.

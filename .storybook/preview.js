@@ -1,6 +1,6 @@
 import { createElement, useEffect } from "react";
 import { run as runHolder } from "holderjs/holder";
-import "../src/index.scss";
+import "./index.scss";
 
 const PreviewImageDecorator = (Story) => {
   useEffect(runHolder);

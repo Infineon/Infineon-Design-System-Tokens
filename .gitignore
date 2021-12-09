@@ -1,6 +1,7 @@
 .vscode
 .DS_Store
 src/tokens/_tokens.scss
+src/*/_*-tokens.scss
 
 
 # Logs

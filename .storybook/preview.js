@@ -12,9 +12,9 @@ const tokenContext = require.context(
   true,
   /.\.(css|less|scss|svg)$/
 );
-const tokenFiles = tokenContext.keys().map(function (filename) {
-  return { filename: filename, content: tokenContext(filename).default };
-});
+const tokenFiles = tokenContext
+  .keys()
+  .map((filename) => ({ filename, content: tokenContext(filename).default }));
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

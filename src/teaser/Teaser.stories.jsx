@@ -1,9 +1,21 @@
 import { Button } from "../button/Button";
 import { Teaser } from "./Teaser";
 
+const tokenContext = require.context("!!raw-loader!", false, /-tokens\.scss$/);
+const tokenFiles = tokenContext.keys().map((filename) => ({
+  filename,
+  content: tokenContext(filename).default,
+}));
+
 export default {
   title: "Teaser",
   component: Teaser,
+  parameters: {
+    designToken: {
+      defaultTab: "Teaser",
+      files: tokenFiles,
+    },
+  },
 };
 
 const DefaultTemplate = (args) => (

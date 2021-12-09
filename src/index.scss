@@ -36,6 +36,9 @@ $cyan: tokens.$color-info;
 
 $min-contrast-ratio: 3.5;
 
+// Options
+$enable-shadows: true;
+
 // Links
 $link-color: tokens.$color-terciary;
 
@@ -63,6 +66,9 @@ $h5-font-size: tokens.$font-size-m;
 $h6-font-size: tokens.$font-size-s;
 
 $headings-font-family: tokens.$font-family-heading;
+
+// Cards
+$card-box-shadow: tokens.$teaser-box-shadow;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";

@@ -1,4 +1,4 @@
-const config = require("../config.json");
+const config = require("../config.js");
 const StyleDictionary = require("style-dictionary");
 const { fileHeader, createPropertyFormatter, sortByReference } =
   StyleDictionary.formatHelpers;

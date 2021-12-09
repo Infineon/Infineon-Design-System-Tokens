@@ -1,0 +1,8 @@
+{
+  "teaser": {
+    "box-shadow": {
+      "value": "0 0.125rem 0.25rem rgba(31, 39, 37, 0.1)",
+      "docblock": ["@tokens Teaser", "@presenter Shadow"]
+    }
+  }
+}

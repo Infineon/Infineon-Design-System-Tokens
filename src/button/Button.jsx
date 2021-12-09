@@ -2,6 +2,9 @@ import PropTypes from "prop-types";
 import BsButton from "react-bootstrap/Button";
 
 const propTypes = {
+  /** Set the button text */
+  label: PropTypes.string,
+
   /** Set button variant */
   variant: PropTypes.oneOf(["solid", "outline", "link"]),
 
@@ -31,13 +34,13 @@ const propTypes = {
   href: PropTypes.string,
 };
 
-export const Button = ({ variant, color = "primary", ...props }) => {
+export const Button = ({ label, variant, color = "primary", children, ...props }) => {
   const bsVariant =
     variant === "link"
       ? variant
       : variant === "outline"
       ? `outline-${color}`
       : color;
-  return <BsButton variant={bsVariant} {...props} />;
+  return <BsButton variant={bsVariant} {...props} children={children || label} />;
 };
 Button.propTypes = propTypes;

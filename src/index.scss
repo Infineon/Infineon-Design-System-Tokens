@@ -1,11 +1,12 @@
+@use "sass:math";
 @use "./tokens/tokens";
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$min-contrast-ratio: 3.5;
 
+// Color system
 $primary: tokens.$color-primary;
 $secondary: tokens.$color-secondary;
 
@@ -33,7 +34,35 @@ $green: tokens.$color-success;
 $teal: tokens.$color-primary;
 $cyan: tokens.$color-info;
 
+$min-contrast-ratio: 3.5;
+
+// Links
 $link-color: tokens.$color-terciary;
+
+// Typography
+$font-family-sans-serif: tokens.$font-family-copy;
+$font-family-monospace: tokens.$font-family-mono;
+
+$font-size-base: tokens.$font-size-s;
+$font-size-sm: tokens.$font-size-xs;
+$font-size-lg: tokens.$font-size-m;
+
+$font-weight-light: tokens.$font-weight-light;
+$font-weight-normal: tokens.$font-weight-regular;
+$font-weight-bold: tokens.$font-weight-bold;
+
+$line-height-base: math.div(tokens.$line-height-s, tokens.$font-size-s);
+$line-height-sm: math.div(tokens.$line-height-xs, tokens.$font-size-xs);
+$line-height-lg: math.div(tokens.$line-height-m, tokens.$font-size-m);
+
+$h1-font-size: tokens.$font-size-xxl;
+$h2-font-size: tokens.$font-size-xl;
+$h3-font-size: tokens.$font-size-l;
+$h4-font-size: tokens.$font-size-m;
+$h5-font-size: tokens.$font-size-m;
+$h6-font-size: tokens.$font-size-s;
+
+$headings-font-family: tokens.$font-family-heading;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";

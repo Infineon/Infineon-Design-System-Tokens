@@ -1,11 +1,8 @@
-import { ClickTeaser } from './ClickTeaser';
+import { ClickTeaser } from "./ClickTeaser";
 
 export default {
   title: "ClickTeaser",
   component: ClickTeaser,
-  parameters: {
-    designTokens: { files: [] }
-  }
 };
 
 const DefaultTemplate = (args) => (
@@ -19,5 +16,5 @@ const DefaultTemplate = (args) => (
 export const Default = DefaultTemplate.bind({});
 Default.args = {
   imageSrc: "holder.js/100px180",
-  buttonLabel: "Click me"
+  buttonLabel: "Click me",
 };

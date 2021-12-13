@@ -34,13 +34,21 @@ const propTypes = {
   href: PropTypes.string,
 };
 
-export const Button = ({ label, variant, color = "primary", children, ...props }) => {
+export const Button = ({
+  label,
+  variant,
+  color = "primary",
+  children,
+  ...props
+}) => {
   const bsVariant =
     variant === "link"
       ? variant
       : variant === "outline"
       ? `outline-${color}`
       : color;
-  return <BsButton variant={bsVariant} {...props} children={children || label} />;
+  return (
+    <BsButton variant={bsVariant} {...props} children={children || label} />
+  );
 };
 Button.propTypes = propTypes;

@@ -22,3 +22,10 @@
 - `yarn compile`
 
 Generates a `bootstrap-theme.scss` variable file to use in any bootstrap project and `index.min.css` with custom styles.
+
+***
+
+## Links
+
+- [Storybook](https://master--61b7000349b6d0003ab22d5d.chromatic.com)
+- [Chromatic Dashboard](https://www.chromatic.com/builds?appId=61b7000349b6d0003ab22d5d)

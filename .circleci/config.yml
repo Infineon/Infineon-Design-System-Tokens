@@ -1,0 +1,50 @@
+version: 2.1
+
+defaults: &defaults
+  docker:
+    - image: cimg/node:14.17
+  working_directory: /mnt/ramdisk
+  resource_class: medium+
+
+aliases:
+  - &save-cache-yarn
+    key: yarn-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+    paths:
+      - .yarn-cache
+  - &restore-cache-yarn
+    keys:
+      - yarn-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+      - yarn-{{ checksum "yarn.lock" }}
+  - &save-cache-node
+    key: node-{{ checksum "yarn.lock" }}
+    paths:
+      - node_modules
+  - &restore-cache-node
+    keys:
+      - node-{{ checksum "yarn.lock" }}
+      - node-
+
+commands:
+  install:
+    description: Install & cache dependencies
+    steps:
+      - restore_cache: *restore-cache-yarn
+      - restore_cache: *restore-cache-node
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile --cache-folder /mnt/ramdisk/.yarn-cache
+      - save_cache: *save-cache-yarn
+      - save_cache: *save-cache-node
+
+jobs:
+  chromatic:
+    <<: *defaults
+    steps:
+      - checkout
+      - install
+      - run: yarn chromatic
+
+workflows:
+  chromatic:
+    jobs:
+      - chromatic

@@ -1,6 +1,13 @@
 import { createElement, useEffect } from "react";
 import { run as runHolder } from "holderjs/holder";
 import "./index.scss";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStar, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(
+  faStar,
+  faCoffee,
+)
 
 const PreviewImageDecorator = (Story) => {
   useEffect(runHolder);

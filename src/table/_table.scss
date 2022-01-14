@@ -1,0 +1,7 @@
+@use "../tokens/tokens";
+
+.thead {
+  &__background-color {
+    background-color: tokens.$color-primary;
+  }
+}

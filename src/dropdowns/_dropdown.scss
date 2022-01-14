@@ -1,0 +1,11 @@
+@use "../tokens/tokens";
+
+.dropdown {  
+  &.split-border {
+    .dropdown-toggle {
+      span {
+        border-right: 1px solid black;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use "../tokens/tokens";
+
+.footer {  
+  &__border {
+    border-bottom: 1px solid black;
+  }
+}
+

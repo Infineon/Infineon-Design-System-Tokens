@@ -2,9 +2,14 @@ import { createElement, useEffect } from "react";
 import { run as runHolder } from "holderjs/holder";
 import "./index.scss";
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStar, faCoffee, faGlobe, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedinIn, faTwitter, faXing, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
+  faStar,
+  faCoffee,
+  faGlobe,
+  faMapMarkerAlt,
   faFacebook,
   faInstagram,
   faLinkedinIn,

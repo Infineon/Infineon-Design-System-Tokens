@@ -3,7 +3,10 @@ import { Select } from "./Select";
 export default {
   title: "Forms/Select",
   component: Select,
-  args: {disabled: false}
+  args: {
+    size: "m",
+    disabled: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

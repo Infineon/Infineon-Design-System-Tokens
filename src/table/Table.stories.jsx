@@ -3,6 +3,11 @@ import { Table } from "./Table";
 export default {
   title: "Components/Table",
   component: Table,
+  args: {
+    size: "m",
+    hover: false,
+    caption: "",
+  }
 };
 
 const DefaultTemplate = (args) => (

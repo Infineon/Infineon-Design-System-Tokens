@@ -3,7 +3,10 @@ import { Textarea } from "./Textarea";
 export default {
   title: "Forms/Textarea",
   component: Textarea,
-  args: {disabled: false}
+  args: {
+    size: "m",
+    disabled: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

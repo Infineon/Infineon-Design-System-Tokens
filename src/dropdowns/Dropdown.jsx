@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const propTypes = {
   /** Specifies a large or small Dropdown */
-  size: PropTypes.oneOf(["sm", "lg"]),
+  size: PropTypes.oneOf(["s", "m", "l"]),
 
   /** Manually set the visual state of the Dropdown to `:active` */
   active: PropTypes.bool,
@@ -17,17 +17,25 @@ const propTypes = {
 
   /** Set icon */
   icon: PropTypes.oneOf([
+    "none",
     "coffee",
     "star",
   ]),
 };
 
-export const Dropdown = ({ split, label, icon, children, ...props }) => {
-  const splitClass = split ? "split-border" : "";
+export const Dropdown = ({ size, split, label, icon, children, ...props }) => {
+  const bsSize =
+    size === "s" ? "sm" 
+    : size === "l" ? "lg" 
+    : undefined;
+
+  const splitClass = 
+    split ? "split-border" 
+    : "";
 
   return (
     <BsDropdown className = {splitClass}>
-      <BsDropdown.Toggle {...props}>
+      <BsDropdown.Toggle size={bsSize} {...props}>
         <span>
           {icon ? <FontAwesomeIcon icon={icon}></FontAwesomeIcon> : ""}
           {label}

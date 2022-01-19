@@ -3,15 +3,20 @@ import BsPagination from "react-bootstrap/Pagination";
 
 const propTypes = {
   /** Specifies a large or small Pagination */
-  size: PropTypes.oneOf(["sm", "lg"]),
+  size: PropTypes.oneOf(["s", "m", "l"]),
 
   /** Specifies an active Pagination-item */
   active : PropTypes.number,
 };
 
-export const Pagination = ({ active, ...props }) => {
+export const Pagination = ({ size, active, ...props }) => {
+  const bsSize =
+    size === "s" ? "sm" 
+    : size === "l" ? "lg" 
+    : undefined;
+
   return (
-    <BsPagination {...props}>
+    <BsPagination size={bsSize} {...props}>
       <BsPagination.First />
       <BsPagination.Prev />
       <BsPagination.Item active={active === 1}>{1}</BsPagination.Item>

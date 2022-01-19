@@ -3,7 +3,10 @@ import { Input } from "./Input";
 export default {
   title: "Forms/Input",
   component: Input,
-  args: {disabled: false}
+  args: {
+    size: "m",
+    disabled: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

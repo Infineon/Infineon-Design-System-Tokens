@@ -3,7 +3,11 @@ import { ProgressBar } from "./ProgressBar";
 export default {
   title: "Components/Progress-bar",
   component: ProgressBar,
-  args: {now: 70}
+  args: {
+    now: 70,
+    label: false,
+    small: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

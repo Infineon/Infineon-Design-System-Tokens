@@ -5,6 +5,7 @@ import { Textarea } from "../form-elements/Textarea";
 export default {
   title: "Components/Modal",
   component: Modal,
+  args: {size: "m"}
 };
 
 const DefaultTemplate = (args) => (

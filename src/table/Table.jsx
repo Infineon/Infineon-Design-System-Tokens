@@ -3,7 +3,7 @@ import BsTable from "react-bootstrap/Table";
 
 const propTypes = {
   /** Specifies a small Table */
-  size: PropTypes.oneOf(["sm"]),
+  size: PropTypes.oneOf(["s", "m"]),
 
   /** Specifies a hoverable table body */
   hover: PropTypes.bool,
@@ -12,9 +12,13 @@ const propTypes = {
   caption: PropTypes.string,
 };
 
-export const Table = ({ caption, children, ...props }) => {
+export const Table = ({ size, caption, children, ...props }) => {
+  const bsSize =
+    size === "s" ? "sm" 
+    : undefined;
+
   return (
-    <BsTable {...props}>
+    <BsTable size={bsSize} {...props}>
       {caption ? <caption>{caption}</caption> : ""}
       {children}
       <tbody>

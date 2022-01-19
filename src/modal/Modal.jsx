@@ -4,12 +4,17 @@ import { Button } from "../button/Button";
 
 const propTypes = {
   /** Specifies a large or small Modal */
-  size: PropTypes.oneOf(["sm", "lg"]),
+  size: PropTypes.oneOf(["s", "m", "l"]),
 };
 
 export const Modal = ({ size, children }) => {
+  const bsSize =
+    size === "s" ? "sm" 
+    : size === "l" ? "lg" 
+    : undefined;
+
   return (
-    <BsModal.Dialog size={size}>
+    <BsModal.Dialog size={bsSize}>
       <BsModal.Header closeButton>
         <BsModal.Title>Modal title</BsModal.Title>
       </BsModal.Header>

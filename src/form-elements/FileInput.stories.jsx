@@ -3,7 +3,10 @@ import { FileInput } from "./FileInput";
 export default {
   title: "Forms/File Input",
   component: FileInput,
-  args: {disabled: false}
+  args: {
+    size: "m",
+    disabled: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

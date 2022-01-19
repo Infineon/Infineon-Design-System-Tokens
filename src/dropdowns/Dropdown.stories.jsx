@@ -5,7 +5,13 @@ import BsFormControl from "react-bootstrap/FormControl";
 export default {
   title: "Components/Dropdown",
   component: Dropdown,
-  args: {label: "Secondary"}
+  args: {
+    label: "Secondary",
+    size: "m",
+    active: false,
+    split: false,
+    icon: "none",
+  }
 };
 
 const DefaultTemplate = (args) => (

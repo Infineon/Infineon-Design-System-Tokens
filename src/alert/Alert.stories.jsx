@@ -4,7 +4,10 @@ import BsAlert from "react-bootstrap/Alert";
 export default {
   title: "Components/Alert",
   component: Alert,
-  args: {variant: "primary"}
+  args: {
+    variant: "primary",
+    closable: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

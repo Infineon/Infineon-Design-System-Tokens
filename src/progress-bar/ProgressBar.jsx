@@ -12,12 +12,17 @@ const propTypes = {
   now: PropTypes.number,
 };
 
-export const ProgressBar = ({ now, small, label }) => {
-  const smallClass = small ? "progress-small" : "";
-  const labelText = label && !small ? `${now}%` : "";
+export const ProgressBar = ({ label, small, now }) => {
+  const labelText = 
+    label && !small ? `${now}%` 
+    : "";
+
+  const smallClass = 
+    small ? "progress-small" 
+    : "";
 
   return (
-    <BsProgressBar now={now} label={labelText} className={smallClass}></BsProgressBar>
+    <BsProgressBar label={labelText} className={smallClass} now={now}></BsProgressBar>
   );
 };
 ProgressBar.propTypes = propTypes;

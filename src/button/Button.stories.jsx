@@ -1,10 +1,29 @@
 import { Button } from "./Button";
 
 export default {
-  title: "Button",
+  title: "Components/Button",
   component: Button,
+  args: {
+    label: "Button",
+    variant: "solid",
+    color: "primary",
+    size: "m",
+    active: false,
+    disabled: false,
+    href: "",
+  }
 };
 
-const Template = (args) => <Button {...args}>Button</Button>;
+const DefaultTemplate = (args) => (
+  <Button {...args}></Button>
+);
 
-export const Default = Template.bind({});
+const BlockLevelTemplate = (args) => (
+  <div className="d-grid gap-2">
+    <Button {...args}></Button>
+  </div>
+);
+
+export const Default = DefaultTemplate.bind({});
+
+export const BlockLevel = BlockLevelTemplate.bind({});

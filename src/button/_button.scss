@@ -1,15 +1,2 @@
 @use "../tokens/tokens";
 @import "../../node_modules/bootstrap/scss/mixins/buttons";
-
-.btn {
-  &-terciary {
-    @include button-variant(
-      $background: tokens.$color-terciary,
-      $border: tokens.$color-terciary
-    );
-  }
-
-  &-outline-terciary {
-    @include button-outline-variant($color: tokens.$color-terciary);
-  }
-}

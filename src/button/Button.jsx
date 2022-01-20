@@ -6,23 +6,19 @@ const propTypes = {
   label: PropTypes.string,
 
   /** Set button variant */
-  variant: PropTypes.oneOf(["solid", "outline", "link"]),
+  variant: PropTypes.oneOf(["solid", "outline"]),
 
   /** Set button color */
   color: PropTypes.oneOf([
     "primary",
     "secondary",
-    "terciary",
     "success",
     "danger",
     "warning",
-    "info",
-    "dark",
-    "light",
   ]),
 
   /** Specifies a large or small button */
-  size: PropTypes.oneOf(["sm", "lg"]),
+  size: PropTypes.oneOf(["s", "m", "l"]),
 
   /** Manually set the visual state of the button to `:active` */
   active: PropTypes.bool,
@@ -34,21 +30,18 @@ const propTypes = {
   href: PropTypes.string,
 };
 
-export const Button = ({
-  label,
-  variant,
-  color = "primary",
-  children,
-  ...props
-}) => {
+export const Button = ({ label, variant, color, size, children, ...props }) => {
   const bsVariant =
-    variant === "link"
-      ? variant
-      : variant === "outline"
-      ? `outline-${color}`
-      : color;
+    variant === "outline" ? `outline-${color}`
+    : color;
+
+  const bsSize =
+    size === "s" ? "sm" 
+    : size === "l" ? "lg" 
+    : undefined;
+
   return (
-    <BsButton variant={bsVariant} {...props} children={children || label} />
+    <BsButton variant={bsVariant} size={bsSize} children={children || label} {...props}></BsButton>
   );
 };
 Button.propTypes = propTypes;

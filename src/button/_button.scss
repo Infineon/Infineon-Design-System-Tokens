@@ -1,2 +1,6 @@
 @use "../tokens/tokens";
 @import "../../node_modules/bootstrap/scss/mixins/buttons";
+
+.btn-badge {
+  color: tokens.$color-black;
+}

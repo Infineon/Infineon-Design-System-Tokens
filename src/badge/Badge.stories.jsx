@@ -1,5 +1,4 @@
 import { Badge } from "./Badge";
-import { Button } from "../button/Button";
 
 export default {
   title: "Components/Badge",
@@ -29,18 +28,6 @@ const H5Template = (args) => (
 
 const H6Template = (args) => (
   <h6><Badge {...args}>New</Badge></h6>
-);
-
-const ButtonBadgePrimaryTemplate = (args) => (
-  <Button color = "primary">
-    Notifications <Badge {...args}>4</Badge>
-  </Button>
-);
-
-const ButtonBadgeSecondaryTemplate = (args) => (
-  <Button color = "secondary">
-    Notifications <Badge {...args}>4</Badge>
-  </Button>
 );
 
 export const Default_h1 = H1Template.bind({});
@@ -83,16 +70,4 @@ Default_h6.storyName = "Default <h6>";
 Default_h6.args = {
   background: "primary",
   text: "white",
-};
-
-export const ButtonBadgePrimary = ButtonBadgePrimaryTemplate.bind({});
-ButtonBadgePrimary.args = {
-  background: "white",
-  text: "black",
-};
-
-export const ButtonBadgeSecondary = ButtonBadgeSecondaryTemplate.bind({});
-ButtonBadgeSecondary.args = {
-  background: "white",
-  text: "black",
 };

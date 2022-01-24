@@ -9,6 +9,7 @@ const propTypes = {
     "success",
     "danger",
     "warning",
+    "color-gray-100",
   ]),
 
   /** Specifies a closable alert */

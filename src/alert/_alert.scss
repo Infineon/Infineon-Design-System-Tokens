@@ -1,0 +1,32 @@
+@use "../tokens/tokens";
+
+.inf {
+  &__alert-highlighted {
+    font-weight: bold;
+  }
+}
+
+.alert {
+  border: none;
+}
+
+.alert-primary,
+.alert-secondary,
+.alert-danger {
+  color: white;
+}
+
+.alert-success,
+.alert-warning,
+.alert-color-gray-100 {
+  color: black;
+}
+
+.alert-color-gray-100 {
+  background-color: #FAFAFA;
+}
+
+.alert-link {
+  color: inherit !important;
+  font-weight: inherit;
+}

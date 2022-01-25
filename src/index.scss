@@ -3,6 +3,8 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
+@import "./alert/alert";
+@import "./badge/badge";
 @import "./button/button";
 @import "./table/table";
 @import "./dropdowns/dropdown";

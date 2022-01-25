@@ -5,9 +5,6 @@ const propTypes = {
   /** Set background color */
   background: PropTypes.oneOf(["primary", "secondary", "success", "danger", "warning", "white"]),
 
-  /** Set text color */
-  text: PropTypes.oneOf(["white", "black"]),
-
   /** Specifies a pill Badge */
   pill: PropTypes.bool,
 };

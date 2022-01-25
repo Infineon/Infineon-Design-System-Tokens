@@ -1,0 +1,13 @@
+@use "../tokens/tokens";
+
+.bg-primary,
+.bg-secondary,
+.bg-danger {
+  color: white;
+}
+
+.bg-success,
+.bg-warning,
+.bg-white {
+  color: black;
+}

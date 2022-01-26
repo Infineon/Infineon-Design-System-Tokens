@@ -168,18 +168,16 @@ const ImageOverlayTemplate = (args) => (
     <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
 
     <BsCard.ImgOverlay>
-      <BsCard.Body>
-        {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-        <BsCard.Title>{args.title}</BsCard.Title>
-        <BsCard.Text>{args.text}</BsCard.Text>
-        <Button color="primary" variant="outline" href="#">Go somewhere</Button>
-      </BsCard.Body>
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title>{args.title}</BsCard.Title>
+      <BsCard.Text>{args.text}</BsCard.Text>
+      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
 
       {args.links && 
-        <BsCard.Body>
+        <div>
           <BsCard.Link href="#">Card Link</BsCard.Link>
           <BsCard.Link href="#">Another Link</BsCard.Link>
-        </BsCard.Body>
+        </div>
       }
     </BsCard.ImgOverlay>
 
@@ -193,17 +191,15 @@ const ImageOverlayWithoutButtonTemplate = (args) => (
     <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
 
     <BsCard.ImgOverlay>
-      <BsCard.Body>
-        {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-        <BsCard.Title>{args.title}</BsCard.Title>
-        <BsCard.Text>{args.text}</BsCard.Text>
-      </BsCard.Body>
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title>{args.title}</BsCard.Title>
+      <BsCard.Text>{args.text}</BsCard.Text>
 
       {args.links && 
-        <BsCard.Body>
+        <div>
           <BsCard.Link href="#">Card Link</BsCard.Link>
           <BsCard.Link href="#">Another Link</BsCard.Link>
-        </BsCard.Body>
+        </div>
       }
     </BsCard.ImgOverlay>
 

@@ -41,7 +41,7 @@ const WithBadgesTemplate = (args) => (
       <div>
         Bonbon toffee muffin
       </div>
-      <Badge pill={true}>14</Badge>
+      <Badge pill={true} background="white">14</Badge>
     </BsListGroup.Item>
     <BsListGroup.Item className="d-flex justify-content-between align-items-start">
       <div>
@@ -70,8 +70,44 @@ const WithBadgesTemplate = (args) => (
   </ListGroup>
 );
 
+const CustomContentTemplate = (args) => (
+  <ListGroup {...args}>
+    <BsListGroup.Item active = {true}>
+      <div className="d-flex justify-content-between align-items-start">
+        <div>List group item heading</div>
+        <div className="inf__list-group__date">3 days ago</div>
+      </div>
+      <div>
+        Jelly beans carrot cake cake cupcake sweet topping cookie brownie. Apple pie candy powder gummi bears tootsie roll gummi bears.
+      </div>
+    </BsListGroup.Item>
+    
+    <BsListGroup.Item>
+      <div className="d-flex justify-content-between align-items-start">
+        <div>List group item heading</div>
+        <div className="inf__list-group__date">3 days ago</div>
+      </div>
+      <div>
+        Jelly beans carrot cake cake cupcake sweet topping cookie brownie.
+      </div>
+    </BsListGroup.Item>
+
+    <BsListGroup.Item>
+      <div className="d-flex justify-content-between align-items-start">
+        <div>List group item heading</div>
+        <div className="inf__list-group__date">3 days ago</div>
+      </div>
+      <div>
+        Content
+      </div>
+    </BsListGroup.Item>
+  </ListGroup>
+);
+
 export const Default = DefaultTemplate.bind({});
 
 export const Flush = FlushTemplate.bind({});
 
 export const WithBadges = WithBadgesTemplate.bind({});
+
+export const CustomContent = CustomContentTemplate.bind({});

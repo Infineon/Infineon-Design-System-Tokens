@@ -1,0 +1,23 @@
+@use "../tokens/tokens";
+
+.inf {
+  &__list-group {
+    &__date {
+      color: tokens.$color-primary;
+    }
+  }
+}
+
+.active {
+  .inf {
+    &__list-group {
+      &__date {
+        color: tokens.$color-white;
+      }
+    }
+  }
+
+  .badge {
+    color: tokens.$color-primary;
+  }
+}

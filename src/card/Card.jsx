@@ -2,16 +2,27 @@ import PropTypes from "prop-types";
 import BsCard from "react-bootstrap/Card";
 
 const propTypes = {
-  /** Image URL */
-  imageSrc: PropTypes.string,
+  /** Set the Card title */
+  title: PropTypes.string,
 
-  /** Set background color */
-  background: PropTypes.oneOf(["primary"]),
+  /** Set the Card text */
+  text: PropTypes.string,
+
+  /** Set the Card header text */
+  headerText: PropTypes.string,
+
+  /** Set the Card subtitle text */
+  subtitleText: PropTypes.string,
+
+  /** Set the Card footer text */
+  footerText: PropTypes.string,
+
+  /** Set Card example links */
+  links: PropTypes.bool,
 };
 
-export const Card = ({ imageSrc, background, children, ...props }) => (
-  <BsCard bg={background} text={background && "white"} {...props}>
-    {imageSrc && <BsCard.Img variant="top" src={imageSrc} />}
+export const Card = ({ children, ...props }) => (
+  <BsCard {...props}>
     {children}
   </BsCard>
 );

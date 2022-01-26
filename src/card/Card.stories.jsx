@@ -7,103 +7,292 @@ import BsListGroup from "react-bootstrap/ListGroup";
 export default {
   title: "Components/Card",
   component: Card,
+  args: {
+    title: "Card Title",
+    text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    headerText: "",
+    subtitleText: "",
+    footerText: "",
+    links: false,
+  }
 };
 
 const DefaultTemplate = (args) => (
   <Card {...args}>
+    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
+    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+
     <BsCard.Body>
-      <h5 className="card-title">Card Title</h5>
-      <p className="card-text">
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </p>
-      <Button color="primary" href="#">
-        Go somewhere
-      </Button>
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title>{args.title}</BsCard.Title>
+      <BsCard.Text>{args.text}</BsCard.Text>
+      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
     </BsCard.Body>
+
+    {args.links && 
+      <BsCard.Body>
+        <BsCard.Link href="#">Card Link</BsCard.Link>
+        <BsCard.Link href="#">Another Link</BsCard.Link>
+      </BsCard.Body>
+    }
+
+    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
+  </Card>
+);
+
+const DefaultWithoutImageTemplate = (args) => (
+  <Card {...args}>
+    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+
+    <BsCard.Body>
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title>{args.title}</BsCard.Title>
+      <BsCard.Text>{args.text}</BsCard.Text>
+      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
+    </BsCard.Body>
+
+    {args.links && 
+      <BsCard.Body>
+        <BsCard.Link href="#">Card Link</BsCard.Link>
+        <BsCard.Link href="#">Another Link</BsCard.Link>
+      </BsCard.Body>
+    }
+
+    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
+  </Card>
+);
+
+const DefaultCenterTemplate = (args) => (
+  <Card {...args}>
+    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
+    {args.headerText && <BsCard.Header className="text-center">{args.headerText}</BsCard.Header>}
+
+    <BsCard.Body className="d-flex justify-content-center flex-wrap text-center">
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title className="w-100">{args.title}</BsCard.Title>
+      <BsCard.Text className="w-100">{args.text}</BsCard.Text>
+      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
+    </BsCard.Body>
+
+    {args.links && 
+      <BsCard.Body className="d-flex justify-content-center">
+        <BsCard.Link href="#">Card Link</BsCard.Link>
+        <BsCard.Link href="#">Another Link</BsCard.Link>
+      </BsCard.Body>
+    }
+
+    {args.footerText && <BsCard.Footer className="text-center">{args.footerText}</BsCard.Footer>}
+  </Card>
+);
+
+const DefaultCenterWithoutImageTemplate = (args) => (
+  <Card {...args}>
+    {args.headerText && <BsCard.Header className="text-center">{args.headerText}</BsCard.Header>}
+
+    <BsCard.Body className="d-flex justify-content-center flex-wrap text-center">
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title className="w-100">{args.title}</BsCard.Title>
+      <BsCard.Text className="w-100">{args.text}</BsCard.Text>
+      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
+    </BsCard.Body>
+
+    {args.links && 
+      <BsCard.Body className="d-flex justify-content-center">
+        <BsCard.Link href="#">Card Link</BsCard.Link>
+        <BsCard.Link href="#">Another Link</BsCard.Link>
+      </BsCard.Body>
+    }
+
+    {args.footerText && <BsCard.Footer className="text-center">{args.footerText}</BsCard.Footer>}
   </Card>
 );
 
 const KitchenSinkTemplate = (args) => (
   <Card {...args}>
+    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
+    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+
     <BsCard.Body>
-      <h5 className="card-title">Card Title</h5>
-      <p className="card-text">
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </p>
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title>{args.title}</BsCard.Title>
+      <BsCard.Text>{args.text}</BsCard.Text>
     </BsCard.Body>
+
     <ListGroup variant="flush">
       <BsListGroup.Item>An item</BsListGroup.Item>
       <BsListGroup.Item>A second item</BsListGroup.Item>
       <BsListGroup.Item>A third item</BsListGroup.Item>
     </ListGroup>
-    <BsCard.Body>
-      <BsCard.Link href="#">Card Link</BsCard.Link>
-      <BsCard.Link href="#">Another Link</BsCard.Link>
-    </BsCard.Body>
+
+    {args.links && 
+      <BsCard.Body>
+        <BsCard.Link href="#">Card Link</BsCard.Link>
+        <BsCard.Link href="#">Another Link</BsCard.Link>
+      </BsCard.Body>
+    }
+
+    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
   </Card>
 );
 
-const FooterTemplate = (args) => (
+const KitchenSinkWithoutImageTemplate = (args) => (
   <Card {...args}>
-    <BsCard.Body className="d-flex justify-content-center flex-wrap text-center">
-      <h5 className="card-title w-100">Card Title</h5>
-      <p className="card-text w-100">
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </p>
-      <Button color="primary" href="#">
-        Go somewhere
-      </Button>
+    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+
+    <BsCard.Body>
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title>{args.title}</BsCard.Title>
+      <BsCard.Text>{args.text}</BsCard.Text>
     </BsCard.Body>
-    <BsCard.Footer className="text-center">2 days ago</BsCard.Footer>
+
+    <ListGroup variant="flush">
+      <BsListGroup.Item>An item</BsListGroup.Item>
+      <BsListGroup.Item>A second item</BsListGroup.Item>
+      <BsListGroup.Item>A third item</BsListGroup.Item>
+    </ListGroup>
+
+    {args.links && 
+      <BsCard.Body>
+        <BsCard.Link href="#">Card Link</BsCard.Link>
+        <BsCard.Link href="#">Another Link</BsCard.Link>
+      </BsCard.Body>
+    }
+
+    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
   </Card>
 );
 
 const ImageOverlayTemplate = (args) => (
   <Card {...args}>
+    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
     <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
+
     <BsCard.ImgOverlay>
-      <h5 className="card-title">Card Title</h5>
-      <p className="card-text">
-        Some quick example text to build on the card title and make up the bulk of the card's content.
-      </p>
+      <BsCard.Body>
+        {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+        <BsCard.Title>{args.title}</BsCard.Title>
+        <BsCard.Text>{args.text}</BsCard.Text>
+        <Button color="primary" variant="outline" href="#">Go somewhere</Button>
+      </BsCard.Body>
+
+      {args.links && 
+        <BsCard.Body>
+          <BsCard.Link href="#">Card Link</BsCard.Link>
+          <BsCard.Link href="#">Another Link</BsCard.Link>
+        </BsCard.Body>
+      }
     </BsCard.ImgOverlay>
+
+    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
   </Card>
 );
 
-const HorizontalTemplate = (args) => (
+const ImageOverlayWithoutButtonTemplate = (args) => (
+  <Card {...args}>
+    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
+
+    <BsCard.ImgOverlay>
+      <BsCard.Body>
+        {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+        <BsCard.Title>{args.title}</BsCard.Title>
+        <BsCard.Text>{args.text}</BsCard.Text>
+      </BsCard.Body>
+
+      {args.links && 
+        <BsCard.Body>
+          <BsCard.Link href="#">Card Link</BsCard.Link>
+          <BsCard.Link href="#">Another Link</BsCard.Link>
+        </BsCard.Body>
+      }
+    </BsCard.ImgOverlay>
+
+    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
+  </Card>
+);
+
+const HorizontalLeftTemplate = (args) => (
   <Card {...args}>
     <div className="row no-gutters">
       <div className="col-md-4">
-        <BsCard.Img src="holder.js/100px270" alt="Card image" ></BsCard.Img>
+        <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
       </div>
       <div className="col-md-8">
+        {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+
         <BsCard.Body>
-          <h5 className="card-title">Card Title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </p>
+          {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+          <BsCard.Title>{args.title}</BsCard.Title>
+          <BsCard.Text>{args.text}</BsCard.Text>
+          <Button color="primary" variant="outline" href="#">Go somewhere</Button>
         </BsCard.Body>
+
+        {args.links && 
+          <BsCard.Body>
+            <BsCard.Link href="#">Card Link</BsCard.Link>
+            <BsCard.Link href="#">Another Link</BsCard.Link>
+          </BsCard.Body>
+        }
+        <div>
+          {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
+        </div>
+      </div>
+    </div>
+  </Card>
+);
+
+const HorizontalRightTemplate = (args) => (
+  <Card {...args}>
+    <div className="row no-gutters">
+      <div className="col-md-8">
+        {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+
+        <BsCard.Body>
+          {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+          <BsCard.Title>{args.title}</BsCard.Title>
+          <BsCard.Text>{args.text}</BsCard.Text>
+          <Button color="primary" variant="outline" href="#">Go somewhere</Button>
+        </BsCard.Body>
+
+        {args.links && 
+          <BsCard.Body>
+            <BsCard.Link href="#">Card Link</BsCard.Link>
+            <BsCard.Link href="#">Another Link</BsCard.Link>
+          </BsCard.Body>
+        }
+        <div>
+          {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
+        </div>
+      </div>
+      <div className="col-md-4">
+        <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
       </div>
     </div>
   </Card>
 );
 
 export const Default = DefaultTemplate.bind({});
-Default.args = {
-  imageSrc: "holder.js/100px180",
-};
 
-export const DefaultWithoutImage = DefaultTemplate.bind({});
+export const DefaultWithoutImage = DefaultWithoutImageTemplate.bind({});
+
+export const DefaultCenter = DefaultCenterTemplate.bind({});
+
+export const DefaultCenterWithoutImage = DefaultCenterWithoutImageTemplate.bind({});
 
 export const KitchenSink = KitchenSinkTemplate.bind({});
 KitchenSink.args = {
-  imageSrc: "holder.js/100px180",
+  links: true,
 };
 
-export const KitchenSinkWithoutImage = KitchenSinkTemplate.bind({});
-
-export const Footer = FooterTemplate.bind({});
+export const KitchenSinkWithoutImage = KitchenSinkWithoutImageTemplate.bind({});
+KitchenSinkWithoutImage.args = {
+  links: true,
+};
 
 export const ImageOverlay = ImageOverlayTemplate.bind({});
 
-export const Horizontal = HorizontalTemplate.bind({});
+export const ImageOverlayWithoutButton = ImageOverlayWithoutButtonTemplate.bind({});
+
+export const HorizontalLeft = HorizontalLeftTemplate.bind({});
+
+export const HorizontalRight = HorizontalRightTemplate.bind({});

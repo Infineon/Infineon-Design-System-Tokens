@@ -2,17 +2,19 @@ import PropTypes from "prop-types";
 import BsCard from "react-bootstrap/Card";
 
 const propTypes = {
-  /** Image URL */
-  imageSrc: PropTypes.string,
+  /** Set the Teaser title */
+  title: PropTypes.string,
 
-  /** Set background color */
-  background: PropTypes.oneOf(["primary", "secondary", "dark"]),
+  /** Set the Teaser text */
+  text: PropTypes.string,
+
+  /** Set the Teaser subtitle text */
+  subtitleText: PropTypes.string,
 };
 
-export const Teaser = ({ imageSrc, background, children, ...props }) => (
-  <BsCard bg={background} text={background && "white"} {...props}>
-    {imageSrc && <BsCard.Img variant="top" src={imageSrc} />}
-    {children && <BsCard.Body>{children}</BsCard.Body>}
+export const Teaser = ({ children, ...props }) => (
+  <BsCard {...props}>
+    {children}
   </BsCard>
 );
 Teaser.propTypes = propTypes;

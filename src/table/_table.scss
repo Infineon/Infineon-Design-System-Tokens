@@ -1,7 +1,17 @@
 @use "../tokens/tokens";
 
-.thead {
-  &__background-color {
-    background-color: tokens.$color-primary;
+.inf {
+  &__thead {
+    &__background-color {
+      background-color: tokens.$color-primary;
+    }
   }
+} 
+
+table {
+  border-top: 1px solid #e6e9e8 !important;
+}
+
+.table > :not(:first-child) {
+  border-top: none;
 }

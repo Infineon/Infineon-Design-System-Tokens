@@ -4,6 +4,7 @@ export default {
   title: "Forms/Textarea",
   component: Textarea,
   args: {
+    label: "Default",
     size: "m",
     disabled: false,
   }

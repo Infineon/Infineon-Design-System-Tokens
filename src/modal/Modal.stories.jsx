@@ -1,4 +1,4 @@
-import { Modal } from "./Modal";
+import { ModalDemo, Modal } from "./ModalDemo";
 import { Input } from "../form-elements/Input";
 import { Textarea } from "../form-elements/Textarea";
 
@@ -8,16 +8,23 @@ export default {
   args: {size: "m"}
 };
 
-const DefaultTemplate = (args) => (
-  <Modal {...args}></Modal>
-);
+const DefaultTemplate = (args) => {
+  const DemoComponent = ModalDemo()
+  return (
+    <DemoComponent {...args}></DemoComponent>
+  )
+}
 
-const MessageTemplate = (args) => (
-  <Modal {...args}>
-    <Input></Input>
-    <Textarea></Textarea>
-  </Modal>
-);
+const MessageTemplate = (args) => {
+  const DemoComponent = ModalDemo(
+    <>
+      <Input></Input><Textarea label="Message"></Textarea>
+    </>
+  )
+  return (
+    <DemoComponent {...args}></DemoComponent>
+  )
+}
 
 export const Default = DefaultTemplate.bind({});
 

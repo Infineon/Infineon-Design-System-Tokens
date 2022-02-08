@@ -1,0 +1,11 @@
+@use "../tokens/tokens";
+
+.inf {
+  &__sidebar {
+    .active {
+      border-left: 4px solid tokens.$color-primary;
+      font-weight: bold;
+      padding-left: calc(1rem - 4px);    
+    }
+  }
+}

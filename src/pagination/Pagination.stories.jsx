@@ -5,7 +5,7 @@ export default {
   component: Pagination,
   args: {
     size: "m",
-    active: 1,
+    active: 3,
   }
 };
 

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import BsPagination from "react-bootstrap/Pagination";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const propTypes = {
   /** Specifies a large or small Pagination */
@@ -17,14 +18,39 @@ export const Pagination = ({ size, active, ...props }) => {
 
   return (
     <BsPagination size={bsSize} {...props}>
-      <BsPagination.First />
-      <BsPagination.Prev />
+      <li className="page-item">
+        <a className="page-link inf__page-link--first" role="button" tabindex="0">
+          <FontAwesomeIcon icon={["fa", "chevron-left"]}/>
+          <span class="visually-hidden">First</span>
+        </a>
+      </li>
+
+      <li className="page-item">
+        <a className="page-link inf__page-link--previous" role="button" tabindex="0">
+          <FontAwesomeIcon icon={["fa", "chevron-left"]}/>
+          <span class="visually-hidden">Previous</span>
+        </a>
+      </li>
+
       <BsPagination.Item active={active === 1}>{1}</BsPagination.Item>
       <BsPagination.Item active={active === 2}>{2}</BsPagination.Item>
       <BsPagination.Item active={active === 3}>{3}</BsPagination.Item>
       <BsPagination.Item active={active === 4}>{4}</BsPagination.Item>
-      <BsPagination.Next />
-      <BsPagination.Last />
+      <BsPagination.Item active={active === 5}>{5}</BsPagination.Item>
+
+      <li className="page-item">
+        <a className="page-link inf__page-link--next" role="button" tabindex="0">
+          <FontAwesomeIcon icon={["fa", "chevron-right"]}/>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </li>
+
+      <li className="page-item">
+        <a className="page-link inf__page-link--last" role="button" tabindex="0">
+          <FontAwesomeIcon icon={["fa", "chevron-right"]}/>
+          <span class="visually-hidden">Last</span>
+        </a>
+      </li>
     </BsPagination>
   );
 };

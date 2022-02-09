@@ -39,3 +39,13 @@
     }
   }
 }
+
+.inf {
+  &__paragraph {
+    &__vertical {
+      &__img {
+        width: 100%;
+      }
+    }
+  }
+}

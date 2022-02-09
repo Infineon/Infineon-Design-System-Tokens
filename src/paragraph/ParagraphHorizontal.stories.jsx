@@ -1,10 +1,10 @@
-import { Paragraph } from "./Paragraph";
+import { ParagraphHorizontal } from "./ParagraphHorizontal";
 import { Button } from "../button/Button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default {
-  title: "Components/Paragraph",
-  component: Paragraph,
+  title: "Components/Paragraph Horizontal",
+  component: ParagraphHorizontal,
   args: {
     title: "The standard Lorem Ipsum passage, used since the 1500s",
     text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
@@ -15,7 +15,7 @@ export default {
 };
 
 const DefaultTemplate = (args) => (
-  <Paragraph {...args}>
+  <ParagraphHorizontal {...args}>
     <div>
       <h3>{args.title}</h3>
       <p>{args.text}</p>
@@ -23,11 +23,11 @@ const DefaultTemplate = (args) => (
         Primary
       </Button>
     </div>
-  </Paragraph>
+  </ParagraphHorizontal>
 );
 
 const BulletpointsTemplate = (args) => (
-  <Paragraph {...args}>
+  <ParagraphHorizontal {...args}>
     <div>
       <h3>{args.title}</h3>
       <p>{args.text}</p>
@@ -46,7 +46,7 @@ const BulletpointsTemplate = (args) => (
         </li>
       </ul>
     </div>
-  </Paragraph>
+  </ParagraphHorizontal>
 );
 
 export const Default = DefaultTemplate.bind({});

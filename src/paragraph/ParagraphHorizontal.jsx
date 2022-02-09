@@ -35,7 +35,7 @@ const propTypes = {
   text: PropTypes.string,
 };
 
-export const Paragraph = ({ children, aspectRatio, imagePosition, alignItems, ...props }) => {
+export const ParagraphHorizontal = ({ children, aspectRatio, imagePosition, alignItems, ...props }) => {
   const aspectRatioClass = 
     aspectRatio === "4:3" ? "inf__aspect-ratio--4-3"
     : aspectRatio === "16:9" ? "inf__aspect-ratio--16-9"
@@ -75,4 +75,4 @@ export const Paragraph = ({ children, aspectRatio, imagePosition, alignItems, ..
     </div>
   )
 };
-Paragraph.propTypes = propTypes;
+ParagraphHorizontal.propTypes = propTypes;

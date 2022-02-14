@@ -1,5 +1,16 @@
 @use "../tokens/tokens";
-@import "../../node_modules/bootstrap/scss/mixins/buttons";
+
+.inf {
+  &__btn-icon {
+    &--before {
+      margin-right: 5px;
+    }
+
+    &--after {
+      margin-left: 5px;
+    }
+  }
+}
 
 .btn-badge {
   color: tokens.$color-black;

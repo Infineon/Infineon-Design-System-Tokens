@@ -13,16 +13,22 @@ export default {
     active: false,
     disabled: false,
     href: "",
+    icon: false,
+    iconPosition: "left",
   }
 };
 
 const DefaultTemplate = (args) => (
-  <Button {...args}></Button>
+  <Button {...args}>
+    {args.label}
+  </Button>
 );
 
 const BlockLevelTemplate = (args) => (
   <div className="d-grid gap-2">
-    <Button {...args}></Button>
+    <Button {...args}>
+      {args.label}
+    </Button>
   </div>
 );
 

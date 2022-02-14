@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import BsButton from "react-bootstrap/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const propTypes = {
   /** Set the button text */
@@ -28,9 +29,15 @@ const propTypes = {
 
   /** Providing a `href` will render an `<a>` element, styled as a button. */
   href: PropTypes.string,
+
+  /** Set icon */
+  icon: PropTypes.bool,
+
+  /** Specifies the icon position */
+  iconPosition: PropTypes.oneOf(["left", "right"]),
 };
 
-export const Button = ({ label, variant, color, size, children, ...props }) => {
+export const Button = ({ label, variant, color, size, icon, iconPosition, children, ...props }) => {
   const bsVariant =
     variant === "outline" ? `outline-${color}`
     : color;
@@ -40,8 +47,22 @@ export const Button = ({ label, variant, color, size, children, ...props }) => {
     : size === "l" ? "lg" 
     : undefined;
 
+  const iconPositionClass =
+    iconPosition === "left" ? "inf__btn-icon--before"
+    : iconPosition === "right" ? "inf__btn-icon--after"
+    : undefined;
+
+  const Icon = () => (
+    icon ? <FontAwesomeIcon icon={["fas", "star"]} className={iconPositionClass}/> : null
+  );
+
   return (
-    <BsButton variant={bsVariant} size={bsSize} children={children || label} {...props}></BsButton>
+    <BsButton variant={bsVariant} size={bsSize} children={children || label} {...props}>
+      {iconPosition === "left" 
+        ? <><Icon/> {children}</>
+        : <>{children} <Icon/></>
+      }
+    </BsButton>
   );
 };
 Button.propTypes = propTypes;

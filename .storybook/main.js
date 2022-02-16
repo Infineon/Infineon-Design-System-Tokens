@@ -24,4 +24,5 @@ module.exports = {
 
     return config;
   },
+  publicDirs: ["../public"]
 };

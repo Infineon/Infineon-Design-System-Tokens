@@ -12,6 +12,70 @@ const image = {
   alt: "infineon-logo",
 };
 
+const DefaultTemplate = (args) => (
+  <Footer {...args}>
+    <footer className="footer">
+      <div className="d-md-flex justify-content-between flex-wrap inf__footer-bottom">
+        <div className="inf__footer-bottom__copyright">
+          © 1999 - 2021 Infineon Technologies AG
+        </div>
+
+        <ul className="list-unstyled d-sm-flex">
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Imprint</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+    </footer>
+  </Footer>
+);
+
+const MediumTemplate = (args) => (
+  <Footer {...args}>
+    <footer className="footer">
+      <div className="d-flex align-items-end inf__footer-border">
+        <div className="d-flex justify-content-between flex-wrap w-100">
+          <img src={image.src} alt={image.alt} width="110" height="48"/>
+          <div className='inf__footer-top__social-media'>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "facebook"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "instagram"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "twitter"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "xing"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "youtube"]} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="d-md-flex justify-content-between align-items-center flex-wrap inf__footer-bottom">
+        <div className="inf__footer-bottom__copyright">
+          © 1999 - 2021 Infineon Technologies AG
+        </div>
+
+        <ul className="list-unstyled d-sm-flex">
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Imprint</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Glossary</a></li>
+        </ul>
+      </div>
+    </footer>
+  </Footer>
+);
+
 const LargeTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
@@ -101,72 +165,8 @@ const LargeTemplate = (args) => (
   </Footer>
 );
 
-const DefaultTemplate = (args) => (
-  <Footer {...args}>
-    <footer className="footer">
-      <div className="d-md-flex justify-content-between flex-wrap inf__footer-bottom">
-        <div className="inf__footer-bottom__copyright">
-          © 1999 - 2021 Infineon Technologies AG
-        </div>
-
-        <ul className="list-unstyled d-sm-flex">
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Imprint</a></li>
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Glossary</a></li>
-        </ul>
-      </div>
-    </footer>
-  </Footer>
-);
-
-const MediumTemplate = (args) => (
-  <Footer {...args}>
-    <footer className="footer">
-      <div className="d-flex align-items-end inf__footer-border">
-        <div className="d-flex justify-content-between flex-wrap w-100">
-          <img src={image.src} alt={image.alt} width="110" height="48"/>
-          <div className='inf__footer-top__social-media'>
-            <a href="">
-              <FontAwesomeIcon icon={["fab", "facebook"]} />
-            </a>
-            <a href="">
-              <FontAwesomeIcon icon={["fab", "instagram"]} />
-            </a>
-            <a href="">
-              <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
-            </a>
-            <a href="">
-              <FontAwesomeIcon icon={["fab", "twitter"]} />
-            </a>
-            <a href="">
-              <FontAwesomeIcon icon={["fab", "xing"]} />
-            </a>
-            <a href="">
-              <FontAwesomeIcon icon={["fab", "youtube"]} />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="d-md-flex justify-content-between align-items-center flex-wrap inf__footer-bottom">
-        <div className="inf__footer-bottom__copyright">
-          © 1999 - 2021 Infineon Technologies AG
-        </div>
-
-        <ul className="list-unstyled d-sm-flex">
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Imprint</a></li>
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Glossary</a></li>
-        </ul>
-      </div>
-    </footer>
-  </Footer>
-);
-
-export const Large = LargeTemplate.bind({});
-
 export const Default = DefaultTemplate.bind({});
 
 export const Medium = MediumTemplate.bind({});
+
+export const Large = LargeTemplate.bind({});

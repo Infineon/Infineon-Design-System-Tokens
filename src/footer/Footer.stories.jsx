@@ -12,27 +12,69 @@ const image = {
   alt: "infineon-logo",
 };
 
-const DefaultTemplate = (args) => (
+const LargeTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
-      <div className="footer__border container-fluid text-md-left">
+      <div className="inf__footer-top">
         <div className="row">
-          <div className="col-md-6 mt-md-0 mt-3">
-            <img src={image.src} alt={image.alt} width="100"/>
-            <div className='footer__social-media'>
-              <a href="" class="me-3">
+          <div className="col-md-2 mb-md-0 mb-3">
+            <h5>Mainlink</h5>
+            <ul className="list-unstyled">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+          </div>
+
+          <div className="col-md-2 mb-md-0 mb-3">
+            <h5>Mainlink</h5>
+            <ul className="list-unstyled">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+          </div>
+
+          <div className="col-md-2 mb-md-0 mb-3">
+            <h5>Mainlink</h5>
+            <ul className="list-unstyled">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+          </div>
+
+          <div className="col-md-2 mb-md-0 mb-3">
+            <h5>Mainlink</h5>
+            <ul className="list-unstyled">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="d-flex align-items-end inf__footer-border">
+          <div className="d-flex justify-content-between flex-wrap w-100">
+            <img src={image.src} alt={image.alt} width="110" height="48"/>
+            <div className='inf__footer-top__social-media'>
+              <a href="">
                 <FontAwesomeIcon icon={["fab", "facebook"]} />
               </a>
-              <a href="" class="me-3">
+              <a href="">
                 <FontAwesomeIcon icon={["fab", "instagram"]} />
               </a>
-              <a href="" class="me-3">
+              <a href="">
                 <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
               </a>
-              <a href="" class="me-3">
+              <a href="">
                 <FontAwesomeIcon icon={["fab", "twitter"]} />
               </a>
-              <a href="" class="me-3">
+              <a href="">
                 <FontAwesomeIcon icon={["fab", "xing"]} />
               </a>
               <a href="">
@@ -40,106 +82,91 @@ const DefaultTemplate = (args) => (
               </a>
             </div>
           </div>
-
-          <div className="col-md-3 mb-md-0 mb-3">
-            <h5>Headline</h5>
-            <ul className="list-unstyled">
-              <li><a href="#">This is a multiline long text link</a></li>
-              <li><a href="#">Medium text link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
-          </div>
-
-          <div className="col-md-3 mb-md-0 mb-3">
-            <h5>Headline</h5>
-            <ul className="list-unstyled">
-              <li><a href="#">This is a multiline long text link</a></li>
-              <li><a href="#">This is a multiline long text link</a></li>
-              <li><a href="#">Medium text link</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
-          </div>
         </div>
       </div>
 
-      <div className="d-flex justify-content-between flex-wrap">
-        <div className="footer-copyright">
+      <div className="d-md-flex justify-content-between flex-wrap inf__footer-bottom">
+        <div className="inf__footer-bottom__copyright">
           © 1999 - 2021 Infineon Technologies AG
         </div>
 
-        <ul className="list-unstyled d-flex">
-          <li><a href="#">Privacy & Policy</a></li>
+        <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
-          <li><a href="#">Site Map</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Imprint</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Glossary</a></li>
         </ul>
       </div>
     </footer>
   </Footer>
 );
 
-const SmallTemplate = (args) => (
+const DefaultTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
-      <div className="d-flex justify-content-between flex-wrap">
-        <div className="footer-copyright">
+      <div className="d-md-flex justify-content-between flex-wrap inf__footer-bottom">
+        <div className="inf__footer-bottom__copyright">
           © 1999 - 2021 Infineon Technologies AG
         </div>
 
-        <ul className="list-unstyled d-flex">
-          <li><a href="#">Privacy & Policy</a></li>
+        <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
-          <li><a href="#">Site Map</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Imprint</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Glossary</a></li>
         </ul>
       </div>
     </footer>
   </Footer>
 );
 
-const SmallIconsTemplate = (args) => (
+const MediumTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
-      <div className='footer__social-media'>
-        <a href="" class="me-3">
-          <FontAwesomeIcon icon={["fab", "facebook"]} />
-        </a>
-        <a href="" class="me-3">
-          <FontAwesomeIcon icon={["fab", "instagram"]} />
-        </a>
-        <a href="" class="me-3">
-          <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
-        </a>
-        <a href="" class="me-3">
-          <FontAwesomeIcon icon={["fab", "twitter"]} />
-        </a>
-        <a href="" class="me-3">
-          <FontAwesomeIcon icon={["fab", "xing"]} />
-        </a>
-        <a href="">
-          <FontAwesomeIcon icon={["fab", "youtube"]} />
-        </a>
+      <div className="d-flex align-items-end inf__footer-border">
+        <div className="d-flex justify-content-between flex-wrap w-100">
+          <img src={image.src} alt={image.alt} width="110" height="48"/>
+          <div className='inf__footer-top__social-media'>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "facebook"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "instagram"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "twitter"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "xing"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "youtube"]} />
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div className="d-flex justify-content-between flex-wrap">
-        <div className="footer-copyright">
+      <div className="d-md-flex justify-content-between align-items-center flex-wrap inf__footer-bottom">
+        <div className="inf__footer-bottom__copyright">
           © 1999 - 2021 Infineon Technologies AG
         </div>
 
-        <ul className="list-unstyled d-flex">
-          <li><a href="#">Privacy & Policy</a></li>
+        <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
-          <li><a href="#">Site Map</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Imprint</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Glossary</a></li>
         </ul>
       </div>
     </footer>
   </Footer>
 );
+
+export const Large = LargeTemplate.bind({});
 
 export const Default = DefaultTemplate.bind({});
 
-export const Small = SmallTemplate.bind({});
-
-export const SmallIcons = SmallIconsTemplate.bind({});
+export const Medium = MediumTemplate.bind({});

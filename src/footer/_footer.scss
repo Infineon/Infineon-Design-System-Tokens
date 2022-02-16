@@ -1,8 +1,65 @@
 @use "../tokens/tokens";
 
-.footer {  
-  &__border {
-    border-bottom: 1px solid black;
+.footer {
+  & ul {
+    margin-bottom: 0;
   }
 }
 
+.inf {
+  &__footer-top {
+    & a {
+      text-decoration: none;
+    }
+
+    &__social-media {
+      & .svg-inline--fa {
+        font-size: 1.5rem;
+        color: #242222;
+      }
+
+      & a {
+        margin: 0 1rem;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__footer-border {
+    height: 168px;
+    border-bottom: 1px solid #DCD5D7;
+    padding: 28px 0;
+  }
+
+  &__footer-bottom {
+    min-height: 80px;
+    padding: 28px 0;
+
+    @media (min-width: 576px) { 
+      & li {
+        margin: 0 1rem;
+    
+        &:first-of-type {
+          margin-left: 0;
+        }
+    
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+
+    & a {
+      font-weight: bold;
+      text-decoration: none;
+      color: tokens.$color-secondary-500;
+    }
+  }
+}

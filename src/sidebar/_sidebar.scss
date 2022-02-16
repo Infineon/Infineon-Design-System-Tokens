@@ -3,7 +3,7 @@
 .inf {
   &__sidebar {
     .active {
-      border-left: 4px solid tokens.$color-primary;
+      border-left: 4px solid tokens.$color-primary-500;
       font-weight: bold;
       padding-left: calc(1rem - 4px);    
     }

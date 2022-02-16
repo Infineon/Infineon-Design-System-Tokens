@@ -1,0 +1,40 @@
+{
+  "box-shadow": {
+    "s": {
+      "value": {
+        "x": "1",
+        "y": "1",
+        "blur": "10",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.2)",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow",
+      "docblock": ["@tokens Box-shadows", "@presenter Shadow"]
+    },
+    "m": {
+      "value": {
+        "x": "1",
+        "y": "1",
+        "blur": "10",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.2)",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow",
+      "docblock": ["@tokens Box-shadows", "@presenter Shadow"]
+    },
+    "l": {
+      "value": {
+        "x": "1",
+        "y": "1",
+        "blur": "10",
+        "spread": "0",
+        "color": "rgba(0, 0, 0, 0.2)",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow",
+      "docblock": ["@tokens Box-shadows", "@presenter Shadow"]
+    }
+  }
+}

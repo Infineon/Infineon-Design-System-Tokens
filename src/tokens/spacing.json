@@ -1,0 +1,44 @@
+{
+  "spacing": {
+    "xxs": {
+      "value": "2px",
+      "type": "spacing",
+      "docblock": ["@tokens Spacing", "@presenter Spacing"]
+    },
+    "xs": {
+      "value": "4px",
+      "type": "spacing",
+      "docblock": ["@tokens Spacing", "@presenter Spacing"]
+    },
+    "s": {
+      "value": "8px",
+      "type": "spacing",
+      "docblock": ["@tokens Spacing", "@presenter Spacing"]
+    },
+    "m": {
+      "value": "16px",
+      "type": "spacing",
+      "docblock": ["@tokens Spacing", "@presenter Spacing"]
+    },
+    "l": {
+      "value": "32px",
+      "type": "spacing",
+      "docblock": ["@tokens Spacing", "@presenter Spacing"]
+    },
+    "xl": {
+      "value": "64px",
+      "type": "spacing",
+      "docblock": ["@tokens Spacing", "@presenter Spacing"]
+    },
+    "xxl": {
+      "value": "128px",
+      "type": "spacing",
+      "docblock": ["@tokens Spacing", "@presenter Spacing"]
+    },
+    "xxxl": {
+      "value": "256px",
+      "type": "spacing",
+      "docblock": ["@tokens Spacing", "@presenter Spacing"]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "font": {
+    "family": {
+      "heading": {
+        "value": "Source Sans Pro",
+        "type": "fontFamilies",
+        "docblock": ["@tokens Font Families", "@presenter FontFamily"]
+      },
+      "body": {
+        "value": "Source Sans Pro",
+        "type": "fontFamilies",
+        "docblock": ["@tokens Font Families", "@presenter FontFamily"]
+      },
+      "monospace": {
+        "value": "Source Sans Pro",
+        "type": "fontFamilies",
+        "docblock": ["@tokens Font Families", "@presenter FontFamily"]
+      }
+    },
+  
+    "weight": {
+      "light": {
+        "value": "300",
+        "type": "fontWeights",
+        "docblock": ["@tokens Font Weights", "@presenter FontWeight"]
+      },
+      "regular": {
+        "value": "400",
+        "type": "fontWeights",
+        "docblock": ["@tokens Font Weights", "@presenter FontWeight"]
+      },
+      "medium": {
+        "value": "500",
+        "type": "fontWeights",
+        "docblock": ["@tokens Font Weights", "@presenter FontWeight"]
+      },
+      "semi-bold": {
+        "value": "600",
+        "type": "fontWeights",
+        "docblock": ["@tokens Font Weights", "@presenter FontWeight"]
+      },
+      "bold": {
+        "value": "700",
+        "type": "fontWeights",
+        "docblock": ["@tokens Font Weights", "@presenter FontWeight"]
+      },
+      "extra-bold": {
+        "value": "800",
+        "type": "fontWeights",
+        "docblock": ["@tokens Font Weights", "@presenter FontWeight"]
+      }
+    },
+  
+    "size": {
+      "s": {
+        "value": "0.875rem",
+        "type": "fontSizes",
+        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
+      },
+      "m": {
+        "value": "1rem",
+        "type": "fontSizes",
+        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
+      },
+      "l": {
+        "value": "1rem",
+        "type": "fontSizes",
+        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
+      },
+      "xl": {
+        "value": "1rem",
+        "type": "fontSizes",
+        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
+      },
+      "xxl": {
+        "value": "1rem",
+        "type": "fontSizes",
+        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
+      }
+    },
+  
+    "line-height": {
+      "s": {
+        "value": "1",
+        "type": "lineHeights",
+        "docblock": ["@tokens Line Heights", "@presenter LineHeight"]
+      },
+      "m": {
+        "value": "1.5",
+        "type": "lineHeights",
+        "docblock": ["@tokens Line Heights", "@presenter LineHeight"]
+      },
+      "l": {
+        "value": "2",
+        "type": "lineHeights",
+        "docblock": ["@tokens Line Heights", "@presenter LineHeight"]
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "border": {
+    "radius": {
+      "s": {
+        "value": "2px",
+        "type": "borderRadius",
+        "docblock": ["@tokens Border: Radius", "@presenter BorderRadius"]
+      },
+      "m": {
+        "value": "4px",
+        "type": "borderRadius",
+        "docblock": ["@tokens Border: Radius", "@presenter BorderRadius"]
+      },
+      "l": {
+        "value": "8px",
+        "type": "borderRadius",
+        "docblock": ["@tokens Border: Radius", "@presenter BorderRadius"]
+      },
+      "sharp": {
+        "value": "0",
+        "type": "borderRadius",
+        "docblock": ["@tokens Border: Radius", "@presenter BorderRadius"]
+      },
+      "pill": {
+        "value": "20px",
+        "type": "borderRadius",
+        "docblock": ["@tokens Border: Radius", "@presenter BorderRadius"]
+      },
+      "circle": {
+        "value": "50%",
+        "type": "borderRadius",
+        "docblock": ["@tokens Border: Radius", "@presenter BorderRadius"]
+      }
+    },
+    "width": {
+      "s": {
+        "value": "1.5px",
+        "type": "borderWidth",
+        "docblock": ["@tokens Border: Width", "@presenter Border"]
+      },
+      "m": {
+        "value": "2px",
+        "type": "borderWidth",
+        "docblock": ["@tokens Border: Width", "@presenter Border"]
+      },
+      "l": {
+        "value": "2.5px",
+        "type": "borderWidth",
+        "docblock": ["@tokens Border: Width", "@presenter Border"]
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { Button } from "../button/Button";
 import { ListGroup } from "../list-group/ListGroup";
 import BsCard from "react-bootstrap/Card";
 import BsListGroup from "react-bootstrap/ListGroup";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default {
   title: "Components/Card",
@@ -13,42 +14,31 @@ export default {
     headerText: "",
     subtitleText: "",
     footerText: "",
+    button: true,
+    buttonIcon: false,
     links: false,
+    image: true,
+    aspectRatio: "16:9",
+    direction: "vertical",
   }
 };
 
 const DefaultTemplate = (args) => (
   <Card {...args}>
-    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
     {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
 
     <BsCard.Body>
       {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
       <BsCard.Title>{args.title}</BsCard.Title>
       <BsCard.Text>{args.text}</BsCard.Text>
-      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
-    </BsCard.Body>
 
-    {args.links && 
-      <BsCard.Body>
-        <BsCard.Link href="#">Card Link</BsCard.Link>
-        <BsCard.Link href="#">Another Link</BsCard.Link>
-      </BsCard.Body>
-    }
-
-    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
-  </Card>
-);
-
-const DefaultWithoutImageTemplate = (args) => (
-  <Card {...args}>
-    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
-
-    <BsCard.Body>
-      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-      <BsCard.Title>{args.title}</BsCard.Title>
-      <BsCard.Text>{args.text}</BsCard.Text>
-      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
+      {args.button &&
+        <Button color="secondary" variant="outline" href="#">Go somewhere
+        {args.buttonIcon &&
+          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
+        }
+        </Button>
+      }
     </BsCard.Body>
 
     {args.links && 
@@ -64,36 +54,20 @@ const DefaultWithoutImageTemplate = (args) => (
 
 const DefaultCenterTemplate = (args) => (
   <Card {...args}>
-    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
     {args.headerText && <BsCard.Header className="text-center">{args.headerText}</BsCard.Header>}
 
     <BsCard.Body className="d-flex justify-content-center flex-wrap text-center">
       {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
       <BsCard.Title className="w-100">{args.title}</BsCard.Title>
       <BsCard.Text className="w-100">{args.text}</BsCard.Text>
-      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
-    </BsCard.Body>
 
-    {args.links && 
-      <BsCard.Body className="d-flex justify-content-center">
-        <BsCard.Link href="#">Card Link</BsCard.Link>
-        <BsCard.Link href="#">Another Link</BsCard.Link>
-      </BsCard.Body>
-    }
-
-    {args.footerText && <BsCard.Footer className="text-center">{args.footerText}</BsCard.Footer>}
-  </Card>
-);
-
-const DefaultCenterWithoutImageTemplate = (args) => (
-  <Card {...args}>
-    {args.headerText && <BsCard.Header className="text-center">{args.headerText}</BsCard.Header>}
-
-    <BsCard.Body className="d-flex justify-content-center flex-wrap text-center">
-      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-      <BsCard.Title className="w-100">{args.title}</BsCard.Title>
-      <BsCard.Text className="w-100">{args.text}</BsCard.Text>
-      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
+      {args.button &&
+        <Button color="secondary" variant="outline" href="#">Go somewhere
+        {args.buttonIcon &&
+          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
+        }
+        </Button>
+      }
     </BsCard.Body>
 
     {args.links && 
@@ -108,34 +82,6 @@ const DefaultCenterWithoutImageTemplate = (args) => (
 );
 
 const KitchenSinkTemplate = (args) => (
-  <Card {...args}>
-    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
-    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
-
-    <BsCard.Body>
-      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-      <BsCard.Title>{args.title}</BsCard.Title>
-      <BsCard.Text>{args.text}</BsCard.Text>
-    </BsCard.Body>
-
-    <ListGroup variant="flush">
-      <BsListGroup.Item>An item</BsListGroup.Item>
-      <BsListGroup.Item>A second item</BsListGroup.Item>
-      <BsListGroup.Item>A third item</BsListGroup.Item>
-    </ListGroup>
-
-    {args.links && 
-      <BsCard.Body>
-        <BsCard.Link href="#">Card Link</BsCard.Link>
-        <BsCard.Link href="#">Another Link</BsCard.Link>
-      </BsCard.Body>
-    }
-
-    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
-  </Card>
-);
-
-const KitchenSinkWithoutImageTemplate = (args) => (
   <Card {...args}>
     {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
 
@@ -165,13 +111,19 @@ const KitchenSinkWithoutImageTemplate = (args) => (
 const ImageOverlayTemplate = (args) => (
   <Card {...args}>
     {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
-    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
 
     <BsCard.ImgOverlay>
       {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
       <BsCard.Title>{args.title}</BsCard.Title>
       <BsCard.Text>{args.text}</BsCard.Text>
-      <Button color="primary" variant="outline" href="#">Go somewhere</Button>
+
+      {args.button &&
+        <Button color="secondary" variant="outline" href="#">Go somewhere
+        {args.buttonIcon &&
+          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
+        }
+        </Button>
+      }
 
       {args.links && 
         <div>
@@ -188,7 +140,6 @@ const ImageOverlayTemplate = (args) => (
 const ImageOverlayWithoutButtonTemplate = (args) => (
   <Card {...args}>
     {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
-    <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
 
     <BsCard.ImgOverlay>
       {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
@@ -209,79 +160,70 @@ const ImageOverlayWithoutButtonTemplate = (args) => (
 
 const HorizontalLeftTemplate = (args) => (
   <Card {...args}>
-    <div className="row no-gutters">
-      <div className="col-md-4">
-        <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
-      </div>
-      <div className="col-md-8">
-        {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
 
-        <BsCard.Body>
-          {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-          <BsCard.Title>{args.title}</BsCard.Title>
-          <BsCard.Text>{args.text}</BsCard.Text>
-          <Button color="primary" variant="outline" href="#">Go somewhere</Button>
-        </BsCard.Body>
+    <BsCard.Body>
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title>{args.title}</BsCard.Title>
+      <BsCard.Text>{args.text}</BsCard.Text>
 
-        {args.links && 
-          <BsCard.Body>
-            <BsCard.Link href="#">Card Link</BsCard.Link>
-            <BsCard.Link href="#">Another Link</BsCard.Link>
-          </BsCard.Body>
+      {args.button &&
+        <Button color="secondary" variant="outline" href="#">Go somewhere
+        {args.buttonIcon &&
+          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
         }
-        <div>
-          {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
-        </div>
-      </div>
+        </Button>
+      }
+    </BsCard.Body>
+
+    {args.links && 
+      <BsCard.Body>
+        <BsCard.Link href="#">Card Link</BsCard.Link>
+        <BsCard.Link href="#">Another Link</BsCard.Link>
+      </BsCard.Body>
+    }
+    <div>
+      {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
     </div>
   </Card>
 );
 
 const HorizontalRightTemplate = (args) => (
   <Card {...args}>
-    <div className="row no-gutters">
-      <div className="col-md-8">
-        {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
+    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
 
-        <BsCard.Body>
-          {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-          <BsCard.Title>{args.title}</BsCard.Title>
-          <BsCard.Text>{args.text}</BsCard.Text>
-          <Button color="primary" variant="outline" href="#">Go somewhere</Button>
-        </BsCard.Body>
+    <BsCard.Body>
+      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+      <BsCard.Title>{args.title}</BsCard.Title>
+      <BsCard.Text>{args.text}</BsCard.Text>
 
-        {args.links && 
-          <BsCard.Body>
-            <BsCard.Link href="#">Card Link</BsCard.Link>
-            <BsCard.Link href="#">Another Link</BsCard.Link>
-          </BsCard.Body>
+      {args.button &&
+        <Button color="secondary" variant="outline" href="#">Go somewhere
+        {args.buttonIcon &&
+          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
         }
-        <div>
-          {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
-        </div>
-      </div>
-      <div className="col-md-4">
-        <BsCard.Img src="holder.js/100px270" alt="Card image"></BsCard.Img>
-      </div>
+        </Button>
+      }
+    </BsCard.Body>
+
+    {args.links && 
+      <BsCard.Body>
+        <BsCard.Link href="#">Card Link</BsCard.Link>
+        <BsCard.Link href="#">Another Link</BsCard.Link>
+      </BsCard.Body>
+    }
+    <div>
+      {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
     </div>
   </Card>
 );
 
 export const Default = DefaultTemplate.bind({});
 
-export const DefaultWithoutImage = DefaultWithoutImageTemplate.bind({});
-
 export const DefaultCenter = DefaultCenterTemplate.bind({});
-
-export const DefaultCenterWithoutImage = DefaultCenterWithoutImageTemplate.bind({});
 
 export const KitchenSink = KitchenSinkTemplate.bind({});
 KitchenSink.args = {
-  links: true,
-};
-
-export const KitchenSinkWithoutImage = KitchenSinkWithoutImageTemplate.bind({});
-KitchenSinkWithoutImage.args = {
   links: true,
 };
 
@@ -290,5 +232,13 @@ export const ImageOverlay = ImageOverlayTemplate.bind({});
 export const ImageOverlayWithoutButton = ImageOverlayWithoutButtonTemplate.bind({});
 
 export const HorizontalLeft = HorizontalLeftTemplate.bind({});
+HorizontalLeft.args = {
+  aspectRatio: "none",
+  direction: "horizontal",
+}
 
 export const HorizontalRight = HorizontalRightTemplate.bind({});
+HorizontalRight.args = {
+  aspectRatio: "none",
+  direction: "horizontal",
+}

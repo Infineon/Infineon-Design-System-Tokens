@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import imageSrc4_3 from "./4-3-s.png";
+import imageSrc4_3 from "../../public/1440x1080_ratio-4-3.png";
 
 const image4_3 = {
   src: imageSrc4_3,

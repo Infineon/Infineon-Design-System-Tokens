@@ -2,17 +2,17 @@
   "font": {
     "family": {
       "heading": {
-        "value": "Source Sans Pro",
+        "value": "\"Source Sans Pro\"",
         "type": "fontFamilies",
         "docblock": ["@tokens Font Families", "@presenter FontFamily"]
       },
       "body": {
-        "value": "Source Sans Pro",
+        "value": "\"Source Sans Pro\"",
         "type": "fontFamilies",
         "docblock": ["@tokens Font Families", "@presenter FontFamily"]
       },
       "monospace": {
-        "value": "Source Sans Pro",
+        "value": "\"Source Sans Pro\"",
         "type": "fontFamilies",
         "docblock": ["@tokens Font Families", "@presenter FontFamily"]
       }

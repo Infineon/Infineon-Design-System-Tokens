@@ -1,0 +1,19 @@
+@use "../tokens/tokens";
+
+.navbar {
+  & .input-group {
+    width: 300px;
+  }
+}
+
+.inf {
+  &__application-name {
+    margin: 0;
+  }
+}
+
+.navbar {
+  & .nav-link {
+    display: inline;
+  }
+}

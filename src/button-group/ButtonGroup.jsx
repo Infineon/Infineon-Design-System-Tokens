@@ -22,7 +22,7 @@ const propTypes = {
   disabled: PropTypes.bool,  
 };
 
-export const ButtonGroup = ({ size, ...props }) => {
+export const ButtonGroup = ({ size, disabled, ...props }) => {
   const bsSize =
     size === "s" ? "sm" 
     : size === "l" ? "lg" 
@@ -31,7 +31,7 @@ export const ButtonGroup = ({ size, ...props }) => {
   return (
     <BsButtonGroup size={bsSize}>
       <Button {...props}>Left</Button>
-      <Button {...props}>Middle</Button>
+      <Button disabled={disabled} {...props}>Middle</Button>
       <Button {...props}>Right</Button>
     </BsButtonGroup>
   );

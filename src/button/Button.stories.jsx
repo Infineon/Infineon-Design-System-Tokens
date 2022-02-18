@@ -38,9 +38,15 @@ const ButtonBadgeTemplate = (args) => (
   </Button>
 );
 
-const ButtonSpinnerTemplate = (args) => (
+const BorderSpinnerTemplate = (args) => (
   <Button {...args}>
     <Spinner size="s" animation="border"></Spinner>{args.label}
+  </Button>
+);
+
+const GrowingSpinnerTemplate = (args) => (
+  <Button {...args}>
+    <Spinner size="s" animation="grow"></Spinner>{args.label}
   </Button>
 );
 
@@ -53,4 +59,6 @@ ButtonBadge.args = {
   label: "Notifications",
 };
 
-export const ButtonSpinner = ButtonSpinnerTemplate.bind({});
+export const BorderSpinner = BorderSpinnerTemplate.bind({});
+
+export const GrowingSpinner = GrowingSpinnerTemplate.bind({});

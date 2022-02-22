@@ -20,6 +20,7 @@ export default {
     image: true,
     aspectRatio: "16:9",
     direction: "vertical",
+    imagePosition: "left",
   }
 };
 
@@ -158,87 +159,17 @@ const ImageOverlayWithoutButtonTemplate = (args) => (
   </Card>
 );
 
-const HorizontalLeftTemplate = (args) => (
-  <Card {...args}>
-    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
-
-    <BsCard.Body>
-      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-      <BsCard.Title>{args.title}</BsCard.Title>
-      <BsCard.Text>{args.text}</BsCard.Text>
-
-      {args.button &&
-        <Button color="secondary" variant="outline" href="#">Go somewhere
-        {args.buttonIcon &&
-          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
-        }
-        </Button>
-      }
-    </BsCard.Body>
-
-    {args.links && 
-      <BsCard.Body>
-        <BsCard.Link href="#">Card Link</BsCard.Link>
-        <BsCard.Link href="#">Another Link</BsCard.Link>
-      </BsCard.Body>
-    }
-    <div>
-      {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
-    </div>
-  </Card>
-);
-
-const HorizontalRightTemplate = (args) => (
-  <Card {...args}>
-    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
-
-    <BsCard.Body>
-      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-      <BsCard.Title>{args.title}</BsCard.Title>
-      <BsCard.Text>{args.text}</BsCard.Text>
-
-      {args.button &&
-        <Button color="secondary" variant="outline" href="#">Go somewhere
-        {args.buttonIcon &&
-          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
-        }
-        </Button>
-      }
-    </BsCard.Body>
-
-    {args.links && 
-      <BsCard.Body>
-        <BsCard.Link href="#">Card Link</BsCard.Link>
-        <BsCard.Link href="#">Another Link</BsCard.Link>
-      </BsCard.Body>
-    }
-    <div>
-      {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
-    </div>
-  </Card>
-);
-
 export const Default = DefaultTemplate.bind({});
 
 export const DefaultCenter = DefaultCenterTemplate.bind({});
 
 export const KitchenSink = KitchenSinkTemplate.bind({});
 KitchenSink.args = {
+  button: false,
+  buttonIcon: false,
   links: true,
 };
 
 export const ImageOverlay = ImageOverlayTemplate.bind({});
 
 export const ImageOverlayWithoutButton = ImageOverlayWithoutButtonTemplate.bind({});
-
-export const HorizontalLeft = HorizontalLeftTemplate.bind({});
-HorizontalLeft.args = {
-  aspectRatio: "none",
-  direction: "horizontal",
-}
-
-export const HorizontalRight = HorizontalRightTemplate.bind({});
-HorizontalRight.args = {
-  aspectRatio: "none",
-  direction: "horizontal",
-}

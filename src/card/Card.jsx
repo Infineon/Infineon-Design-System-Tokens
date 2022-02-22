@@ -57,6 +57,9 @@ const propTypes = {
 
   /** Specifies the direction for the image */
   direction: PropTypes.oneOf(["vertical", "horizontal"]),
+
+  /** Specifies the image position */
+  imagePosition: PropTypes.oneOf(["left", "right"]),
 };
 
 const Image = ({ aspectRatio }) => {
@@ -92,22 +95,36 @@ const Image = ({ aspectRatio }) => {
   )
 };
 
-export const Card = ({ aspectRatio, direction, image, children, ...props }) => {
+export const Card = ({ image, aspectRatio, direction, imagePosition, children, ...props }) => {
   if ( image ) {
     if (direction === "horizontal") {
-      return (
-        <BsCard className="inf__card__horizontal" {...props}>
-  
-        <div className="row no-gutters">
-        <div className="col-md-4">
-          <Image aspectRatio={aspectRatio}/>
-        </div>
-        <div className="col-md-8">
-          {children}
-        </div>
-      </div>
-      </BsCard>
-      )
+      if (imagePosition === "left") {
+        return (
+          <BsCard className="inf__card__horizontal" {...props}>
+            <div className="row no-gutters">
+              <div className="col-md-4">
+                <Image aspectRatio={aspectRatio}/>
+              </div>
+              <div className="col-md-8">
+                {children}
+              </div>
+            </div>
+          </BsCard>
+        )
+      } else {
+        return (
+          <BsCard className="inf__card__horizontal" {...props}>
+            <div className="row no-gutters">
+              <div className="col-md-8">
+                {children}
+              </div>
+              <div className="col-md-4">
+                <Image aspectRatio={aspectRatio}/>
+              </div>
+            </div>
+          </BsCard>
+        )
+      }
     } else {
       return (
         <BsCard className="inf__card" {...props}>

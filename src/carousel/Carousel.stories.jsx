@@ -7,6 +7,7 @@ export default {
   args: {
     controls: true,
     indicators: true,
+    aspectRatio: "4:3",
   }
 };
 

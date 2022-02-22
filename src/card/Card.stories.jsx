@@ -53,7 +53,7 @@ const DefaultTemplate = (args) => (
   </Card>
 );
 
-const DefaultCenterTemplate = (args) => (
+const CenterTemplate = (args) => (
   <Card {...args}>
     {args.headerText && <BsCard.Header className="text-center">{args.headerText}</BsCard.Header>}
 
@@ -109,59 +109,9 @@ const KitchenSinkTemplate = (args) => (
   </Card>
 );
 
-const ImageOverlayTemplate = (args) => (
-  <Card {...args}>
-    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
-
-    <BsCard.ImgOverlay>
-      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-      <BsCard.Title>{args.title}</BsCard.Title>
-      <BsCard.Text>{args.text}</BsCard.Text>
-
-      {args.button &&
-        <Button color="secondary" variant="outline" href="#">Go somewhere
-        {args.buttonIcon &&
-          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
-        }
-        </Button>
-      }
-
-      {args.links && 
-        <div>
-          <BsCard.Link href="#">Card Link</BsCard.Link>
-          <BsCard.Link href="#">Another Link</BsCard.Link>
-        </div>
-      }
-    </BsCard.ImgOverlay>
-
-    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
-  </Card>
-);
-
-const ImageOverlayWithoutButtonTemplate = (args) => (
-  <Card {...args}>
-    {args.headerText && <BsCard.Header>{args.headerText}</BsCard.Header>}
-
-    <BsCard.ImgOverlay>
-      {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
-      <BsCard.Title>{args.title}</BsCard.Title>
-      <BsCard.Text>{args.text}</BsCard.Text>
-
-      {args.links && 
-        <div>
-          <BsCard.Link href="#">Card Link</BsCard.Link>
-          <BsCard.Link href="#">Another Link</BsCard.Link>
-        </div>
-      }
-    </BsCard.ImgOverlay>
-
-    {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
-  </Card>
-);
-
 export const Default = DefaultTemplate.bind({});
 
-export const DefaultCenter = DefaultCenterTemplate.bind({});
+export const Center = CenterTemplate.bind({});
 
 export const KitchenSink = KitchenSinkTemplate.bind({});
 KitchenSink.args = {
@@ -169,7 +119,3 @@ KitchenSink.args = {
   buttonIcon: false,
   links: true,
 };
-
-export const ImageOverlay = ImageOverlayTemplate.bind({});
-
-export const ImageOverlayWithoutButton = ImageOverlayWithoutButtonTemplate.bind({});

@@ -2,13 +2,16 @@ import PropTypes from "prop-types";
 import BsForm from "react-bootstrap/Form";
   
 const propTypes = {
-  /** Set a disabled Select radio button */
+  /** Set the Radio Button label text */
+  label: PropTypes.string,
+
+  /** Set a disabled Select Radio Button */
   disabled: PropTypes.bool,
 };
 
-export const RadioButton = ({ children, ...props }) => {
+export const RadioButton = ({ label, children, ...props }) => {
   return (
-    <BsForm.Check type="radio" id="radioButton" label="Radio button" {...props}></BsForm.Check>
+    <BsForm.Check type="radio" id="radioButton" label={label} {...props}></BsForm.Check>
   );
 };
 RadioButton.propTypes = propTypes;

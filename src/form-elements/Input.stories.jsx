@@ -4,6 +4,7 @@ export default {
   title: "Forms/Input",
   component: Input,
   args: {
+    label: "Default",
     size: "m",
     disabled: false,
   }

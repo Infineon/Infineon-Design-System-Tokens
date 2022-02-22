@@ -3,7 +3,10 @@ import { RadioButton } from "./RadioButton";
 export default {
   title: "Forms/Radio Button",
   component: RadioButton,
-  args: {disabled: false}
+  args: {
+    label: "Radio button",
+    disabled: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

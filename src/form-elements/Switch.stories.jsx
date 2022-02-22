@@ -3,7 +3,10 @@ import { Switch } from "./Switch";
 export default {
   title: "Forms/Switch",
   component: Switch,
-  args: {disabled: false}
+  args: {
+    label: "Default",
+    disabled: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

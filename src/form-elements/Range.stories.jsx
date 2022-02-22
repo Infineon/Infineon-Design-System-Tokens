@@ -3,7 +3,10 @@ import { Range } from "./Range";
 export default {
   title: "Forms/Range",
   component: Range,
-  args: {disabled: false}
+  args: {
+    label: "Example range",
+    disabled: false,
+  }
 };
 
 const DefaultTemplate = (args) => (

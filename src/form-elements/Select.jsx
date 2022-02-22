@@ -2,6 +2,9 @@ import PropTypes from "prop-types";
 import BsForm from "react-bootstrap/Form";
 
 const propTypes = {
+  /** Set the Select label text */
+  label: PropTypes.string,
+
   /** Specifies a large or small Select field */
   size: PropTypes.oneOf(["s", "m", "l"]),
 
@@ -9,7 +12,7 @@ const propTypes = {
   disabled: PropTypes.bool,
 };
 
-export const Select = ({ size, ...props }) => {
+export const Select = ({ label, size, ...props }) => {
   const bsSize =
     size === "s" ? "sm" 
     : size === "l" ? "lg" 
@@ -17,7 +20,7 @@ export const Select = ({ size, ...props }) => {
 
   return (
     <BsForm.Group className="mb-3" controlId="inputSelect">
-      <BsForm.Label>Default</BsForm.Label>
+      <BsForm.Label>{label}</BsForm.Label>
       <BsForm.Select aria-label="Default select example" size={bsSize} {...props}>
         <option>Select</option>
         <option value="1">One</option>

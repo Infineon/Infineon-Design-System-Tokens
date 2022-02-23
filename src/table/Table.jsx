@@ -18,10 +18,12 @@ export const Table = ({ size, caption, children, ...props }) => {
     : undefined;
 
   return (
-    <BsTable size={bsSize} {...props}>
-      {children}
-      {caption ? <caption>{caption}</caption> : ""}
-    </BsTable>
+    <div class="table-responsive">
+      <BsTable size={bsSize} {...props}>
+        {children}
+        {caption ? <caption>{caption}</caption> : ""}
+      </BsTable>
+    </div>
   );
 };
 Table.propTypes = propTypes;

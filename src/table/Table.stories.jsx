@@ -15,30 +15,36 @@ const DefaultTemplate = (args) => (
     <thead>
       <tr>
         <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
         <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>15</td>
+        <td>15</td>
+        <td>Name example</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+        <td>21</td>
+        <td>21</td>
+        <td>Name example</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>Larry</td>
-        <td>The Bird</td>
-        <td>@twitter</td>
+        <td>12</td>
+        <td>12</td>
+        <td>Name example</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>25</td>
+        <td>25</td>
+        <td>Name example</td>
       </tr>
     </tbody>
   </Table>
@@ -49,30 +55,36 @@ const HeaderTemplate = (args) => (
     <thead className="inf__thead__background-color">
       <tr>
         <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
         <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>15</td>
+        <td>15</td>
+        <td>Name example</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+        <td>21</td>
+        <td>21</td>
+        <td>Name example</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>Larry</td>
-        <td>The Bird</td>
-        <td>@twitter</td>
+        <td>12</td>
+        <td>12</td>
+        <td>Name example</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>25</td>
+        <td>25</td>
+        <td>Name example</td>
       </tr>
     </tbody>
   </Table>
@@ -83,30 +95,36 @@ const StripedTemplate = (args) => (
     <thead>
       <tr>
         <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
         <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>15</td>
+        <td>15</td>
+        <td>Name example</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+        <td>21</td>
+        <td>21</td>
+        <td>Name example</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>Larry</td>
-        <td>The Bird</td>
-        <td>@twitter</td>
+        <td>12</td>
+        <td>12</td>
+        <td>Name example</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>25</td>
+        <td>25</td>
+        <td>Name example</td>
       </tr>
     </tbody>
   </Table>
@@ -116,31 +134,37 @@ const DefaultNumbersRightTemplate = (args) => (
   <Table {...args}>
     <thead>
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Handle</th>
         <th className="text-end">#</th>
       </tr>
     </thead>
 
     <tbody>
       <tr>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>15</td>
+        <td>15</td>
+        <td>Name example</td>
         <td className="text-end">1</td>
       </tr>
       <tr>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+        <td>21</td>
+        <td>21</td>
+        <td>Name example</td>
         <td className="text-end">2</td>
       </tr>
       <tr>
-        <td>Larry</td>
-        <td>The Bird</td>
-        <td>@twitter</td>
+        <td>12</td>
+        <td>12</td>
+        <td>Name example</td>
         <td className="text-end">3</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>25</td>
+        <td>Name example</td>
+        <td className="text-end">4</td>
       </tr>
     </tbody>
   </Table>

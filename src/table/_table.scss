@@ -1,9 +1,10 @@
 @use "../tokens/tokens";
 
 .inf {
-  &__thead {
+  &__thead {    
     &__background-color {
-      background-color: tokens.$color-primary-500;
+      background-color: tokens.$color-secondary-500;
+      color: tokens.$color-white;
     }
   }
 } 
@@ -14,4 +15,12 @@ table {
 
 .table > :not(:first-child) {
   border-top: none;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.5rem 38px;
+}
+
+th {
+  width: 25%;
 }

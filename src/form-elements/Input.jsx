@@ -5,6 +5,9 @@ const propTypes = {
   /** Set the Input label text */
   label: PropTypes.string,
 
+  /** Specifies the label position */
+  labelPosition: PropTypes.oneOf(["top", "left"]),
+
   /** Specifies a large or small Input field */
   size: PropTypes.oneOf(["s", "m", "l"]),
 
@@ -12,20 +15,34 @@ const propTypes = {
   disabled: PropTypes.bool,
 };
 
-export const Input = ({ label, size, ...props }) => {
+export const Input = ({ label, labelPosition, size, children, ...props }) => {
   const bsSize =
     size === "s" ? "sm" 
     : size === "l" ? "lg" 
     : undefined;
 
-  return (
-    <BsForm.Group className="mb-3" controlId="input">
-      <BsForm.Label>{label}</BsForm.Label>
-      <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
-      <BsForm.Text>
-        Caption text, description, error notification
-      </BsForm.Text>
-    </BsForm.Group>
-  );
+  if ( labelPosition === "top" ) {
+    return (
+      <BsForm.Group className="mb-3" controlId="input">
+        <BsForm.Label>{label}</BsForm.Label>
+        <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
+        <BsForm.Text>
+          Caption text, description, error notification
+        </BsForm.Text>
+      </BsForm.Group>
+    );
+  } else {
+    return (
+      <BsForm.Group className="inf__input-left mb-3" controlId="input">
+        <div className="inf__input-left__container">
+          <BsForm.Label>{label}</BsForm.Label>
+          <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
+        </div>
+        <BsForm.Text>
+          Caption text, description, error notification
+        </BsForm.Text>
+      </BsForm.Group>
+    );
+  }
 };
 Input.propTypes = propTypes;

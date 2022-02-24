@@ -5,6 +5,7 @@ export default {
   component: Select,
   args: {
     label: "Default",
+    labelPosition: "top",
     size: "m",
     disabled: false,
   }

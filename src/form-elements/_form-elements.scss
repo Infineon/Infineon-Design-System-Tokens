@@ -1,5 +1,33 @@
 @use "../tokens/tokens";
 
+.inf__input-left {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  & .form-label {
+    margin-right: 20px;
+    margin-bottom: 0;
+
+    @media (min-width: 576px) {
+      margin-right: 70px;
+    }
+  }
+  
+  & .form-text {
+    margin-left: calc(48px + 20px);
+
+    @media (min-width: 576px) {
+      margin-left: calc(48px + 70px);
+    }
+  }
+}
+
 textarea {
   resize: none;
 }

@@ -7,7 +7,7 @@ export default {
   title: "Components/Teaser",
   component: Teaser,
   args: {
-    title: "This is a headline",
+    title: "This is a headline example of a teaser",
     subtitleText: "01.01.2022.",
     image: true,
     aspectRatio: "16:9",
@@ -21,6 +21,8 @@ const DefaultTemplate = (args) => (
     <BsCard.Body>
       <BsCard.Title>{args.title}</BsCard.Title>
       {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
+    </BsCard.Body>
+    <BsCard.Body className="inf__card-link-wrapper">
       <BsCard.Link href="#">Link</BsCard.Link>
     </BsCard.Body>
   </Teaser>
@@ -39,14 +41,12 @@ const ImageOverlayTemplate = (args) => (
 const EventTemplate = (args) => (
   <Teaser {...args}>
     <div>
-      <BsCard.ImgOverlay>
-        <div className="d-flex flex-wrap justify-content-end">
-          <Button>
-            <FontAwesomeIcon icon={["fa", "star"]}/>
-          </Button>
-          <p className="w-100 mb-0">Overline Text</p>
-          <BsCard.Title className="w-100 mb-0">{args.title}</BsCard.Title>
-        </div>
+      <BsCard.ImgOverlay className="d-flex flex-wrap justify-content-end">
+        <Button color="secondary">
+          <FontAwesomeIcon icon={["fa", "star"]}/>
+        </Button>
+        <p className="w-100 mb-0">Overline Text</p>
+        <BsCard.Title className="w-100 mb-0">{args.title}</BsCard.Title>
       </BsCard.ImgOverlay>
     </div>
 

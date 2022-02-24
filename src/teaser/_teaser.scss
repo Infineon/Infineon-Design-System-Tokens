@@ -10,10 +10,27 @@
 
     &__horizontal {
       max-width: 711px;
-      
+
       &__image {
         max-width: 100%;
       }
+    }
+
+    .card-img-overlay {
+      height: calc(100% - 56px);
+    }
+
+    & .card-title {
+      font-size: 28px;
+    }
+
+    & .inf__card-link-wrapper {
+      border-top: 1px solid tokens.$color-info-200;
+    }
+
+    & .card-link {
+      color: tokens.$color-secondary-500;
+      text-decoration: none;
     }
   }
 }
@@ -54,6 +71,27 @@
 
     &--1-1 {
       padding-bottom: 100%;
+    }
+  }
+}
+
+.inf__teaser {
+  &__horizontal {
+    .card-img-overlay {
+      height: calc(100% - 56px);
+    }
+
+    & .card-title {
+      font-size: 28px;
+    }
+
+    & .inf__card-link-wrapper {
+      border-top: 1px solid tokens.$color-info-200;
+    }
+
+    & .card-link {
+      color: tokens.$color-secondary-500;
+      text-decoration: none;
     }
   }
 }

@@ -59,23 +59,6 @@ const LongerTextTemplate3 = (args) => (
   </ParagraphVertical>
 );
 
-const LongerTextTemplate4 = (args) => (
-  <ParagraphVertical {...args}>
-    <div>
-      <div className="row">
-        <div className="col-6">
-          <h3>{args.title}</h3>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-6">
-          <p>{args.text}</p>
-        </div>
-      </div>
-    </div>
-  </ParagraphVertical>
-);
-
 export const LongerText = LongerTextTemplate.bind({});
 LongerText.args = {
   text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
@@ -88,10 +71,5 @@ LongerText2.args = {
 
 export const LongerText3 = LongerTextTemplate3.bind({});
 LongerText3.args = {
-  text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
-};
-
-export const LongerText4 = LongerTextTemplate4.bind({});
-LongerText4.args = {
   text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
 };

@@ -12,18 +12,30 @@ const propTypes = {
 
   /** Set the Paragraph text */
   text: PropTypes.string,
+
+  /** Specifies the image position */
+  imagePosition: PropTypes.oneOf(["top", "bottom"]),
 };
 
-export const ParagraphVertical = ({ children, ...props }) => {
-  const ImageTest = () => (
-    <img className="inf__paragraph-vertical__img" src={image4_3.src} alt={image4_3.alt}/>
-  );
+const Image = () => (
+  <img className="inf__paragraph-vertical__img" src={image4_3.src} alt={image4_3.alt}/>
+);
 
-  return (
-    <div className="inf__paragraph-vertical" {...props}>
-      <ImageTest/>
-      {children}
-    </div>
-  )
+export const ParagraphVertical = ({ imagePosition, children, ...props }) => {
+  if ( imagePosition === "top" ) {
+    return (
+      <div className="inf__paragraph inf__paragraph-vertical" {...props}>
+        <Image/>
+        {children}
+      </div>
+    )
+  } else {
+    return (
+      <div className="inf__paragraph inf__paragraph-vertical" {...props}>
+        {children}
+        <Image/>
+      </div>
+    )
+  }
 };
 ParagraphVertical.propTypes = propTypes;

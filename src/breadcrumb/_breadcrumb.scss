@@ -1,5 +1,16 @@
 @use "../tokens/tokens";
 
 .breadcrumb-item a {
+  font-size: 14px;
   text-decoration: none;
+  color: tokens.$color-black;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 16px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: tokens.$color-info-300;
+  padding-right: 16px;
 }

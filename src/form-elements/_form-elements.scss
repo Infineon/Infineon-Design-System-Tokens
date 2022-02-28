@@ -1,29 +1,49 @@
 @use "../tokens/tokens";
 
-.inf__input-left {
-  display: flex;
-  flex-wrap: wrap;
-
-  &__container {
+.inf {
+  &__input-left {
     display: flex;
-    align-items: center;
-    width: 100%;
-  }
-
-  & .form-label {
-    margin-right: 20px;
-    margin-bottom: 0;
-
-    @media (min-width: 576px) {
-      margin-right: 70px;
+    flex-wrap: wrap;
+  
+    &__container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  
+    & .form-label {
+      margin-right: 20px;
+      margin-bottom: 0;
+  
+      @media (min-width: 576px) {
+        margin-right: 70px;
+      }
+    }
+    
+    & .form-text {
+      margin-left: calc(48px + 20px);
+  
+      @media (min-width: 576px) {
+        margin-left: calc(48px + 70px);
+      }
     }
   }
-  
-  & .form-text {
-    margin-left: calc(48px + 20px);
 
-    @media (min-width: 576px) {
-      margin-left: calc(48px + 70px);
+  &__input {
+    &--success {
+      & .form-control {
+        border-color: tokens.$color-success-600;
+      }
+    }
+
+    &--error {
+      & .form-control {
+        border-color: tokens.$color-danger-500;
+      }
+
+      & .form-text {
+        color: tokens.$color-danger-500;
+      }
     }
   }
 }

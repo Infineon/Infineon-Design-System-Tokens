@@ -1,0 +1,35 @@
+@use "../tokens/tokens";
+
+.inf {
+  &__bulletpoints {
+
+    &.row > * {
+      padding-right: 15px;
+      padding-left: 15px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    .svg-inline--fa.fa-w-16 {
+      width: 43px;
+      height: 43px;
+      margin-bottom: 18px;
+      vertical-align: -0.5em;
+    }
+
+    .svg-inline--fa + p {
+      font-weight: bold;
+    }
+
+    p + p {
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+}

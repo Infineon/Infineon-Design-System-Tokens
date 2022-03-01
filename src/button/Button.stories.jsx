@@ -57,8 +57,15 @@ export const BlockLevel = BlockLevelTemplate.bind({});
 export const ButtonBadge = ButtonBadgeTemplate.bind({});
 ButtonBadge.args = {
   label: "Notifications",
+  color: "secondary",
 };
 
 export const BorderSpinner = BorderSpinnerTemplate.bind({});
+BorderSpinner.args = {
+  color: "secondary",
+};
 
 export const GrowingSpinner = GrowingSpinnerTemplate.bind({});
+GrowingSpinner.args = {
+  color: "secondary",
+};

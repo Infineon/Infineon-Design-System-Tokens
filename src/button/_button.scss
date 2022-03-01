@@ -1,5 +1,36 @@
 @use "../tokens/tokens";
 
+.btn {
+  font-weight: 600;
+  border-radius: 1px;
+  font-weight: 600;
+  padding: 9px 32px;
+
+  & .svg-inline--fa.fa-w-16 {
+    width: 12px;
+    height: 12px;
+  }
+
+  & .btn-badge {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 3.5px 5.5px 1.5px 5.5px;
+    min-width: 18px;
+    min-height: 18px;
+    margin-left: 12px;
+  }
+
+  & .spinner-border, .spinner-grow {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+}
+
+.btn-lg {
+  font-size: 20px;
+}
+
 .inf {
   &__btn-icon {
     &--before {

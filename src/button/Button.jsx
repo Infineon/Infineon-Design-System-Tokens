@@ -53,7 +53,7 @@ export const Button = ({ label, variant, color, size, icon, iconPosition, childr
     : undefined;
 
   const Icon = () => (
-    icon ? <FontAwesomeIcon icon={["fas", "star"]} className={iconPositionClass}/> : null
+    icon ? <FontAwesomeIcon icon={["fa", "check"]} className={iconPositionClass}/> : null
   );
 
   return (

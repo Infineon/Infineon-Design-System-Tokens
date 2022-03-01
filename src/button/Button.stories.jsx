@@ -24,14 +24,6 @@ const DefaultTemplate = (args) => (
   </Button>
 );
 
-const BlockLevelTemplate = (args) => (
-  <div className="d-grid gap-2">
-    <Button {...args}>
-      {args.label}
-    </Button>
-  </div>
-);
-
 const ButtonBadgeTemplate = (args) => (
   <Button {...args}>
     {args.label}<Badge background="white" className="btn-badge">4</Badge>
@@ -51,8 +43,6 @@ const GrowingSpinnerTemplate = (args) => (
 );
 
 export const Default = DefaultTemplate.bind({});
-
-export const BlockLevel = BlockLevelTemplate.bind({});
 
 export const ButtonBadge = ButtonBadgeTemplate.bind({});
 ButtonBadge.args = {

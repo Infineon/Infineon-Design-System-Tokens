@@ -40,7 +40,7 @@ const HeaderTemplate = (args) => (
 
 const SearchTemplate = (args) => (
   <Dropdown {...args}>
-    <BsFormControl autoFocus className="mx-3 my-2 w-auto" placeholder="Search"></BsFormControl>
+    <BsFormControl autoFocus className="w-auto" placeholder="Search"></BsFormControl>
 
     <BsDropdown.Item href="#/action-1" active>Something else</BsDropdown.Item>
     <BsDropdown.Item href="#/action-2">Hover action</BsDropdown.Item>
@@ -70,14 +70,12 @@ const IconTemplate = (args) => (
 
 const FilterTemplate = (args) => (
   <Dropdown {...args}>
-    <BsForm.Group className="mx-3 my-2" controlId="inputSelect">
-      <BsForm.Select aria-label="Default select example">
-        <option>Select</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </BsForm.Select>
-    </BsForm.Group>
+    <BsForm.Select aria-label="Default select example">
+      <option>Select</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </BsForm.Select>
 
     <BsDropdown.Item href="#/action-1">
       <Checkbox id="checkbox-01" label="Something else here"></Checkbox>

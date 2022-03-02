@@ -1,1 +1,67 @@
 @use "../tokens/tokens";
+
+.dropdown {
+  & .btn {
+    background-color: tokens.$color-secondary-500;
+    border-color: tokens.$color-secondary-500;
+  }
+
+  & .dropdown-menu {
+    padding: 0;
+    border: none;
+    border-radius: 1px;
+    background-color: tokens.$color-info-100;
+    transform: translate3d(0px, calc(44px + 8px), 0px) !important;
+
+    .dropdown-header {
+      padding: 0.5rem 20px;
+      font-weight: 600;
+      font-size: 16px;
+      color: tokens.$color-black;
+    }
+
+    & .form-control, .form-select {
+      margin: 24.5px 20px 12.25px 20px;
+    }
+
+    & .dropdown-item {
+      padding: 10.5px 20px;
+
+      &.active {
+        background-color: transparent;
+        border-left: 5px solid tokens.$color-secondary-600;
+        padding-left: calc(20px - 5px);
+        color: tokens.$color-secondary-600;
+      }
+    }
+
+    .dropdown-divider {
+      margin: 0;
+    }
+  }
+
+  & .btn-sm {
+    & + .dropdown-menu {
+      transform: translate3d(0px, calc(41px + 8px), 0px) !important;
+    }
+  }
+
+  & .btn-lg {
+    & + .dropdown-menu {
+      transform: translate3d(0px, calc(50px + 8px), 0px) !important;
+    }
+  }
+}
+
+.show > .btn-primary.dropdown-toggle {
+  background-color: tokens.$color-secondary-500;
+  border-color: tokens.$color-secondary-500;
+}
+
+.btn-check:checked + .btn-primary:focus,
+.btn-check:active + .btn-primary:focus,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}

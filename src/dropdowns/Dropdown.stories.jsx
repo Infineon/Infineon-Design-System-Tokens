@@ -12,7 +12,6 @@ export default {
     label: "Secondary",
     size: "m",
     active: false,
-    split: false,
     icon: "none",
   }
 };

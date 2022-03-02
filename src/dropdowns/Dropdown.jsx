@@ -9,9 +9,6 @@ const propTypes = {
   /** Manually set the visual state of the Dropdown to `:active` */
   active: PropTypes.bool,
 
-  /** Specifies a split in the Dropdown */
-  split: PropTypes.bool,
-
   /** Set the Dropdown text */
   label: PropTypes.string,
 
@@ -23,18 +20,14 @@ const propTypes = {
   ]),
 };
 
-export const Dropdown = ({ size, split, label, icon, children, ...props }) => {
+export const Dropdown = ({ size, label, icon, children, ...props }) => {
   const bsSize =
     size === "s" ? "sm" 
     : size === "l" ? "lg" 
     : undefined;
 
-  const splitClass = 
-    split ? "split-border" 
-    : "";
-
   return (
-    <BsDropdown className = {splitClass}>
+    <BsDropdown>
       <BsDropdown.Toggle size={bsSize} {...props}>
         <span>
           {icon ? <FontAwesomeIcon icon={icon}></FontAwesomeIcon> : ""}

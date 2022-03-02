@@ -7,7 +7,7 @@ export default {
     variant: "solid",
     color: "primary",
     size: "m",
-    disabled: false,
+    disabled: true,
   }
 };
 

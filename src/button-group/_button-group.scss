@@ -1,0 +1,20 @@
+@use "../tokens/tokens";
+
+.btn-group {
+  .btn:not(.btn-outline-primary, 
+           .btn-outline-secondary,
+           .btn-outline-success,
+           .btn-outline-danger,
+           .btn-outline-warning) {
+    border-color: tokens.$color-white;
+  }
+
+  .btn {
+    padding: 5px 24px;
+  }
+}
+
+.btn-group-sm > .btn,
+.btn-group-lg > .btn  {
+  border-radius: 1px;
+}

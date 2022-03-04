@@ -17,7 +17,7 @@ export const FileInput = ({ size, ...props }) => {
 
   return (
     <BsForm.Group className="mb-3" controlId="fileInput">
-      <BsForm.Control type="file" placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
+      <BsForm.Control type="file" size={bsSize} {...props}></BsForm.Control>
     </BsForm.Group>
   );
 };

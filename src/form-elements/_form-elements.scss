@@ -48,6 +48,141 @@
   }
 }
 
+.form-check-input {
+  width: 13px;
+  height: 13px;
+  border: 1px solid tokens.$color-info-400;
+}
+
+.form-check-input:checked {
+  background-color: tokens.$color-secondary-500;
+  border-color: tokens.$color-secondary-500;
+}
+
+#checkbox.form-check-input[type="checkbox"] {
+  border-radius: 1px;
+}
+
+.form-check-input:focus {
+  border-color: tokens.$color-info-400;
+  box-shadow: 0 0 0 3px #59B29B;
+}
+
+.form-switch {
+  margin-left: 13px;
+}
+
+.form-switch .form-check-input:focus {
+  border-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.7' fill='%237D6F72'/%3E%3C/svg%3E");
+}
+
+.form-switch .form-check-input:checked {
+  border: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.5' fill='%23FFF'/%3E%3C/svg%3E");
+}
+
+.form-switch .form-check-input {
+  height: 22px;
+  width: 40px;
+  margin-top: 0;
+  margin-left: -53px;
+  border: 1px solid tokens.$color-info-500;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.7' fill='%237D6F72'/%3E%3C/svg%3E");
+}
+
+.form-check-label {
+  color: tokens.$color-black;
+}
+
+.inf__form-label--input {
+  color: tokens.$color-info-500;
+  margin-bottom: 3px;
+}
+
+.form-control::file-selector-button {
+  background-color: tokens.$color-info-100;
+  color: tokens.$color-black;
+}
+
+.form-control, .form-select {
+  color: tokens.$color-black;
+  border: 1px solid tokens.$color-info-300;
+  border-radius: 1px;
+}
+
+#input.form-control {
+  padding: 8px 16px;
+}
+
+#inputSelect.form-select, #inputTextarea.form-control {
+  padding: 8.75px 16px;
+}
+
+.form-control::placeholder {
+  font-size: 15px;
+  color: tokens.$color-info-400;
+}
+
+.form-control:focus {
+  color: tokens.$color-black;
+  border-color: tokens.$color-info-400;
+  box-shadow: 0 0 0 3px #59B29B;
+}
+
+.form-select {
+  font-size: 15px;
+}
+
+.form-text {
+  margin-top: 3px;
+  font-size: 13px;
+  color: tokens.$color-black;
+}
+
+.inf__form-label--form-range {
+  font-size: 12px;
+  color: tokens.$color-black;
+  margin-bottom: 5px;
+}
+
+.form-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background-color: tokens.$color-secondary-500;
+}
+
+.form-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 3px #59B29B;
+}
+
+.form-range::-moz-range-track {
+  height: 5px;
+  background-color: tokens.$color-info-200;
+  border-radius: 1px;
+}
+
+#inf__inputSearch.form-control {
+  padding: 5px 16px 5px 36px;
+}
+
+.inf__search-icon-wrapper {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+
+  & svg {
+    vertical-align: 1px;
+  }
+}
+
+.input-group > .form-control:focus {
+  z-index: 1;
+}
+
 textarea {
   resize: none;
 }

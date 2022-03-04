@@ -32,7 +32,7 @@ export const Input = ({ label, labelPosition, size, state, children, ...props })
   if ( labelPosition === "top" ) {
     return (
       <BsForm.Group className={"mb-3 " + stateClass} controlId="input">
-        <BsForm.Label>{label}</BsForm.Label>
+        <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
         <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
         <BsForm.Text>
           Caption text, description, error notification
@@ -43,7 +43,7 @@ export const Input = ({ label, labelPosition, size, state, children, ...props })
     return (
       <BsForm.Group className={"inf__input-left mb-3 " + stateClass} controlId="input">
         <div className="inf__input-left__container">
-          <BsForm.Label>{label}</BsForm.Label>
+          <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
           <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
         </div>
         <BsForm.Text>

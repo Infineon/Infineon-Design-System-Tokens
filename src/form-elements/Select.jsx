@@ -24,7 +24,7 @@ export const Select = ({ label, labelPosition, size, ...props }) => {
   if ( labelPosition === "top" ) {
     return (
       <BsForm.Group className="mb-3" controlId="inputSelect">
-        <BsForm.Label>{label}</BsForm.Label>
+        <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
         <BsForm.Select aria-label="Default select example" size={bsSize} {...props}>
           <option>Select</option>
           <option value="1">One</option>
@@ -40,7 +40,7 @@ export const Select = ({ label, labelPosition, size, ...props }) => {
     return (
       <BsForm.Group className="inf__input-left mb-3" controlId="inputSelect">
         <div className="inf__input-left__container">
-          <BsForm.Label>{label}</BsForm.Label>
+          <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
           <BsForm.Select aria-label="Default select example" size={bsSize} {...props}>
             <option>Select</option>
             <option value="1">One</option>

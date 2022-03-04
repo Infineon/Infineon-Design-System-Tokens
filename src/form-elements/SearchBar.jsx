@@ -19,11 +19,11 @@ export const SearchBar = ({ size, ...props }) => {
 
   return (
     <BsInputGroup>
-      <BsInputGroup.Text>
+      <span class="inf__search-icon-wrapper">
         <FontAwesomeIcon icon={["fas", "search"]}/>
-      </BsInputGroup.Text>
-      <BsForm.Control type="text" placeholder="Search" size={bsSize} {...props}></BsForm.Control>
-    </BsInputGroup>
+      </span>
+      <BsForm.Control id="inf__inputSearch" className="test" type="text" placeholder="Search" size={bsSize} {...props}></BsForm.Control>
+    </BsInputGroup>    
   );
 };
 SearchBar.propTypes = propTypes;

@@ -20,7 +20,7 @@ export const Textarea = ({ label, size, ...props }) => {
 
   return (
     <BsForm.Group className="mb-3" controlId="inputTextarea">
-      <BsForm.Label>{label}</BsForm.Label>
+      <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
       <BsForm.Control as="textarea" rows={5} placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
     </BsForm.Group>
   );

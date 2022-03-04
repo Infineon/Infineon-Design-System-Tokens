@@ -12,7 +12,7 @@ const propTypes = {
 export const Range = ({ label, disabled, children, ...props }) => {
   return (
     <div {...props}>
-      <BsForm.Label>{label}</BsForm.Label>
+      <BsForm.Label className="inf__form-label--form-range">{label}</BsForm.Label>
       <BsForm.Range disabled={disabled}/>
     </div>
   );

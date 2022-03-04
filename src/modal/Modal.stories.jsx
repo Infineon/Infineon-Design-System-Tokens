@@ -18,7 +18,8 @@ const DefaultTemplate = (args) => {
 const MessageTemplate = (args) => {
   const DemoComponent = ModalDemo(
     <>
-      <Input></Input><Textarea label="Message"></Textarea>
+      <Input labelPosition="top" label="Modal Content"></Input>
+      <Textarea label="Message"></Textarea>
     </>
   )
   return (

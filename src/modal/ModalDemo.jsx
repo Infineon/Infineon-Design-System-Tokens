@@ -24,7 +24,6 @@ export const Modal = ({ size, children }) => {
         </BsModal.Header>
 
         <BsModal.Body>
-          <p>Modal Content</p>
           {children}
         </BsModal.Body>
 

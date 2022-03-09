@@ -6,7 +6,8 @@ export default {
   component: Alert,
   args: {
     variant: "primary",
-    closable: false,
+    closable: true,
+    icon: true,
   }
 };
 
@@ -29,12 +30,9 @@ const DefaultTemplate = (args) => {
 
 const AdditionalContentTemplate = (args) => (
   <Alert {...args}>
-    <BsAlert.Heading>Well done!</BsAlert.Heading>
-    <p>
-      Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-    </p>
+    <BsAlert.Heading>Headline</BsAlert.Heading>
     <p className="mb-0">
-      Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
     </p>
   </Alert>
 );
@@ -44,4 +42,5 @@ export const Default = DefaultTemplate.bind({});
 export const AdditionalContent = AdditionalContentTemplate.bind({});
 AdditionalContent.args = {
   variant: "color-gray-100",
+  icon: false,
 };

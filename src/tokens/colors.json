@@ -130,7 +130,7 @@
     },
 
     "black": {
-      "value": "#000",
+      "value": "#1D1D1D",
       "type": "color",
       "docblock": ["@tokens Colors: Shades", "@presenter Color"]
     },

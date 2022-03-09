@@ -16,25 +16,30 @@ const image = {
 };
 
 const DefaultTemplate = (args) => (
-  <NavBar {...args} expand="lg">
+  <NavBar {...args}>
     <BsNavBar.Brand href="#home">
       <img src={image.src} alt={image.alt} width="100"/>
     </BsNavBar.Brand>
+
     <BsNavBar.Toggle aria-controls="basic-navbar-nav" />
     <BsNavBar.Collapse id="basic-navbar-nav">
-      <p className="inf__application-name">Application name</p>
-        <SearchBar className="inf__nav-searchbar"></SearchBar>
-        <div>
-          <BsNav.Link href="#">Link
-            <FontAwesomeIcon icon={["fas", "user"]}/>
-          </BsNav.Link>
-          <BsNav.Link href="#">Link
-            <FontAwesomeIcon icon={["fas", "globe"]}/>
-          </BsNav.Link>
-          <BsNav.Link href="#">Link
-            <FontAwesomeIcon icon={["fas", "shopping-cart"]}/>
-          </BsNav.Link>
+      <div className="d-flex justify-content-between align-items-center w-100">
+        <p className="inf__application-name">Application name</p>
+        <div className="d-flex align-items-center">
+          <SearchBar className="inf__nav-searchbar"></SearchBar>
+          <div>
+            <BsNav.Link href="#">Link
+              <FontAwesomeIcon icon={["fas", "user"]}/>
+            </BsNav.Link>
+            <BsNav.Link href="#">Link
+              <FontAwesomeIcon icon={["fas", "globe"]}/>
+            </BsNav.Link>
+            <BsNav.Link href="#">Link
+              <FontAwesomeIcon icon={["fas", "shopping-cart"]}/>
+            </BsNav.Link>
+          </div>
         </div>
+      </div>
     </BsNavBar.Collapse>
   </NavBar>
 );

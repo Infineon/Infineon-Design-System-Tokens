@@ -6,26 +6,25 @@
 }
 
 .inf {
-  &__card {
-    max-width: 320px;
+  &__image {
+    max-width: 100%;
+  }
 
+  &__card-vertical {
+    max-width: 320px;
+  }
+
+  &__card-horizontal {
     &__image {
       max-width: 100%;
     }
-
-    &__horizontal {
-      &__image {
-        max-width: 100%;
-      }
-    }
   }
 }
 
 .inf {
-  &__card__horizontal
+  &__card-horizontal
   &__aspect-ratio {
-    &__box-wrapper, .inf__card__img {
-      max-width: 320px;
+    &__box-wrapper, .inf__img {
       width: 100%;
     }
 
@@ -62,9 +61,9 @@
 }
 
 .inf {
-  &__card
+  &__card-vertical
   &__aspect-ratio {
-    &__box-wrapper, .inf__card__img {
+    &__box-wrapper, .inf__img {
       max-width: 320px;
       width: 100%;
     }
@@ -98,5 +97,56 @@
     &--1-1 {
       padding-bottom: 100%;
     }
+  }
+}
+
+.inf__card {
+  border: 1px solid tokens.$color-info-200;
+  border-radius: 1px;
+
+  .card-body {
+    padding: 24px 32px;
+  }
+
+  .card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: tokens.$color-info-500;
+    margin-bottom: 4px;
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: tokens.$color-black;
+  }
+
+  .card-text {
+    line-height: 28px;
+    color: tokens.$color-black;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+
+  .inf__card-link-wrapper {
+    margin-top: 16px;
+  }
+
+  .card-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: tokens.$color-secondary-500;
+  }
+
+  .card-footer {
+    font-size: 13px;
+    border-top: 1px solid tokens.$color-info-200;
+    background-color: tokens.$color-white;
+    color: tokens.$color-black;
+    padding: 6px 32px;
   }
 }

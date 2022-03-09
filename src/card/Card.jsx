@@ -83,7 +83,7 @@ const Image = ({ aspectRatio }) => {
 
   if ( aspectRatioClass === "" ) {
     return (
-      <img className="inf__card__image" src={imageSrc} alt={imageAlt}/>
+      <img className="inf__image" src={imageSrc} alt={imageAlt}/>
     )
   }
   return (
@@ -100,7 +100,7 @@ export const Card = ({ image, aspectRatio, direction, imagePosition, children, .
     if (direction === "horizontal") {
       if (imagePosition === "left") {
         return (
-          <BsCard className="inf__card__horizontal" {...props}>
+          <BsCard className="inf__card inf__card-horizontal" {...props}>
             <div className="row no-gutters">
               <div className="col-md-4">
                 <Image aspectRatio={aspectRatio}/>
@@ -113,7 +113,7 @@ export const Card = ({ image, aspectRatio, direction, imagePosition, children, .
         )
       } else {
         return (
-          <BsCard className="inf__card__horizontal" {...props}>
+          <BsCard className="inf__card inf__card-horizontal" {...props}>
             <div className="row no-gutters">
               <div className="col-md-8">
                 {children}
@@ -127,7 +127,7 @@ export const Card = ({ image, aspectRatio, direction, imagePosition, children, .
       }
     } else {
       return (
-        <BsCard className="inf__card" {...props}>
+        <BsCard className="inf__card inf__card-vertical" {...props}>
           <Image aspectRatio={aspectRatio}/>
           {children}
         </BsCard>
@@ -135,7 +135,7 @@ export const Card = ({ image, aspectRatio, direction, imagePosition, children, .
     }
   } else {
     return (
-      <BsCard className="inf__card" {...props}>
+      <BsCard className="inf__card inf__card-vertical" {...props}>
         {children}
       </BsCard>
     )

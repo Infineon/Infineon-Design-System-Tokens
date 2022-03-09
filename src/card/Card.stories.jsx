@@ -40,14 +40,14 @@ const DefaultTemplate = (args) => (
         }
         </Button>
       }
-    </BsCard.Body>
 
-    {args.links && 
-      <BsCard.Body>
-        <BsCard.Link href="#">Card Link</BsCard.Link>
-        <BsCard.Link href="#">Another Link</BsCard.Link>
-      </BsCard.Body>
-    }
+      {args.links &&
+        <div className="inf__card-link-wrapper">
+          <BsCard.Link href="#">Card Link</BsCard.Link>
+          <BsCard.Link href="#">Another Link</BsCard.Link>
+        </div>
+      }
+    </BsCard.Body>
 
     {args.footerText && <BsCard.Footer>{args.footerText}</BsCard.Footer>}
   </Card>
@@ -69,14 +69,16 @@ const CenterTemplate = (args) => (
         }
         </Button>
       }
+
+      {args.links && 
+        <div className="inf__card-link-wrapper">
+          <BsCard.Link href="#">Card Link</BsCard.Link>
+          <BsCard.Link href="#">Another Link</BsCard.Link>
+        </div>
+      }
     </BsCard.Body>
 
-    {args.links && 
-      <BsCard.Body className="d-flex justify-content-center">
-        <BsCard.Link href="#">Card Link</BsCard.Link>
-        <BsCard.Link href="#">Another Link</BsCard.Link>
-      </BsCard.Body>
-    }
+
 
     {args.footerText && <BsCard.Footer className="text-center">{args.footerText}</BsCard.Footer>}
   </Card>

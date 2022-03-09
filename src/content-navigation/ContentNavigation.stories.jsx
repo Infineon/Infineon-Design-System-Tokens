@@ -1,6 +1,7 @@
 import { ContentNavigation } from "./ContentNavigation";
 import BsNav from "react-bootstrap/Nav";
 import BsNavDropdown from "react-bootstrap/NavDropdown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default {
   title: "Components/Content Navigation",
@@ -8,7 +9,7 @@ export default {
 };
 
 const DefaultTemplate = (args) => (
-  <ContentNavigation {...args}>
+  <ContentNavigation className="inf__content-nav-default" {...args}>
     <BsNav.Item as="li">
       <BsNav.Link href="/home">Active</BsNav.Link>
     </BsNav.Item>
@@ -26,8 +27,8 @@ const DefaultTemplate = (args) => (
   </ContentNavigation>
 );
 
-const TabsTemplate = (args) => (
-  <ContentNavigation {...args} variant="tabs">
+const VerticalNavTemplate = (args) => (
+  <ContentNavigation className="flex-column" {...args}>
     <BsNav.Item as="li">
       <BsNav.Link href="/home">Active</BsNav.Link>
     </BsNav.Item>
@@ -36,6 +37,53 @@ const TabsTemplate = (args) => (
     </BsNav.Item>
     <BsNav.Item as="li">
       <BsNav.Link eventKey="link-2">Link</BsNav.Link>
+    </BsNav.Item>
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="disabled" disabled>
+        Disabled
+      </BsNav.Link>
+    </BsNav.Item>
+  </ContentNavigation>
+);
+
+const VerticalNavIconsTemplate = (args) => (
+  <ContentNavigation className="flex-column inf__content-nav__border" {...args}>
+    <BsNav.Item as="li">
+      <BsNav.Link href="#">
+        <FontAwesomeIcon icon={["fas", "globe"]} />
+      </BsNav.Link>
+    </BsNav.Item>
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-1">
+        <FontAwesomeIcon icon={["fas", "globe"]} />
+      </BsNav.Link>
+    </BsNav.Item>
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-2">
+        <FontAwesomeIcon icon={["fas", "globe"]} />
+      </BsNav.Link>
+    </BsNav.Item>
+    <p className="inf__content-nav__divider">Divider</p>
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-3">
+        <FontAwesomeIcon icon={["fas", "globe"]} />
+      </BsNav.Link>
+    </BsNav.Item>
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-4">
+        <FontAwesomeIcon icon={["fas", "globe"]} />
+      </BsNav.Link>
+    </BsNav.Item>
+  </ContentNavigation>
+);
+
+const TabsTemplate = (args) => (
+  <ContentNavigation {...args} variant="tabs">
+    <BsNav.Item as="li">
+      <BsNav.Link href="/home">Active</BsNav.Link>
+    </BsNav.Item>
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-1">Link</BsNav.Link>
     </BsNav.Item>
     <BsNav.Item as="li">
       <BsNav.Link eventKey="disabled" disabled>
@@ -111,6 +159,10 @@ const PillsDropdownsTemplate = (args) => (
 );
 
 export const Default = DefaultTemplate.bind({});
+
+export const VerticalNavIcons = VerticalNavIconsTemplate.bind({});
+
+export const VerticalNav = VerticalNavTemplate.bind({});
 
 export const Tabs = TabsTemplate.bind({});
 

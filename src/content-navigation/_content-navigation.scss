@@ -1,5 +1,53 @@
 @use "../tokens/tokens";
 
+.inf {
+  &__content-nav-default {
+    & .nav-link {
+      color: tokens.$color-black;
+
+      &.active {
+        font-weight: 600;
+      }
+    }
+
+    & .nav-link.disabled {
+      color: tokens.$color-info-200;
+    }
+  }
+
+  &__content-nav {
+    &__border {
+      display: inline-flex;
+      border: 1px solid tokens.$color-info-300;
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      & .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 29px 0 29px;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        color: tokens.$color-black;
+
+        &:hover {
+          color: tokens.$color-white;
+          background-color: tokens.$color-secondary-500;  
+        }
+      }
+    }
+
+    &__divider {
+      color: tokens.$color-secondary-500;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .nav-tabs {
   display: inline-flex;
   border-bottom: 1px solid tokens.$color-secondary-600;
@@ -11,6 +59,7 @@
   }
 
   & .nav-link.active {
+    font-weight: 600;
     color: tokens.$color-secondary-600;
     border-color: transparent;
     border-bottom: solid 5px tokens.$color-secondary-600;

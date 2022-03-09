@@ -8,14 +8,47 @@
 
 .inf {
   &__footer-top {
+    .col-6 {
+      margin-bottom: 32px;
+
+      @media (min-width: 768px) { 
+        margin-bottom: 0;
+      }
+    }
+
+    & h5 {
+      font-weight: 600;
+      color: tokens.$color-black;
+      margin-bottom: 9px;
+    }
+
+    & li {
+      margin: 9px 0;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
     & a {
       text-decoration: none;
+      color: tokens.$color-black
     }
 
     &__social-media {
+      width: 100%;
+
+      @media (min-width: 576px) { 
+        width: auto;
+      }
+
       & .svg-inline--fa {
         font-size: 1.5rem;
-        color: #242222;
+        color: tokens.$color-black;
       }
 
       & a {
@@ -33,14 +66,36 @@
   }
 
   &__footer-border {
-    height: 168px;
-    border-bottom: 1px solid #DCD5D7;
+    height: 214px;
+    border-bottom: 1px solid tokens.$color-info-300;
     padding: 28px 0;
+
+    img {
+      margin-bottom: 50px;
+
+      @media (min-width: 576px) { 
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: 576px) { 
+      height: 168px;
+    }
   }
 
   &__footer-bottom {
     min-height: 80px;
     padding: 28px 0;
+
+    ul {
+      margin-bottom: 7px;
+    }
+
+    & a {
+      font-weight: 600;
+      text-decoration: none;
+      color: tokens.$color-secondary-500;
+    }
 
     @media (min-width: 576px) { 
       & li {
@@ -56,10 +111,12 @@
       }
     }
 
-    & a {
-      font-weight: bold;
-      text-decoration: none;
-      color: tokens.$color-secondary-500;
+    @media (min-width: 768px) { 
+      flex-direction: row-reverse;
+
+      ul {
+        margin-bottom: 0;
+      }
     }
   }
 }

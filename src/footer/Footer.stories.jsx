@@ -16,16 +16,16 @@ const DefaultTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
       <div className="d-md-flex justify-content-between flex-wrap inf__footer-bottom">
-        <div className="inf__footer-bottom__copyright">
-          © 1999 - 2021 Infineon Technologies AG
-        </div>
-
         <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
           <li><a href="#">Imprint</a></li>
           <li><a href="#">Privacy policy</a></li>
           <li><a href="#">Glossary</a></li>
         </ul>
+
+        <div className="inf__footer-bottom__copyright">
+          © 1999 - 2021 Infineon Technologies AG
+        </div>
       </div>
     </footer>
   </Footer>
@@ -61,16 +61,16 @@ const MediumTemplate = (args) => (
       </div>
 
       <div className="d-md-flex justify-content-between align-items-center flex-wrap inf__footer-bottom">
-        <div className="inf__footer-bottom__copyright">
-          © 1999 - 2021 Infineon Technologies AG
-        </div>
-
         <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
           <li><a href="#">Imprint</a></li>
           <li><a href="#">Privacy policy</a></li>
           <li><a href="#">Glossary</a></li>
         </ul>
+
+        <div className="inf__footer-bottom__copyright">
+          © 1999 - 2021 Infineon Technologies AG
+        </div>
       </div>
     </footer>
   </Footer>
@@ -81,7 +81,7 @@ const LargeTemplate = (args) => (
     <footer className="footer">
       <div className="inf__footer-top">
         <div className="row">
-          <div className="col-md-2 mb-md-0 mb-3">
+          <div className="col-6 col-md-2">
             <h5>Mainlink</h5>
             <ul className="list-unstyled">
               <li><a href="#">Link 1</a></li>
@@ -91,7 +91,7 @@ const LargeTemplate = (args) => (
             </ul>
           </div>
 
-          <div className="col-md-2 mb-md-0 mb-3">
+          <div className="col-6 col-md-2">
             <h5>Mainlink</h5>
             <ul className="list-unstyled">
               <li><a href="#">Link 1</a></li>
@@ -101,7 +101,7 @@ const LargeTemplate = (args) => (
             </ul>
           </div>
 
-          <div className="col-md-2 mb-md-0 mb-3">
+          <div className="col-6 col-md-2">
             <h5>Mainlink</h5>
             <ul className="list-unstyled">
               <li><a href="#">Link 1</a></li>
@@ -111,7 +111,7 @@ const LargeTemplate = (args) => (
             </ul>
           </div>
 
-          <div className="col-md-2 mb-md-0 mb-3">
+          <div className="col-6 col-md-2">
             <h5>Mainlink</h5>
             <ul className="list-unstyled">
               <li><a href="#">Link 1</a></li>
@@ -150,16 +150,16 @@ const LargeTemplate = (args) => (
       </div>
 
       <div className="d-md-flex justify-content-between flex-wrap inf__footer-bottom">
-        <div className="inf__footer-bottom__copyright">
-          © 1999 - 2021 Infineon Technologies AG
-        </div>
-
         <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
           <li><a href="#">Imprint</a></li>
           <li><a href="#">Privacy policy</a></li>
           <li><a href="#">Glossary</a></li>
         </ul>
+
+        <div className="inf__footer-bottom__copyright">
+          © 1999 - 2021 Infineon Technologies AG
+        </div>
       </div>
     </footer>
   </Footer>

@@ -1,43 +1,54 @@
 @use "../tokens/tokens";
 
-.inf {
-  &__teaser {
-    max-width: 370px;
+.inf__teaser {
+  border-top: 1px solid tokens.$color-info-200;
+  border-radius: 1px;
 
-    &__image {
-      max-width: 100%;
-    }
+  & .card-body {
+    padding: 17px 18px;
+  }
 
-    &__horizontal {
-      max-width: 711px;
+  & .card-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 35.2px;
+    margin-bottom: 8px;
+  }
 
-      &__image {
-        max-width: 100%;
-      }
-    }
+  & .card-subtitle {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
 
-    .card-img-overlay {
-      height: calc(100% - 56px);
-    }
-
-    & .card-title {
-      font-size: 28px;
-    }
-
-    & .inf__card-link-wrapper {
-      border-top: 1px solid tokens.$color-info-200;
-    }
-
-    & .card-link {
-      color: tokens.$color-secondary-500;
-      text-decoration: none;
-    }
+  & .card-link {
+    font-weight: 600;
+    color: tokens.$color-secondary-500;
+    text-decoration: none;
   }
 }
 
-.inf {
-  &__teaser__horizontal
-  &__aspect-ratio {
+.inf__teaser-vertical {
+  max-width: 370px;
+
+  .card-img-overlay {
+    height: calc(100% - 56px);
+  }
+
+  & .inf__card-link-wrapper {
+    border-top: 1px solid tokens.$color-info-200;
+  }
+}
+
+
+.inf__teaser-horizontal {
+  max-width: 711px;
+
+  & img {
+    max-width: 100%;
+  }
+
+  & .inf__aspect-ratio {
     &__box-wrapper, .inf__card__img {
       max-width: 370px;
       width: 100%;
@@ -75,30 +86,27 @@
   }
 }
 
-.inf__teaser {
-  &__horizontal {
-    .card-img-overlay {
-      height: calc(100% - 56px);
-    }
+.inf__teaser-horizontal {
+  & .card-img-overlay {
+    height: calc(100% - 56px);
+  }
 
-    & .card-title {
-      font-size: 28px;
-    }
+  & .card-title {
+    font-size: 28px;
+  }
 
-    & .inf__card-link-wrapper {
-      border-top: 1px solid tokens.$color-info-200;
-    }
+  & .inf__card-link-wrapper {
+    border-top: 1px solid tokens.$color-info-200;
+  }
 
-    & .card-link {
-      color: tokens.$color-secondary-500;
-      text-decoration: none;
-    }
+  & .card-link {
+    color: tokens.$color-secondary-500;
+    text-decoration: none;
   }
 }
 
-.inf {
-  &__teaser
-  &__aspect-ratio {
+.inf__teaser-vertical {
+  & .inf__aspect-ratio {
     &__box-wrapper, .inf__card__img {
       max-width: 370px;
       width: 100%;

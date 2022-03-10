@@ -11,7 +11,7 @@
   }
 
   &__card-vertical {
-    max-width: 320px;
+    max-width: 348px;
   }
 
   &__card-horizontal {
@@ -64,7 +64,7 @@
   &__card-vertical
   &__aspect-ratio {
     &__box-wrapper, .inf__img {
-      max-width: 320px;
+      max-width: 348px;
       width: 100%;
     }
 
@@ -133,6 +133,7 @@
   }
 
   .btn {
+    font-size: 14px;
     margin-top: 20px;
   }
 

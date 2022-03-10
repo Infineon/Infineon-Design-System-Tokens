@@ -1,7 +1,7 @@
 @use "../tokens/tokens";
 
 .inf {
-  &__sidebar {
+  &__table-of-content-nav {
     & .nav-link {
       color: tokens.$color-black;
       padding: 12px calc(12px + 4px) 12px calc(12px + 4px);

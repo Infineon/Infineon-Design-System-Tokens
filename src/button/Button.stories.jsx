@@ -12,7 +12,6 @@ export default {
     size: "m",
     active: false,
     disabled: false,
-    href: "",
     icon: false,
     iconPosition: "left",
   }

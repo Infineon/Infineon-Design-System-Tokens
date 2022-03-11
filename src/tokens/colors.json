@@ -38,7 +38,7 @@
 
     "danger": {
       "400": {
-        "value": "#EC1F3E",
+        "value": "#E61433",
         "type": "color",
         "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
       },

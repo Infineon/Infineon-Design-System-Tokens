@@ -37,7 +37,7 @@ const propTypes = {
   iconPosition: PropTypes.oneOf(["left", "right"]),
 };
 
-export const Button = ({ label, variant, color, size, icon, iconPosition, children, ...props }) => {
+export const Button = ({ label, variant, color, size, disabled, icon, iconPosition, children, ...props }) => {
   const bsVariant =
     variant === "outline" ? `outline-${color}`
     : color;
@@ -57,7 +57,7 @@ export const Button = ({ label, variant, color, size, icon, iconPosition, childr
   );
 
   return (
-    <BsButton variant={bsVariant} size={bsSize} children={children || label} {...props}>
+    <BsButton variant={bsVariant} size={bsSize} disabled={disabled} children={children || label} {...props}>
       {iconPosition === "left" 
         ? <><Icon/> {children}</>
         : <>{children} <Icon/></>

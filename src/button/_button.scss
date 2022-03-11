@@ -6,6 +6,132 @@
   font-weight: 600;
   padding: 9px 32px;
 
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:disabled, &.disabled {
+    opacity: 1;
+    background-color: tokens.$color-info-400;
+    border-color: tokens.$color-info-400;
+    color: tokens.$color-white;
+  }
+
+  &.btn-primary {
+    &:focus {
+      background-color: tokens.$color-primary-500;
+      border-color: tokens.$color-primary-500;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      background-color: tokens.$color-primary-600;
+      box-shadow: 0 0 0 2px tokens.$color-primary-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-primary-400;
+      border-color: tokens.$color-primary-400;  
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-primary-600;
+      border-color: tokens.$color-primary-600;  
+    }
+  }
+
+  &.btn-secondary {
+    &:focus {
+      background-color: tokens.$color-secondary-500;
+      border-color: tokens.$color-secondary-500;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      background-color: tokens.$color-secondary-600;
+      box-shadow: 0 0 0 2px tokens.$color-secondary-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-secondary-400;
+      border-color: tokens.$color-secondary-400;
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-secondary-600;
+      border-color: tokens.$color-secondary-600;  
+    }
+  }
+
+  &.btn-success {
+    &:focus {
+      background-color: tokens.$color-success-500;
+      border-color: tokens.$color-success-500;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      background-color: tokens.$color-success-600;
+      box-shadow: 0 0 0 2px tokens.$color-success-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-success-400;
+      border-color: tokens.$color-success-400;
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-success-600;
+      border-color: tokens.$color-success-600;
+    }
+  }
+
+  &.btn-danger {
+    &:focus {
+      background-color: tokens.$color-danger-500;
+      border-color: tokens.$color-danger-500;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      background-color: tokens.$color-danger-600;
+      box-shadow: 0 0 0 2px tokens.$color-danger-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-danger-400;
+      border-color: tokens.$color-danger-400;
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-danger-600;
+      border-color: tokens.$color-danger-600;
+    }
+  }
+
+  &.btn-warning{
+    &:focus {
+      background-color: tokens.$color-warning-500;
+      border-color: tokens.$color-warning-500;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      background-color: tokens.$color-warning-600;
+      box-shadow: 0 0 0 2px tokens.$color-warning-400;
+    }
+    
+    &:hover {
+      background-color: tokens.$color-warning-400;
+      border-color: tokens.$color-warning-400;
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-warning-600;
+      border-color: tokens.$color-warning-600;
+    }
+  }
+
   & .svg-inline--fa.fa-w-16 {
     width: 12px;
     height: 12px;
@@ -18,6 +144,7 @@
     min-width: 18px;
     min-height: 18px;
     margin-left: 12px;
+    color: tokens.$color-black;
   }
 
   & .spinner-border, .spinner-grow {
@@ -42,8 +169,4 @@
       margin-left: 5px;
     }
   }
-}
-
-.btn-badge {
-  color: tokens.$color-black;
 }

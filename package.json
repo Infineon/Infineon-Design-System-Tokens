@@ -22,7 +22,7 @@
     "start": "concurrently -r yarn:watch-*",
     "compile-theme": "scss-bundle -e src/bootstrap-theme.scss -o dist/bootstrap-theme.scss",
     "compile-css": "sass --style=compressed --no-source-map src/index.scss dist/index.min.css",
-    "compile": "concurrently -r yarn:compile-*",
+    "compile": "yarn build-tokens && concurrently -r yarn:compile-*",
     "chromatic": "chromatic --build-script-name=build --exit-once-uploaded"
   },
   "dependencies": {

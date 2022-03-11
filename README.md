@@ -17,11 +17,11 @@
 
 - `yarn build-storybook`
 
-## Compile
+## Bundle
 
-- `yarn compile`
+- `yarn bundle`
 
-Generates a `bootstrap-theme.scss` variable file to use in any bootstrap project and `index.min.css` with custom styles.
+Generates a ready to use bundle in dist folder.
 
 ***
 

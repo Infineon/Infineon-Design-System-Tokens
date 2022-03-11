@@ -28,7 +28,7 @@ export const Dropdown = ({ size, label, icon, children, ...props }) => {
 
   return (
     <BsDropdown>
-      <BsDropdown.Toggle size={bsSize} {...props}>
+      <BsDropdown.Toggle className="btn-secondary" size={bsSize} {...props}>
         <span>
           {icon ? <FontAwesomeIcon icon={icon}></FontAwesomeIcon> : ""}
           {label}

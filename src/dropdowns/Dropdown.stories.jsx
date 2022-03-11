@@ -40,7 +40,7 @@ const HeaderTemplate = (args) => (
 
 const SearchTemplate = (args) => (
   <Dropdown {...args}>
-    <BsFormControl autoFocus className="w-auto" placeholder="Search"></BsFormControl>
+    <BsFormControl className="inf__dropdown-search" autoFocus placeholder="Search"></BsFormControl>
 
     <BsDropdown.Item href="#/action-1" active>Something else</BsDropdown.Item>
     <BsDropdown.Item href="#/action-2">Hover action</BsDropdown.Item>
@@ -53,24 +53,24 @@ const SearchTemplate = (args) => (
 const IconTemplate = (args) => (
   <Dropdown {...args}>
     <BsDropdown.Item href="#/action-1">
-      <FontAwesomeIcon icon={["fa", "coffee"]}/>Action
+      <FontAwesomeIcon icon={["fa", "bell"]}/>Action
     </BsDropdown.Item>
     <BsDropdown.Item href="#/action-2">
-      <FontAwesomeIcon icon={["fa", "coffee"]}/>Another action
+      <FontAwesomeIcon icon={["fa", "chart-pie"]}/>Another action
     </BsDropdown.Item>
     <BsDropdown.Item href="#/action-3">
       <FontAwesomeIcon icon={["fa", "coffee"]}/>Something else here
     </BsDropdown.Item>
     <BsDropdown.Divider />
     <BsDropdown.Item href="#/action-4">
-      <FontAwesomeIcon icon={["fa", "coffee"]}/>Another action
+      <FontAwesomeIcon icon={["fa", "star"]}/>Another action
     </BsDropdown.Item>
   </Dropdown>
 );
 
 const FilterTemplate = (args) => (
   <Dropdown {...args}>
-    <BsForm.Select aria-label="Default select example">
+    <BsForm.Select className="inf__dropdown-select" aria-label="Default select example">
       <option>Select</option>
       <option value="1">One</option>
       <option value="2">Two</option>
@@ -78,16 +78,16 @@ const FilterTemplate = (args) => (
     </BsForm.Select>
 
     <BsDropdown.Item href="#/action-1">
-      <Checkbox id="checkbox-01" label="Something else here"></Checkbox>
+      <Checkbox id="checkbox" label="Something else here"></Checkbox>
     </BsDropdown.Item>
-    <BsDropdown.Item href="#/action-2" active>
-      <Checkbox id="checkbox-02" label="Hover action"></Checkbox>
+    <BsDropdown.Item href="#/action-2">
+      <Checkbox id="checkbox" label="Hover action"></Checkbox>
     </BsDropdown.Item>
     <BsDropdown.Item href="#/action-3">
-      <Checkbox id="checkbox-03" label="Another action"></Checkbox>
+      <Checkbox id="checkbox" label="Another action"></Checkbox>
     </BsDropdown.Item>
     <BsDropdown.Item href="#/action-4">
-      <Checkbox id="checkbox-04" label="Something else"></Checkbox>
+      <Checkbox id="checkbox" label="Something else"></Checkbox>
     </BsDropdown.Item>
   </Dropdown>
 );

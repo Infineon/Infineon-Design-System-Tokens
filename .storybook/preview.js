@@ -2,7 +2,7 @@ import { createElement, useEffect } from "react";
 import { run as runHolder } from "holderjs/holder";
 import "./index.scss";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faInfoCircle, faStar, faCoffee, faCheck, faChevronLeft, faChevronRight, faChevronDown, faSearch, faUser, faGlobe, faShoppingCart, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faStar, faCoffee, faCheck, faChevronLeft, faChevronRight, faChevronDown, faSearch, faUser, faGlobe, faShoppingCart, faMapMarkerAlt, faChartPie, faBell } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedinIn, faTwitter, faXing, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -18,6 +18,8 @@ library.add(
   faGlobe,
   faShoppingCart,
   faMapMarkerAlt,
+  faChartPie,
+  faBell,
   faFacebook,
   faInstagram,
   faLinkedinIn,

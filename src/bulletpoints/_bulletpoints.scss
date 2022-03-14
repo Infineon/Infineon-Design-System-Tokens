@@ -2,18 +2,9 @@
 
 .inf {
   &__bulletpoints {
-
     &.row > * {
       padding-right: 15px;
       padding-left: 15px;
-
-      &:first-child {
-        padding-left: 0;
-      }
-
-      &:last-child {
-        padding-right: 0;
-      }
     }
 
     .svg-inline--fa.fa-w-16 {
@@ -24,7 +15,7 @@
     }
 
     .svg-inline--fa + p {
-      font-weight: bold;
+      font-weight: 600;
     }
 
     p + p {

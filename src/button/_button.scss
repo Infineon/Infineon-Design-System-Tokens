@@ -40,6 +40,27 @@
     }
   }
 
+  &.btn-outline-primary {
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px tokens.$color-primary-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-primary-400;
+      border-color: tokens.$color-primary-400;  
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-primary-600;
+      border-color: tokens.$color-primary-600;  
+    }
+  }
+
   &.btn-secondary {
     &:focus {
       background-color: tokens.$color-secondary-500;
@@ -55,6 +76,27 @@
     &:hover {
       background-color: tokens.$color-secondary-400;
       border-color: tokens.$color-secondary-400;
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-secondary-600;
+      border-color: tokens.$color-secondary-600;  
+    }
+  }
+
+  &.btn-outline-secondary {
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px tokens.$color-secondary-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-secondary-400;
+      border-color: tokens.$color-secondary-400;  
     }
 
     &:active, &.active {
@@ -86,6 +128,27 @@
     }
   }
 
+  &.btn-outline-success {
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px tokens.$color-success-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-success-400;
+      border-color: tokens.$color-success-400;  
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-success-600;
+      border-color: tokens.$color-success-600;  
+    }
+  }
+  
   &.btn-danger {
     &:focus {
       background-color: tokens.$color-danger-500;
@@ -109,6 +172,27 @@
     }
   }
 
+  &.btn-outline-danger {
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px tokens.$color-danger-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-danger-400;
+      border-color: tokens.$color-danger-400;  
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-danger-600;
+      border-color: tokens.$color-danger-600;  
+    }
+  }
+
   &.btn-warning{
     &:focus {
       background-color: tokens.$color-warning-500;
@@ -129,6 +213,27 @@
     &:active, &.active {
       background-color: tokens.$color-warning-600;
       border-color: tokens.$color-warning-600;
+    }
+  }
+
+  &.btn-outline-warning {
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px tokens.$color-warning-400;
+    }
+
+    &:hover {
+      background-color: tokens.$color-warning-400;
+      border-color: tokens.$color-warning-400;  
+    }
+
+    &:active, &.active {
+      background-color: tokens.$color-warning-600;
+      border-color: tokens.$color-warning-600;  
     }
   }
 

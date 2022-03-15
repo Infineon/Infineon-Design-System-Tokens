@@ -25,7 +25,7 @@ const DefaultTemplate = (args) => (
 
 const ButtonBadgeTemplate = (args) => (
   <Button {...args}>
-    {args.label}<Badge background="white" className="btn-badge">4</Badge>
+    {args.label}<Badge bg="light" className="btn-badge">4</Badge>
   </Button>
 );
 

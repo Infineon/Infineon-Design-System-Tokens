@@ -66,6 +66,26 @@
       }
     }
   }
+
+  & .btn + .btn-outline-primary:disabled, & .btn-outline-primary.disabled {
+    border-left-color: tokens.$color-primary-500;
+  }
+
+  & .btn + .btn-outline-secondary:disabled, & .btn-outline-secondary.disabled {
+    border-left-color: tokens.$color-secondary-500;
+  }
+
+  & .btn + .btn-outline-success:disabled, & .btn-outline-success.disabled {
+    border-left-color: tokens.$color-success-500;
+  }
+
+  & .btn + .btn-outline-danger:disabled, & .btn-outline-danger.disabled {
+    border-left-color: tokens.$color-danger-500;
+  }
+
+  & .btn + .btn-outline-warning:disabled, & .btn-outline-warning.disabled {
+    border-left-color: tokens.$color-warning-500;
+  }
 }
 
 .btn-group-sm > .btn,

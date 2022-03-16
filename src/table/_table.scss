@@ -18,7 +18,11 @@ table {
 }
 
 .table > :not(caption) > * > * {
-  padding: 0.5rem 38px;
+  padding: 9px 38px;
+}
+
+.table-sm > :not(caption) > * > * {
+  padding: 6px 38px;
 }
 
 th {

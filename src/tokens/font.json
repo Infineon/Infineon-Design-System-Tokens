@@ -50,40 +50,45 @@
         "docblock": ["@tokens Font Weights", "@presenter FontWeight"]
       }
     },
-  
+    
     "size": {
-      "xs": {
-        "value": "1rem",
-        "type": "fontSizes",
-        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
-      },
       "s": {
-        "value": "1.25rem",
+        "value": "0.8125rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       },
       "m": {
-        "value": "1.5rem",
+        "value": "1rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       },
       "l": {
-        "value": "1.75rem",
+        "value": "1.25rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       },
       "xl": {
-        "value": "2.25rem",
+        "value": "1.5rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       },
       "xxl": {
+        "value": "1.75rem",
+        "type": "fontSizes",
+        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
+      },
+      "xxxl": {
+        "value": "2.25rem",
+        "type": "fontSizes",
+        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
+      },
+      "xxxxl": {
         "value": "2.75rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       }
     },
-  
+
     "line-height": {
       "s": {
         "value": "1",

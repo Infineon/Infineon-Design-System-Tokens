@@ -1,0 +1,25 @@
+@use "../tokens/tokens";
+
+h1 {
+  font-size: tokens.$font-size-xxl;
+}
+
+h2 {
+  font-size: tokens.$font-size-xl;
+}
+
+h3 {
+  font-size: tokens.$font-size-l;
+}
+
+h4 {
+  font-size: tokens.$font-size-m;
+}
+
+h5 {
+  font-size: tokens.$font-size-s;
+}
+
+h6 {
+  font-size: tokens.$font-size-xs;
+}

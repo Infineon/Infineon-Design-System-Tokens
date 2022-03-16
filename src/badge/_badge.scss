@@ -2,4 +2,30 @@
 
 .badge {
   padding: 4px 12px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+h1 .badge {
+  padding: 6px 36px;
+}
+
+h2 .badge {
+  padding: 6px 30px;
+}
+
+h3 .badge {
+  padding: 6px 28px;
+}
+
+h4 .badge {
+  padding: 6px 26px;
+}
+
+h5 .badge {
+  padding: 6px 24px;
+}
+
+h6 .badge {
+  padding: 6px 20px;
 }

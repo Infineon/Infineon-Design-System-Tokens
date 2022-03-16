@@ -52,28 +52,33 @@
     },
   
     "size": {
+      "xs": {
+        "value": "1rem",
+        "type": "fontSizes",
+        "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
+      },
       "s": {
-        "value": "0.875rem",
+        "value": "1.25rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       },
       "m": {
-        "value": "1rem",
+        "value": "1.5rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       },
       "l": {
-        "value": "1rem",
+        "value": "1.75rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       },
       "xl": {
-        "value": "1rem",
+        "value": "2.25rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       },
       "xxl": {
-        "value": "1rem",
+        "value": "2.75rem",
         "type": "fontSizes",
         "docblock": ["@tokens Font Sizes", "@presenter FontSize"]
       }

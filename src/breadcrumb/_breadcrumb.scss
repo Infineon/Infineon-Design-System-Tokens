@@ -10,10 +10,10 @@
 }
 
 .breadcrumb-item + .breadcrumb-item {
-  padding-left: 16px;
+  padding-left: 21px;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
   color: tokens.$color-info-300;
-  padding-right: 16px;
+  padding-right: 21px;
 }

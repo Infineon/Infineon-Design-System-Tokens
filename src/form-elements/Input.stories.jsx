@@ -5,7 +5,6 @@ export default {
   component: Input,
   args: {
     label: "Default",
-    labelPosition: "top",
     size: "m",
     disabled: false,
   }

@@ -5,9 +5,6 @@ const propTypes = {
   /** Set the Input label text */
   label: PropTypes.string,
 
-  /** Specifies the label position */
-  labelPosition: PropTypes.oneOf(["top", "left"]),
-
   /** Specifies a large or small Input field */
   size: PropTypes.oneOf(["s", "m", "l"]),
 
@@ -18,7 +15,7 @@ const propTypes = {
   state: PropTypes.oneOf(["none", "success", "error"]),
 };
 
-export const Input = ({ label, labelPosition, size, state, children, ...props }) => {
+export const Input = ({ label, size, state, children, ...props }) => {
   const bsSize =
     size === "s" ? "sm" 
     : size === "l" ? "lg" 
@@ -29,28 +26,14 @@ export const Input = ({ label, labelPosition, size, state, children, ...props })
     : state === "error" ? "inf__input--error"
     : "";
 
-  if ( labelPosition === "top" ) {
-    return (
-      <BsForm.Group className={"mb-3 " + stateClass} controlId="input">
-        <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
-        <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
-        <BsForm.Text>
-          Caption text, description, error notification
-        </BsForm.Text>
-      </BsForm.Group>
-    );
-  } else {
-    return (
-      <BsForm.Group className={"inf__input-left mb-3 " + stateClass} controlId="input">
-        <div className="inf__input-left__container">
-          <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
-          <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
-        </div>
-        <BsForm.Text>
-          Caption text, description, error notification
-        </BsForm.Text>
-      </BsForm.Group>
-    );
-  }
+  return (
+    <BsForm.Group className={stateClass} controlId="input">
+      <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
+      <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
+      <div className="form-text">
+        Caption text, description, error notification
+      </div>
+    </BsForm.Group>
+  );
 };
 Input.propTypes = propTypes;

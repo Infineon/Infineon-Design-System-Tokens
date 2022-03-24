@@ -28,17 +28,16 @@ export const Alert = ({ closable, icon, children, ...props }) => {
   if ( icon ) {
     return (
       <BsAlert {...props} dismissible={closable}>
-        <div className="inf__alert-wrapper inf__alert-wrapper-icon">
-          <Icon/>{children}
+        <div className="inf__alert-icon-wrapper">
+          <Icon/>
         </div>
+        {children}
       </BsAlert>
     )
   } else {
     return (
       <BsAlert {...props} dismissible={closable}>
-        <div className="inf__alert-wrapper">
-          {children}
-        </div>
+        {children}
       </BsAlert>
     )
   }

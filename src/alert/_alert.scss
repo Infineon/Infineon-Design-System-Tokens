@@ -2,24 +2,15 @@
 
 .inf {
   &__alert-wrapper {
-    padding: 12px 0;
-    padding-right: 30px;
+    padding: 16px 48px 16px 24px;
     line-height: 20px;
   }
 
-  &__alert-wrapper-icon {
-    margin-left: calc(24px + 12px);
-
-    & .inf__alert-icon {
-      position: absolute;
-      left: 15px;
-      top: 50%;
-      transform: translate(0, -50%);
-      width: 24px;
-      height: 24px;
-    }
+  &__alert-text {
+    width: 100%;
+    padding: 12px 48px 12px 12px;
   }
-  
+
   &__alert-highlighted {
     font-weight: bold;
   }
@@ -29,16 +20,19 @@
   border: none;
   border-radius: 1px;
   max-width: 800px;
-  min-height: 52px;
-  padding: 0 22px;
+  padding: 0;
   display: flex;
-  align-items: center;
+}
+
+.alert-heading {
+  line-height: 1.75;
 }
 
 .alert-dismissible .btn-close {
   padding: 0;
-  width: 15px;
-  height: 15px;
+  width: 24px;
+  height: 24px;
+  background-size: 15px;
 }
 
 .alert-heading {
@@ -48,62 +42,44 @@
 
 .alert p {
   font-size: 13px;
-  line-height: 24px;
+  line-height: 1.75;
 }
 
 .alert-primary,
 .alert-secondary,
-.alert-danger {
-  color: tokens.$color-white;
-
-  & .btn-close {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" fill="%23FFF"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>') !important;
-    opacity: 1;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 18.5px;
-  }
-}
-
+.alert-danger,
 .alert-success,
 .alert-warning,
 .alert-color-gray-100 {
   color: tokens.$color-black;
+  background-color: tokens.$color-white;
 
   & .btn-close {
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" fill="%23000"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>') !important;
     opacity: 1;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 18.5px;
-  }
-}
-
-.alert-color-gray-100 {
-  & .btn-close {
-    top: 12px;
-    transform: translate(0, 0);
+    top: 14px;
+    right: 12px;
   }
 }
 
 .alert-primary {
-  background-color: tokens.$color-primary-500;
+  border: 1px solid tokens.$color-primary-500;
 }
 
 .alert-secondary {
-  background-color: tokens.$color-secondary-500;
+  border: 1px solid tokens.$color-secondary-500;
 }
 
 .alert-success {
-  background-color: tokens.$color-success-500;
+  border: 1px solid tokens.$color-success-500;
 }
 
 .alert-danger {
-  background-color: tokens.$color-danger-500;
+  border: 1px solid tokens.$color-danger-500;
 }
 
 .alert-warning {
-  background-color: tokens.$color-warning-500;
+  border: 1px solid tokens.$color-warning-500;
 }
 
 .alert-color-gray-100 {
@@ -113,4 +89,43 @@
 .alert-link {
   color: inherit !important;
   font-weight: inherit;
+}
+
+.inf__alert-icon-wrapper {
+  position: relative;
+  min-width: 48px;
+  color: tokens.$color-white;
+  padding: 14px 12px;
+}
+
+.alert-primary .inf__alert-icon-wrapper {
+  background-color: tokens.$color-primary-500;
+}
+
+.alert-secondary .inf__alert-icon-wrapper {
+  background-color: tokens.$color-secondary-500;
+}
+
+.alert-success .inf__alert-icon-wrapper {
+  background-color: tokens.$color-success-500;
+}
+
+.alert-danger .inf__alert-icon-wrapper {
+  background-color: tokens.$color-danger-500;
+}
+
+.alert-warning .inf__alert-icon-wrapper {
+  background-color: tokens.$color-warning-500;
+}
+
+.alert-color-gray-100 .inf__alert-icon-wrapper {
+  background-color: tokens.$color-black;
+}
+
+.alert .svg-inline--fa.fa-w-16 {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 24px;
+  height: 24px;
 }

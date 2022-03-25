@@ -40,12 +40,12 @@ export const Link = ({ color, underline, icon, iconPosition, ...props }) => {
   );
 
   return (
-    <div {...props}>
+    <>
       {iconPosition === "left" 
-        ? <><a className={colorClass + " " + underlineClass} href="#"><IconLeft/>Link</a></>
-        : <><a className={colorClass + " " + underlineClass} href="#">Link<IconRight/></a></>
+        ? <><a className={colorClass + " " + underlineClass} href="#" {...props}><IconLeft/>Link</a></>
+        : <><a className={colorClass + " " + underlineClass} href="#" {...props}>Link<IconRight/></a></>
       }
-    </div>
+    </>
   );
 };
 Link.propTypes = propTypes;

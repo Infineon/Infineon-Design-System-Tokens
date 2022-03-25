@@ -4,6 +4,8 @@ export default {
   title: "Components/Link",
   component: Link,
   args: {
+    color: "brand",
+    underline: false,
     icon: false,
     iconPosition: "left",
   }

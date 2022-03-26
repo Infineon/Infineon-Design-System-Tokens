@@ -2,11 +2,14 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const propTypes = {
+  /** Set the Link text */
+  linkText: PropTypes.string,
+
   /** Set Link color */
   color: PropTypes.oneOf(["brand", "font"]),
 
   /** Set underline */
-  underline: PropTypes.bool,
+  underlineNone: PropTypes.bool,
 
   /** Set icon */
   icon: PropTypes.bool,
@@ -15,21 +18,19 @@ const propTypes = {
   iconPosition: PropTypes.oneOf(["left", "right"]),
 };
 
-export const Link = ({ color, underline, icon, iconPosition, ...props }) => {
+export const Link = ({ linkText, color, underlineNone, icon, iconPosition, ...props }) => {
   const colorClass =
-    color === "brand" ? "text-secondary"
-    : color === "font" ? "text-body"
-    : undefined;
+    color === "brand" ? "ifx__link-color-brand"
+    : "";
 
   const underlineClass =
-    underline === true ? "ifx__link-underline"
-    : underline === false ? ""
-    : undefined;
+    underlineNone === true ? "ifx__link-underline-none"
+    : "";
 
   const iconPositionClass =
     iconPosition === "left" ? "ifx__link-icon--before"
     : iconPosition === "right" ? "ifx__link-icon--after"
-    : undefined;
+    : "";
 
   const IconLeft = () => (
     icon ? <FontAwesomeIcon icon={["fa", "arrow-down"]} className={iconPositionClass}/> : null
@@ -42,8 +43,8 @@ export const Link = ({ color, underline, icon, iconPosition, ...props }) => {
   return (
     <>
       {iconPosition === "left" 
-        ? <><a className={colorClass + " " + underlineClass} href="#" {...props}><IconLeft/>Link</a></>
-        : <><a className={colorClass + " " + underlineClass} href="#" {...props}>Link<IconRight/></a></>
+        ? <><a className={colorClass + " " + underlineClass} href="#" {...props}><IconLeft/>{linkText}</a></>
+        : <><a className={colorClass + " " + underlineClass} href="#" {...props}>{linkText}<IconRight/></a></>
       }
     </>
   );

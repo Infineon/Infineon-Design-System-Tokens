@@ -24,7 +24,7 @@ const DefaultTemplate = (args) => {
   return (
     <Alert {...args}>
       <div className="inf__alert-text">
-        <span className="inf__alert-highlighted">{variantUppercase}!</span> A simple {args.variant} alert with <Link href="#" color="font" underline>an example link</Link>. Give it a click if you like.      
+        <span className="inf__alert-highlighted">{variantUppercase}!</span> A simple {args.variant} alert with <Link href="#" linkText="an example link"></Link>. Give it a click if you like.      
       </div>
     </Alert>
   );

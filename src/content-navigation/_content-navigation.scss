@@ -5,6 +5,10 @@
     & .nav-link {
       color: tokens.$color-black;
 
+      &:hover {
+        color: tokens.$color-secondary-400;
+      }
+
       &.active {
         font-weight: 600;
       }
@@ -13,6 +17,20 @@
     & .nav-link.disabled {
       color: tokens.$color-info-200;
     }
+  }
+
+  &__vertical-nav-icons-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__vertical-nav-icons-btn {
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: -1px;
+    padding: 0 !important;
   }
 
   &__content-nav {
@@ -34,7 +52,11 @@
 
         &:hover {
           color: tokens.$color-white;
-          background-color: tokens.$color-secondary-500;  
+          background-color: tokens.$color-secondary-400;  
+        }
+
+        &:active {
+          background-color: tokens.$color-secondary-600;
         }
       }
     }
@@ -50,26 +72,26 @@
 
 .nav-tabs {
   display: inline-flex;
-  border-bottom: 1px solid tokens.$color-secondary-600;
+  border-bottom: 1px solid tokens.$color-secondary-500;
 
   & .nav-link {
-    width: 120px;
+    padding: 8px 16px;
     color: tokens.$color-black;
     text-align: center;
   }
 
   & .nav-link.active {
     font-weight: 600;
-    color: tokens.$color-secondary-600;
+    color: tokens.$color-secondary-500;
     border-color: transparent;
-    border-bottom: solid 5px tokens.$color-secondary-600;
+    border-bottom: solid 4px tokens.$color-secondary-500;
   }
 
   & .nav-link.disabled {
     color: tokens.$color-info-200;
   }
 
-  & .dropdown-toggle::after {
+  & .dropdown .dropdown-toggle::after {
     border: none;
     width: 10px;
     height: 5.5px;

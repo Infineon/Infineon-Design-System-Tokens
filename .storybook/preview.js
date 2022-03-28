@@ -1,7 +1,7 @@
 import { createElement, useEffect } from "react";
 import { run as runHolder } from "holderjs/holder";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faInfoCircle, faStar, faCoffee, faCheck, faChevronLeft, faChevronRight, faChevronDown, faSearch, faUser, faGlobe, faShoppingCart, faMapMarkerAlt, faChartPie, faBell } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faStar, faCoffee, faCheck, faChevronLeft, faChevronRight, faChevronDown, faSearch, faUser, faGlobe, faShoppingCart, faMapMarkerAlt, faChartPie, faBell, faArrowDown, faArrowRight, faCompass, faChartBar, faHome, faTachometerAlt } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedinIn, faTwitter, faXing, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import "./index.scss";
 import "../src/index";
@@ -21,6 +21,12 @@ library.add(
   faMapMarkerAlt,
   faChartPie,
   faBell,
+  faArrowDown,
+  faArrowRight,
+  faCompass,
+  faTachometerAlt,
+  faHome,
+  faChartBar,
   faFacebook,
   faInstagram,
   faLinkedinIn,

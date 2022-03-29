@@ -82,18 +82,21 @@ const TabsTemplate = (args) => (
 const TabsDropdownsTemplate = (args) => (
   <ContentNavigation {...args} variant="tabs">
     <BsNav.Item as="li">
-      <BsNav.Link href="/home">Active</BsNav.Link>
+      <BsNav.Link href="/home">Link active</BsNav.Link>
     </BsNav.Item>
-    <BsNavDropdown as="li" title="Dropdown" id="nav-dropdown">
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-2">Link default</BsNav.Link>
+    </BsNav.Item>
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-2">Link default</BsNav.Link>
+    </BsNav.Item>
+    <BsNavDropdown as="li" title="Link dropdown" id="nav-dropdown">
       <BsNavDropdown.Item eventKey="4.1">Action</BsNavDropdown.Item>
       <BsNavDropdown.Item eventKey="4.2">Another action</BsNavDropdown.Item>
       <BsNavDropdown.Item eventKey="4.3">Something else here</BsNavDropdown.Item>
       <BsNavDropdown.Divider />
       <BsNavDropdown.Item eventKey="4.4">Separated link</BsNavDropdown.Item>
     </BsNavDropdown>
-    <BsNav.Item as="li">
-      <BsNav.Link eventKey="link-2">Link</BsNav.Link>
-    </BsNav.Item>
     <BsNav.Item as="li">
       <BsNav.Link eventKey="disabled" disabled>
         Disabled
@@ -124,18 +127,21 @@ const PillsTemplate = (args) => (
 const PillsDropdownsTemplate = (args) => (
   <ContentNavigation {...args} variant="pills">
     <BsNav.Item as="li">
-      <BsNav.Link href="/home">Active</BsNav.Link>
+      <BsNav.Link href="/home">Link Active</BsNav.Link>
     </BsNav.Item>
-    <BsNavDropdown as="li" title="Dropdown" id="nav-dropdown">
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-2">Link default</BsNav.Link>
+    </BsNav.Item>
+    <BsNav.Item as="li">
+      <BsNav.Link eventKey="link-2">Link default</BsNav.Link>
+    </BsNav.Item>
+    <BsNavDropdown as="li" title="Link dropdown" id="nav-dropdown">
       <BsNavDropdown.Item eventKey="4.1">Action</BsNavDropdown.Item>
       <BsNavDropdown.Item eventKey="4.2">Another action</BsNavDropdown.Item>
       <BsNavDropdown.Item eventKey="4.3">Something else here</BsNavDropdown.Item>
       <BsNavDropdown.Divider />
       <BsNavDropdown.Item eventKey="4.4">Separated link</BsNavDropdown.Item>
     </BsNavDropdown>
-    <BsNav.Item as="li">
-      <BsNav.Link eventKey="link-2">Link</BsNav.Link>
-    </BsNav.Item>
     <BsNav.Item as="li">
       <BsNav.Link eventKey="disabled" disabled>
         Disabled

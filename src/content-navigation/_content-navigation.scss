@@ -2,7 +2,7 @@
 
 .inf__content-nav-default {
   flex-wrap: nowrap;
-  overflow-y: scroll;
+  overflow-x: scroll;
   font-size: 13px;
 
   @media (min-width: 576px) { 
@@ -116,7 +116,7 @@
 
 .nav-tabs {
   flex-wrap: nowrap;
-  overflow-y: scroll;
+  overflow-x: scroll;
   display: inline-flex;
   font-size: 13px;
   border-bottom: 1px solid tokens.$color-secondary-500;
@@ -178,7 +178,7 @@
 
 .nav-pills {
   flex-wrap: nowrap;
-  overflow-y: scroll;
+  overflow-x: scroll;
   font-size: 13px;
 
   @media (min-width: 576px) { 

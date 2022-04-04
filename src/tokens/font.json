@@ -91,12 +91,12 @@
 
     "line-height": {
       "s": {
-        "value": "1",
+        "value": "1.25",
         "type": "lineHeights",
         "docblock": ["@tokens Line Heights", "@presenter LineHeight"]
       },
       "m": {
-        "value": "1.5",
+        "value": "1.75",
         "type": "lineHeights",
         "docblock": ["@tokens Line Heights", "@presenter LineHeight"]
       },

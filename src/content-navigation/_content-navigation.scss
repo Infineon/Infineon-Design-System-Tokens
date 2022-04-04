@@ -1,92 +1,19 @@
 @use "../tokens/tokens";
 
-.inf {
-  &__content-nav-default {
-    & .nav-link {
-      color: tokens.$color-black;
-
-      &:hover {
-        color: tokens.$color-secondary-400;
-        background-color: tokens.$color-info-200;
-      }
-
-      &.active {
-        color: tokens.$color-secondary-500;
-      }
-    }
-
-    & .nav-link.disabled {
-      color: tokens.$color-info-200;
-    }
-  }
-
-  &__vertical-nav-icons-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  &__vertical-nav-icons-btn {
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    margin-left: -1px;
-    padding: 0 !important;
-  }
-
-  &__content-nav {
-    &__border {
-      display: inline-flex;
-      border-right: 2px solid tokens.$color-info-300;
-      padding-top: 30px;
-      padding-bottom: 30px;
-
-      & .nav-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 25px 0 16px;
-        padding: 0;
-        width: 24px;
-        height: 24px;
-        color: tokens.$color-black;
-
-        &:hover {
-          color: tokens.$color-white;
-          background-color: tokens.$color-secondary-400;  
-        }
-
-        &:active {
-          background-color: tokens.$color-secondary-600;
-        }
-      }
-    }
-
-    &__divider {
-      color: tokens.$color-secondary-500;
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-  }
-}
-
-.nav-tabs {
-  display: inline-flex;
+.inf__content-nav-default {
+  flex-wrap: nowrap;
+  overflow-y: scroll;
   font-size: 13px;
-  border-bottom: 1px solid tokens.$color-secondary-500;
 
   @media (min-width: 576px) { 
     font-size: 16px;
   }
-
+  
   & .nav-link {
-    padding: 4px 8px;
+    white-space: nowrap;
     color: tokens.$color-black;
-    text-align: center;
-    border-radius: 1px;
 
-    @media (min-width: 576px) { 
+    @media (min-width: 576px) {
       padding: 8px 16px;
     }
 
@@ -94,17 +21,19 @@
       color: tokens.$color-secondary-400;
       background-color: tokens.$color-info-200;
     }
-  }
 
-  & .nav-link.active, & .nav-link:active {
-    font-weight: 600;
-    color: tokens.$color-secondary-500;
-    border-color: transparent;
-    border-bottom: solid 4px tokens.$color-secondary-500;
+    &.active {
+      color: tokens.$color-secondary-500;
+      background-color: tokens.$color-white;
+    }
   }
 
   & .nav-link.disabled {
     color: tokens.$color-info-200;
+  }
+
+  & .dropdown.show .dropdown-toggle::after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%23000"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>');
   }
 
   & .dropdown .dropdown-toggle::after {
@@ -114,12 +43,152 @@
     background-size: 10px;
     background-position: center;
     background-repeat: no-repeat;
-    vertical-align: 0;
+    vertical-align: 3px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%23000"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>');
+  }
+}
+
+.inf__content-nav-default.flex-column {
+  display: inline-block;
+}
+
+.inf__content-nav-default-vertical.flex-column {
+  display: inline-block;
+  border-left: 1px solid tokens.$color-secondary-500;
+
+  & .nav-link:not(.active) {
+    padding-left: calc(16px + 3px);
+  }
+
+  & .nav-link.active {
+    color: tokens.$color-secondary-500;
+    border-left: 3px solid tokens.$color-secondary-500;
+  }
+}
+
+.inf__vertical-nav-icons-wrapper {
+  position: relative;
+  display: inline-block;
+
+  & .inf__vertical-nav-icons-btn {
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: -1px;
+    padding: 0 !important;
+  }
+
+  & .inf__content-nav__border {
+    display: inline-flex;
+    border-right: 2px solid tokens.$color-info-300;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    & .nav-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 25px 0 16px;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      color: tokens.$color-black;
+
+      &:hover {
+        color: tokens.$color-white;
+        background-color: tokens.$color-secondary-400;  
+      }
+
+      &:active {
+        background-color: tokens.$color-secondary-600;
+      }
+    }
+  }
+
+  & .inf__content-nav__divider {
+    color: tokens.$color-secondary-500;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.nav-tabs {
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  display: inline-flex;
+  font-size: 13px;
+  border-bottom: 1px solid tokens.$color-secondary-500;
+
+  @media (min-width: 576px) { 
+    font-size: 16px;
+  }
+
+  & .nav-item.show .nav-link {
+    color: tokens.$color-black;
+  }
+
+  & .nav-link {
+    white-space: nowrap;
+    padding: 4px 8px;
+    color: tokens.$color-black;
+    text-align: center;
+    border: none;
+    border-radius: 1px;
+
+    @media (min-width: 576px) { 
+      padding: 8px 16px;
+    }
+
+    &:hover {
+      padding-bottom: 11px;
+      color: tokens.$color-secondary-400;
+      background-color: tokens.$color-info-200;
+    }
+  }
+
+  & .nav-link.active {
+    font-weight: 600;
+    color: tokens.$color-secondary-500;
+    background-color: tokens.$color-white;
+    border-color: transparent;
+    border-bottom: solid 4px tokens.$color-secondary-500;
+  }
+
+  & .nav-link.disabled {
+    color: tokens.$color-info-200;
+  }
+
+  & .dropdown.show .dropdown-toggle::after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%23000"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>');
+  }
+
+  & .dropdown .dropdown-toggle::after {
+    border: none;
+    width: 10px;
+    height: 5.5px;
+    background-size: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: 3px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%23000"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>');
   }
 }
 
 .nav-pills {
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+  font-size: 13px;
+
+  @media (min-width: 576px) { 
+    font-size: 16px;
+  }
+
+  & .nav-item.show .nav-link {
+    background-color: transparent;
+  }
+
   .nav-item {
     margin-right: 4px;
 
@@ -128,7 +197,7 @@
     }
 
     & .nav-link {
-      height: 32px;
+      white-space: nowrap;
       padding: 6px 22px;
       color: tokens.$color-black;
       border-radius: 100px;
@@ -149,6 +218,10 @@
     }
   }
 
+  & .dropdown.show .dropdown-toggle::after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%23000"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>');
+  }
+
   & .dropdown .dropdown-toggle::after {
     border: none;
     width: 10px;
@@ -156,7 +229,27 @@
     background-size: 10px;
     background-position: center;
     background-repeat: no-repeat;
-    vertical-align: 0;
+    vertical-align: 3px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="%23000"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>');
+  }
+}
+
+.nav-pills.flex-column {
+  display: inline-block;
+
+  @media (min-width: 576px) { 
+    font-size: 16px;
+  }
+
+  .nav-item {
+    margin-bottom: 6px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
   }
 }

@@ -8,16 +8,16 @@ export default {
 
 const Bulletpoints2Template = (args) => (
   <Bulletpoints {...args}>
-    <div className="col-md-4">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
-      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
+    <div className="col-md-6">
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
+      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
 
-    <div className="col-md-4">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
-      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
+    <div className="col-md-6">
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
+      <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
   </Bulletpoints>
 );
@@ -25,20 +25,20 @@ const Bulletpoints2Template = (args) => (
 const Bulletpoints3Template = (args) => (
   <Bulletpoints {...args}>
     <div className="col-md-4">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
       <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
 
     <div className="col-md-4">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
       <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
 
     <div className="col-md-4">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
       <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
   </Bulletpoints>
@@ -47,26 +47,26 @@ const Bulletpoints3Template = (args) => (
 const Bulletpoints4Template = (args) => (
   <Bulletpoints {...args}>
     <div className="col-md-3">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
       <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
 
     <div className="col-md-3">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
       <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
 
     <div className="col-md-3">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
       <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
 
     <div className="col-md-3">
-      <FontAwesomeIcon icon={["fa", "check"]}/>
-      <p className="mb-0">Bear claw cake biscuit</p>
+      <FontAwesomeIcon icon={["fal", "check"]}/>
+      <h5>Collumn Headline</h5>
       <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
     </div>
   </Bulletpoints>

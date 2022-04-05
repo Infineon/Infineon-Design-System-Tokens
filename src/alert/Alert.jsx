@@ -22,13 +22,13 @@ const propTypes = {
 
 export const Alert = ({ closable, icon, children, ...props }) => {
   const Icon = () => (
-    icon ? <FontAwesomeIcon icon={["fa", "info-circle"]} className="inf__alert-icon"/> : null
+    icon ? <FontAwesomeIcon icon={["fal", "circle-info"]} className="ifx__alert-icon"/> : null
   );
 
   if ( icon ) {
     return (
       <BsAlert {...props} dismissible={closable}>
-        <div className="inf__alert-icon-wrapper">
+        <div className="ifx__alert-icon-wrapper">
           <Icon/>
         </div>
         {children}

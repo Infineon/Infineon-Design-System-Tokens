@@ -67,7 +67,7 @@ export const ParagraphHorizontal = ({ children, aspectRatio, imagePosition, alig
   );
 
   return (
-    <div className={"inf__paragraph inf__paragraph-horizontal d-flex " + alignItemsClass} {...props}>
+    <div className={"inf__paragraph-horizontal d-flex " + alignItemsClass} {...props}>
       {imagePosition === "left" 
         ? <><Image/> {children}</>
         : <>{children} <Image/></>

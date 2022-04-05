@@ -17,7 +17,7 @@ const DefaultTemplate = (args) => (
 
 const TwoColumnsTemplate = (args) => (
   <Paragraph {...args}>
-    <p className="inf__paragraph-vertical__columns">{args.text}</p>
+    <p className="inf__paragraph__columns">{args.text}</p>
   </Paragraph>
 );
 

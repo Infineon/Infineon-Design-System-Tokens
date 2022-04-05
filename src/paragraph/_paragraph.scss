@@ -2,10 +2,27 @@
 
 .inf {
   &__paragraph {
-    h3 {
-      font-size: 36px;
-      line-height: 46px;
-      font-weight: 600;
+    &__columns {
+      column-count: 1;
+      column-gap: 24px;
+  
+      @media (min-width: 768px) { 
+        column-count: 2;
+      } 
+    }
+
+    &__text-centered {
+      & .row {
+        justify-content: center;
+      }
+    }
+
+    p {
+      font-size: 13px;
+
+      @media (min-width: 768px) { 
+        font-size: 16px;
+      } 
     }
   }
 
@@ -49,35 +66,13 @@
     }
 
     h3 {
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 600;
       margin-bottom: 5px;
 
       @media (min-width: 768px) { 
         margin-bottom: 8px;
-      } 
-    }
-  }
-
-  &__paragraph-vertical {
-    &__columns {
-      column-count: 1;
-      column-gap: 24px;
-  
-      @media (min-width: 768px) { 
-        column-count: 2;
-      } 
-    }
-
-    &__text-centered {
-      & .row {
-        justify-content: center;
-      }
-    }
-
-    p {
-      font-size: 13px;
-
-      @media (min-width: 768px) { 
-        font-size: 16px;
       } 
     }
   }

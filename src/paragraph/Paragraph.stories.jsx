@@ -1,8 +1,8 @@
-import { ParagraphVertical } from "./ParagraphVertical";
+import { Paragraph } from "./Paragraph";
 
 export default {
-  title: "Components/Paragraph Vertical",
-  component: ParagraphVertical,
+  title: "Components/Paragraph",
+  component: Paragraph,
   args: {
     title: "The standard Lorem Ipsum passage, used since the 1500s",
     text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
@@ -10,19 +10,19 @@ export default {
 };
 
 const DefaultTemplate = (args) => (
-  <ParagraphVertical {...args}>
+  <Paragraph {...args}>
     <p>{args.text}</p>
-  </ParagraphVertical>
+  </Paragraph>
 );
 
 const TwoColumnsTemplate = (args) => (
-  <ParagraphVertical {...args}>
+  <Paragraph {...args}>
     <p className="inf__paragraph-vertical__columns">{args.text}</p>
-  </ParagraphVertical>
+  </Paragraph>
 );
 
 const ArticleTemplate = (args) => (
-  <ParagraphVertical {...args}>
+  <Paragraph {...args}>
     <div>
       <div className="row">
         <div className="col-6">
@@ -34,7 +34,7 @@ const ArticleTemplate = (args) => (
         </div>
       </div>
     </div>
-  </ParagraphVertical>
+  </Paragraph>
 );
 
 export const Default = DefaultTemplate.bind({});

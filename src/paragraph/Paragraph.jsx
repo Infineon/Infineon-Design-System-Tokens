@@ -8,11 +8,11 @@ const propTypes = {
   text: PropTypes.string,
 };
 
-export const ParagraphVertical = ({ children, ...props }) => {
+export const Paragraph = ({ children, ...props }) => {
   return (
     <div className="inf__paragraph inf__paragraph-vertical" {...props}>
       {children}
     </div>
   )
 };
-ParagraphVertical.propTypes = propTypes;
+Paragraph.propTypes = propTypes;

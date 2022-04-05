@@ -57,25 +57,7 @@
     }
   }
 
-  
   &__paragraph-vertical {
-    &__img {
-      width: 100%;
-      height: 139px;
-
-      & + div {
-        margin-top: 13px !important;
-
-        @media (min-width: 768px) { 
-          margin-top: 28px !important;
-        } 
-      }
-    }
-
-    div + .inf__paragraph-vertical__img {
-      margin-top: 16px !important;
-    }
-
     &__columns {
       column-count: 1;
       column-gap: 24px;
@@ -91,23 +73,11 @@
       }
     }
 
-    h3 {
-      margin: 0 40px 24px 40px;
-
-      @media (min-width: 768px) { 
-        margin: 0 14px 8px 14px;
-      } 
-    }
-
     p {
-      font-size: 16px;
-      line-height: 31px;
-      margin: 0 40px 0 40px;
+      font-size: 13px;
 
       @media (min-width: 768px) { 
-        font-size: 22px;
-        line-height: 40px;
-        margin: 0 14px 0 14px;
+        font-size: 16px;
       } 
     }
   }

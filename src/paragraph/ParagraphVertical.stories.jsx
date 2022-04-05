@@ -6,29 +6,26 @@ export default {
   args: {
     title: "The standard Lorem Ipsum passage, used since the 1500s",
     text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
-    imagePosition: "top",
   }
 };
 
-const LongerTextTemplate = (args) => (
+const DefaultTemplate = (args) => (
   <ParagraphVertical {...args}>
-    <div>
-      <div className="row">
-        <div className="col-md-6">
-          <h3>{args.title}</h3>
-        </div>
-      </div>
-      <p className="inf__paragraph-vertical__columns">{args.text}</p>
-    </div>
+    <p>{args.text}</p>
   </ParagraphVertical>
 );
 
-const LongerTextTemplate2 = (args) => (
+const TwoColumnsTemplate = (args) => (
+  <ParagraphVertical {...args}>
+    <p className="inf__paragraph-vertical__columns">{args.text}</p>
+  </ParagraphVertical>
+);
+
+const ArticleTemplate = (args) => (
   <ParagraphVertical {...args}>
     <div>
       <div className="row">
         <div className="col-6">
-          <h3>{args.title}</h3>
         </div>
       </div>
       <div className="row">
@@ -40,26 +37,17 @@ const LongerTextTemplate2 = (args) => (
   </ParagraphVertical>
 );
 
-const LongerTextTemplate3 = (args) => (
-  <ParagraphVertical {...args}>
-    <div>
-      <h3>{args.title}</h3>
-      <p>{args.text}</p>
-    </div>
-  </ParagraphVertical>
-);
-
-export const LongerText = LongerTextTemplate.bind({});
-LongerText.args = {
-  text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
-};
-
-export const LongerText2 = LongerTextTemplate2.bind({});
-LongerText2.args = {
+export const Default = DefaultTemplate.bind({});
+Default.args = {
   text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
 };
 
-export const LongerText3 = LongerTextTemplate3.bind({});
-LongerText3.args = {
+export const TwoColumns = TwoColumnsTemplate.bind({});
+TwoColumns.args = {
+  text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
+};
+
+export const Article = ArticleTemplate.bind({});
+Article.args = {
   text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
 };

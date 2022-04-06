@@ -43,3 +43,51 @@
     margin: 0;
   }
 }
+
+.inf__vertical-nav-icons-wrapper {
+  position: relative;
+  display: inline-block;
+
+  & .inf__vertical-nav-icons-btn {
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: -1px;
+    padding: 0 !important;
+  }
+
+  & .inf__content-nav__border {
+    display: inline-flex;
+    border-right: 2px solid tokens.$color-info-300;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    & .nav-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 25px 0 16px;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      color: tokens.$color-black;
+
+      &:hover {
+        color: tokens.$color-white;
+        background-color: tokens.$color-secondary-400;  
+      }
+
+      &:active {
+        background-color: tokens.$color-secondary-600;
+      }
+    }
+  }
+
+  & .inf__content-nav__divider {
+    color: tokens.$color-secondary-500;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

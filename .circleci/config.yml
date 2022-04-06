@@ -28,9 +28,6 @@ commands:
   install:
     description: Install & cache dependencies
     steps:
-      – run:
-          name: set up fontawesome registry
-          command: npm config set \"//npm.fontawesome.com/:_authToken\" ${FONTAWESOME_NPM_AUTH_TOKEN}
       - restore_cache: *restore-cache-yarn
       - restore_cache: *restore-cache-node
       - run:
@@ -44,6 +41,7 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run: npm config set "//npm.fontawesome.com/:_authToken" ${FONTAWESOME_NPM_AUTH_TOKEN}
       - install
       - run: yarn chromatic
 

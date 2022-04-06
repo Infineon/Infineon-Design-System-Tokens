@@ -42,7 +42,7 @@ const ArticleTemplate = (args) => (
   </Paragraph>
 );
 
-const Bulletpoints2Template = (args) => (
+const TwoColumnsWithIconsTemplate = (args) => (
   <Paragraph {...args}>
     <div className="row ifx__bulletpoints">
       <div className="col-md-6">
@@ -60,7 +60,7 @@ const Bulletpoints2Template = (args) => (
   </Paragraph>
 );
 
-const Bulletpoints3Template = (args) => (
+const ThreeColumnsWithIconsTemplate = (args) => (
   <Paragraph {...args}>
     <div className="row ifx__bulletpoints">
       <div className="col-md-4">
@@ -84,7 +84,7 @@ const Bulletpoints3Template = (args) => (
   </Paragraph>
 );
 
-const Bulletpoints4Template = (args) => (
+const FourColumnsWithIconsTemplate = (args) => (
   <Paragraph {...args}>
     <div className="row ifx__bulletpoints">
       <div className="col-md-3">
@@ -129,8 +129,8 @@ Article.args = {
   text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
 };
 
-export const Bulletpoints2 = Bulletpoints2Template.bind({});
+export const TwoColumnsWithIcons = TwoColumnsWithIconsTemplate.bind({});
 
-export const Bulletpoints3 = Bulletpoints3Template.bind({});
+export const ThreeColumnsWithIcons = ThreeColumnsWithIconsTemplate.bind({});
 
-export const Bulletpoints4 = Bulletpoints4Template.bind({});
+export const FourColumnsWithIcons = FourColumnsWithIconsTemplate.bind({});

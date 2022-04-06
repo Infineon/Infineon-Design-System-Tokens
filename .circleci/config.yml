@@ -30,7 +30,7 @@ commands:
     steps:
       – run:
           name: set up fontawesome registry
-          command: npm config set "//npm.fontawesome.com/:_authToken" ${FONTAWESOME_NPM_AUTH_TOKEN}
+          command: npm config set \"//npm.fontawesome.com/:_authToken\" ${FONTAWESOME_NPM_AUTH_TOKEN}
       - restore_cache: *restore-cache-yarn
       - restore_cache: *restore-cache-node
       - run:

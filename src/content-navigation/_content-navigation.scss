@@ -12,6 +12,7 @@
   & .nav-link {
     white-space: nowrap;
     color: tokens.$color-black;
+    padding: 4px 8px;
 
     @media (min-width: 576px) {
       padding: 8px 16px;
@@ -80,6 +81,14 @@
       margin-right: 0;
     }
 
+    @media (min-width: 576px) { 
+      margin-right: 10px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
     & .nav-link {
       white-space: nowrap;
       padding: 6px 22px;
@@ -126,7 +135,15 @@
   }
 
   .nav-item {
-    margin-bottom: 6px;
+    margin: 0 0 6px 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 576px) { 
+      margin: 0 0 12px 0;
+    }
 
     &:last-of-type {
       margin-bottom: 0;

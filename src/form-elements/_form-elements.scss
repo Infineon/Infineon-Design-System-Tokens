@@ -34,6 +34,15 @@
   border-color: tokens.$color-secondary-500;
 }
 
+.form-check-input:checked[type="radio"] {
+  background-color: tokens.$color-white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.5' fill='%23378375'/%3E%3C/svg%3E");
+}
+
+.form-check-input:checked[type="radio"]:focus {
+  background-color: tokens.$color-white;
+}
+
 #checkbox.form-check-input[type="checkbox"] {
   border-radius: 1px;
 }
@@ -113,6 +122,8 @@
 .form-control::file-selector-button {
   background-color: tokens.$color-info-100;
   color: tokens.$color-black;
+  padding: 8px 15px;
+  font-weight: 600;
 }
 
 .form-control.form-control-sm:not(#inputTextarea), .form-select.form-select-sm {
@@ -120,7 +131,6 @@
 }
 
 .form-control:not(#inputTextarea), .form-select {
-  height: 44px;
   color: tokens.$color-black;
   border: 1px solid tokens.$color-info-300;
   border-radius: 1px;
@@ -216,19 +226,23 @@
 }
 
 #inf__inputSearch.form-control {
-  padding: 5px 16px 5px 36px;
+  padding: 8px 36px 8px 16px;
 }
 
 .inf__search-icon-wrapper {
   position: absolute;
+  right: 0;
   pointer-events: none;
   z-index: 2;
-  width: 36px;
-  height: 36px;
-  padding: 10px;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
 
-  & svg {
+  svg.svg-inline--fa.fa-w-16 {
+    width: 20px;
+    height: 20px;
     vertical-align: 1px;
+    color: tokens.$color-info-500;
   }
 }
 

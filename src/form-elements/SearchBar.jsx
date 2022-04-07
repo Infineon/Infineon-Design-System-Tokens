@@ -19,10 +19,10 @@ export const SearchBar = ({ size, ...props }) => {
 
   return (
     <BsInputGroup>
-      <span class="inf__search-icon-wrapper">
-        <FontAwesomeIcon icon={["fas", "search"]}/>
-      </span>
       <BsForm.Control id="inf__inputSearch" className="test" type="text" placeholder="Search" size={bsSize} {...props}></BsForm.Control>
+      <span class="inf__search-icon-wrapper">
+        <FontAwesomeIcon icon={["fal", "magnifying-glass"]}/>
+      </span>
     </BsInputGroup>    
   );
 };

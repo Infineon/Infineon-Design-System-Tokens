@@ -1,8 +1,8 @@
 import { createElement, useEffect } from "react";
 import { run as runHolder } from "holderjs/holder";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faStar, faCoffee, faChevronLeft, faChevronRight, faSearch, faUser, faGlobe, faShoppingCart, faMapMarkerAlt, faChartPie, faBell, faCalendar, faArrowDown, faArrowRight, faCompass, faChartBar, faHome, faTachometerAlt } from '@fortawesome/free-solid-svg-icons'
-import { faInfoCircle, faCheckCircle, faTriangleExclamation, faCircleExclamation, faXmark, faCheck, faChevronDown } from '@fortawesome/pro-light-svg-icons'
+import { faStar, faCoffee, faChevronLeft, faChevronRight, faShoppingCart, faMapMarkerAlt, faChartPie, faBell, faCalendar, faArrowDown, faArrowRight, faCompass, faChartBar, faHome, faTachometerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faInfoCircle, faCheckCircle, faTriangleExclamation, faCircleExclamation, faXmark, faCheck, faChevronDown, faMagnifyingGlass, faUser, faGlobe } from '@fortawesome/pro-light-svg-icons'
 import { faFacebook, faInstagram, faLinkedinIn, faTwitter, faXing, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import "./index.scss";
 import "../src/index";
@@ -16,12 +16,12 @@ library.add(
   faStar,
   faCoffee,
   faCheck,
-  faChevronLeft,
-  faChevronRight,
   faChevronDown,
-  faSearch,
+  faMagnifyingGlass,
   faUser,
   faGlobe,
+  faChevronLeft,
+  faChevronRight,
   faShoppingCart,
   faMapMarkerAlt,
   faChartPie,

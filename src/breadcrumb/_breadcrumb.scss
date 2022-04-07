@@ -5,15 +5,17 @@
 }
 
 .breadcrumb-item a {
+  display: inline-block;
+  font-weight: 400;
   text-decoration: none;
-  color: tokens.$color-black;
 }
 
 .breadcrumb-item + .breadcrumb-item {
-  padding-left: 21px;
+  padding-left: 16px;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
   color: tokens.$color-info-300;
-  padding-right: 21px;
+  padding-right: 16px;
+  margin: 3px 0;
 }

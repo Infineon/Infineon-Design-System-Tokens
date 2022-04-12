@@ -1,27 +1,9 @@
 @use "../tokens/tokens";
 
 .inf {
-  &__paragraph {
-    &__columns {
-      column-count: 1;
-      column-gap: 24px;
-  
-      @media (min-width: 768px) { 
-        column-count: 2;
-      } 
-    }
-
-    &__text-centered {
-      & .row {
-        justify-content: center;
-      }
-    }
-  }
-
   &__paragraph-horizontal {
     & .inf__aspect-ratio {
       &__box-wrapper {
-        max-width: 320px;
         width: 100%;
         margin-left: 1rem;
       }
@@ -57,20 +39,48 @@
       }
     }
 
+    .ifx__paragraph-category {
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
     h3 {
       font-size: 36px;
-      line-height: 46px;
+      line-height: 45px;
       font-weight: 600;
       margin-bottom: 5px;
 
       @media (min-width: 768px) { 
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       } 
+    }
+
+    ul {
+      margin-left: 16px;
     }
   }
 }
 
 .ifx__paragraph-without-icon {
+  .ifx__paragraph__columns {
+    column-count: 1;
+    column-gap: 30px;
+
+    @media (min-width: 768px) { 
+      column-count: 2;
+    } 
+  }
+
+  .ifx__paragraph-without-icon-article-text {
+    font-size: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) { 
+      font-size: 22px;
+      margin-bottom: 8px;
+    } 
+  }
+
   p {
     font-size: 13px;
 

@@ -12,8 +12,10 @@ export default {
 
 const DefaultTemplate = (args) => (
   <Paragraph {...args}>
-    <div className="ifx__paragraph-without-icon">
-      <p>{args.text}</p>
+    <div className="col-12 col-md-10">
+      <div className="ifx__paragraph-without-icon">
+        <p>{args.text}</p>
+      </div>
     </div>
   </Paragraph>
 );
@@ -21,7 +23,7 @@ const DefaultTemplate = (args) => (
 const TwoColumnsTemplate = (args) => (
   <Paragraph {...args}>
     <div className="ifx__paragraph-without-icon">
-      <p className="inf__paragraph__columns">{args.text}</p>
+      <p className="ifx__paragraph__columns">{args.text}</p>
     </div>
   </Paragraph>
 );
@@ -29,12 +31,9 @@ const TwoColumnsTemplate = (args) => (
 const ArticleTemplate = (args) => (
   <Paragraph {...args}>
     <div className="ifx__paragraph-without-icon">
-      <div className="row">
-        <div className="col-6">
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-7">
+      <div className="row justify-content-center">
+        <div className="col-10">
+          <p className="ifx__paragraph-without-icon-article-text">Lead But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
           <p>{args.text}</p>
         </div>
       </div>
@@ -121,12 +120,12 @@ Default.args = {
 
 export const TwoColumns = TwoColumnsTemplate.bind({});
 TwoColumns.args = {
-  text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
+  text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings."
 };
 
 export const Article = ArticleTemplate.bind({});
 Article.args = {
-  text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
+  text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
 };
 
 export const TwoColumnsWithIcons = TwoColumnsWithIconsTemplate.bind({});

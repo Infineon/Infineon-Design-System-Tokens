@@ -20,14 +20,14 @@ export const Pagination = ({ size, active, ...props }) => {
     <BsPagination size={bsSize} {...props}>
       <li className="page-item">
         <a className="page-link inf__page-link--first" role="button" tabindex="0">
-          <FontAwesomeIcon icon={["fa", "chevron-left"]}/>
+          <FontAwesomeIcon icon={["fal", "chevrons-left"]}/>
           <span class="visually-hidden">First</span>
         </a>
       </li>
 
       <li className="page-item">
         <a className="page-link inf__page-link--previous" role="button" tabindex="0">
-          <FontAwesomeIcon icon={["fa", "chevron-left"]}/>
+          <FontAwesomeIcon icon={["fal", "chevron-left"]}/>
           <span class="visually-hidden">Previous</span>
         </a>
       </li>
@@ -40,14 +40,14 @@ export const Pagination = ({ size, active, ...props }) => {
 
       <li className="page-item">
         <a className="page-link inf__page-link--next" role="button" tabindex="0">
-          <FontAwesomeIcon icon={["fa", "chevron-right"]}/>
+          <FontAwesomeIcon icon={["fal", "chevron-right"]}/>
           <span class="visually-hidden">Next</span>
         </a>
       </li>
 
       <li className="page-item">
         <a className="page-link inf__page-link--last" role="button" tabindex="0">
-          <FontAwesomeIcon icon={["fa", "chevron-right"]}/>
+          <FontAwesomeIcon icon={["fal", "chevrons-right"]}/>
           <span class="visually-hidden">Last</span>
         </a>
       </li>

@@ -33,6 +33,11 @@
   &:hover {
     color: tokens.$color-black;
     background-color: tokens.$color-info-200;
+
+    & .fa-chevron-left,
+    & .fa-chevron-right {
+      color: tokens.$color-black;
+    }
   }
 }
 
@@ -97,8 +102,8 @@
 }
 
 .pagination {
-  .fa-chevron-left,
-  .fa-chevron-right {
+  .fa-chevrons-left,
+  .fa-chevrons-right {
     color: tokens.$color-info-300;
   }
 }

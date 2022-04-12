@@ -6,9 +6,9 @@ export default {
   title: "Components/Paragraph Horizontal",
   component: ParagraphHorizontal,
   args: {
-    title: "The standard Lorem Ipsum passage, used since the 1500s",
-    text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.",
-    aspectRatio: "4:3",
+    title: "The standard Lorem Ipsum headline",
+    text: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
+    aspectRatio: "16:9",
     imagePosition: "right",
     alignItems: "center",
   }
@@ -17,10 +17,11 @@ export default {
 const DefaultTemplate = (args) => (
   <ParagraphHorizontal {...args}>
     <div>
+      <p className="ifx__paragraph-category">Category</p>
       <h3>{args.title}</h3>
       <p>{args.text}</p>
       <Button color="primary" href="#">
-        Primary
+        Button
       </Button>
     </div>
   </ParagraphHorizontal>
@@ -29,20 +30,21 @@ const DefaultTemplate = (args) => (
 const BulletpointsTemplate = (args) => (
   <ParagraphHorizontal {...args}>
     <div>
+      <p className="ifx__paragraph-category">Category</p>
       <h3>{args.title}</h3>
       <p>{args.text}</p>
       <ul className="list-unstyled">
         <li>
-          <FontAwesomeIcon icon={["fa", "check"]}/>
-          Bear claw cake biscuit
+          <FontAwesomeIcon icon={["fal", "check"]}/>
+          Checkmark
         </li>
         <li>
-          <FontAwesomeIcon icon={["fa", "check"]}/>
-          Bear claw cake biscuit
+          <FontAwesomeIcon icon={["fal", "check"]}/>
+          Checkmark
         </li>
         <li>
-          <FontAwesomeIcon icon={["fa", "check"]}/>
-          Bear claw cake biscuit
+          <FontAwesomeIcon icon={["fal", "check"]}/>
+          Checkmark
         </li>
       </ul>
     </div>

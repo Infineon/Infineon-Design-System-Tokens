@@ -15,7 +15,7 @@ const image = {
 const DefaultTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
-      <div className="d-md-flex justify-content-between flex-wrap inf__footer-bottom">
+      <div className="d-md-flex justify-content-between flex-wrap ifx__footer-bottom">
         <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
           <li><a href="#">Imprint</a></li>
@@ -23,7 +23,7 @@ const DefaultTemplate = (args) => (
           <li><a href="#">Glossary</a></li>
         </ul>
 
-        <div className="inf__footer-bottom__copyright">
+        <div className="ifx__footer-bottom__copyright">
           © 1999 - 2021 Infineon Technologies AG
         </div>
       </div>
@@ -34,10 +34,10 @@ const DefaultTemplate = (args) => (
 const MediumTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
-      <div className="d-flex align-items-end inf__footer-border">
+      <div className="d-flex align-items-end ifx__footer-border">
         <div className="d-flex justify-content-between flex-wrap w-100">
           <img src={image.src} alt={image.alt} width="110" height="48"/>
-          <div className='inf__footer-top__social-media'>
+          <div className='ifx__footer-top__social-media'>
             <a href="">
               <FontAwesomeIcon icon={["fab", "facebook"]} />
             </a>
@@ -60,7 +60,7 @@ const MediumTemplate = (args) => (
         </div>
       </div>
 
-      <div className="d-md-flex justify-content-between align-items-center flex-wrap inf__footer-bottom">
+      <div className="d-md-flex justify-content-between align-items-center flex-wrap ifx__footer-bottom">
         <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
           <li><a href="#">Imprint</a></li>
@@ -68,7 +68,7 @@ const MediumTemplate = (args) => (
           <li><a href="#">Glossary</a></li>
         </ul>
 
-        <div className="inf__footer-bottom__copyright">
+        <div className="ifx__footer-bottom__copyright">
           © 1999 - 2021 Infineon Technologies AG
         </div>
       </div>
@@ -79,7 +79,7 @@ const MediumTemplate = (args) => (
 const LargeTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
-      <div className="inf__footer-top">
+      <div className="ifx__footer-top">
         <div className="row">
           <div className="col-6 col-md-2">
             <h5>Mainlink</h5>
@@ -122,10 +122,10 @@ const LargeTemplate = (args) => (
           </div>
         </div>
 
-        <div className="d-flex align-items-end inf__footer-border">
+        <div className="d-flex align-items-end ifx__footer-border">
           <div className="d-flex justify-content-between flex-wrap w-100">
             <img src={image.src} alt={image.alt} width="110" height="48"/>
-            <div className='inf__footer-top__social-media'>
+            <div className='ifx__footer-top__social-media'>
               <a href="">
                 <FontAwesomeIcon icon={["fab", "facebook"]} />
               </a>
@@ -149,7 +149,7 @@ const LargeTemplate = (args) => (
         </div>
       </div>
 
-      <div className="d-md-flex justify-content-between flex-wrap inf__footer-bottom">
+      <div className="d-md-flex justify-content-between flex-wrap ifx__footer-bottom">
         <ul className="list-unstyled d-sm-flex">
           <li><a href="#">Terms</a></li>
           <li><a href="#">Imprint</a></li>
@@ -157,7 +157,7 @@ const LargeTemplate = (args) => (
           <li><a href="#">Glossary</a></li>
         </ul>
 
-        <div className="inf__footer-bottom__copyright">
+        <div className="ifx__footer-bottom__copyright">
           © 1999 - 2021 Infineon Technologies AG
         </div>
       </div>

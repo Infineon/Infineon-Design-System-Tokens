@@ -18,7 +18,7 @@ export const ProgressBar = ({ label, small, now }) => {
     : "";
 
   const smallClass = 
-    small ? "inf__progress-small" 
+    small ? "ifx__progress-small" 
     : "";
 
   return (

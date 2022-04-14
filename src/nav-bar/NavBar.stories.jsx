@@ -24,9 +24,9 @@ const DefaultTemplate = (args) => (
     <BsNavBar.Toggle aria-controls="basic-navbar-nav" />
     <BsNavBar.Collapse id="basic-navbar-nav">
       <div className="d-flex justify-content-between align-items-center w-100">
-        <p className="inf__application-name">Application name</p>
+        <p className="ifx__application-name">Application name</p>
         <div className="d-flex align-items-center">
-          <SearchBar className="inf__nav-searchbar"></SearchBar>
+          <SearchBar className="ifx__nav-searchbar"></SearchBar>
           <div>
             <BsNav.Link href="#">Link
               <FontAwesomeIcon icon={["fas", "user"]}/>
@@ -45,8 +45,8 @@ const DefaultTemplate = (args) => (
 );
 
 const VerticalTemplate = (args) => (
-  <div className="inf__vertical-nav-icons-wrapper">
-    <ul className="flex-column inf__content-nav__border nav" {...args}>
+  <div className="ifx__vertical-nav-icons-wrapper">
+    <ul className="flex-column ifx__content-nav__border nav" {...args}>
       <BsNav.Item as="li">
         <BsNav.Link href="#">
           <FontAwesomeIcon icon={["fas", "globe"]} />
@@ -62,7 +62,7 @@ const VerticalTemplate = (args) => (
           <FontAwesomeIcon icon={["fas", "chart-bar"]} />
         </BsNav.Link>
       </BsNav.Item>
-      <p className="inf__content-nav__divider">Divider</p>
+      <p className="ifx__content-nav__divider">Divider</p>
       <BsNav.Item as="li">
         <BsNav.Link eventKey="link-3">
           <FontAwesomeIcon icon={["fas", "home"]} />
@@ -74,7 +74,7 @@ const VerticalTemplate = (args) => (
         </BsNav.Link>
       </BsNav.Item>
     </ul>
-    <div className="d-inline-flex inf__content-nav__border inf__vertical-nav-icons-btn">
+    <div className="d-inline-flex ifx__content-nav__border ifx__vertical-nav-icons-btn">
       <FontAwesomeIcon icon={["fas", "chevron-right"]} />
     </div>
   </div>

@@ -22,7 +22,7 @@ const DefaultTemplate = (args) => (
       <BsCard.Title>{args.title}</BsCard.Title>
       {args.subtitleText && <BsCard.Subtitle>{args.subtitleText}</BsCard.Subtitle>}
     </BsCard.Body>
-    <BsCard.Body className="inf__card-link-wrapper">
+    <BsCard.Body className="ifx__card-link-wrapper">
       <BsCard.Link href="#">Link</BsCard.Link>
     </BsCard.Body>
   </Teaser>

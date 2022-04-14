@@ -37,9 +37,9 @@ const propTypes = {
 
 const Image = ({ aspectRatio }) => {
   const aspectRatioClass = 
-    aspectRatio === "4:3" ? "inf__aspect-ratio--4-3"
-    : aspectRatio === "16:9" ? "inf__aspect-ratio--16-9"
-    : aspectRatio === "1:1" ? "inf__aspect-ratio--1-1"
+    aspectRatio === "4:3" ? "ifx__aspect-ratio--4-3"
+    : aspectRatio === "16:9" ? "ifx__aspect-ratio--16-9"
+    : aspectRatio === "1:1" ? "ifx__aspect-ratio--1-1"
     : "";
 
   const imageSrc =
@@ -56,13 +56,13 @@ const Image = ({ aspectRatio }) => {
 
   if ( aspectRatioClass === "" ) {
     return (
-      <img className="inf__carousel__image" src={imageSrc} alt={imageAlt}/>
+      <img className="ifx__carousel__image" src={imageSrc} alt={imageAlt}/>
     )
   }
   return (
-    <div className="inf__aspect-ratio__box-wrapper ">
-      <div className={"inf__aspect-ratio__box " + aspectRatioClass}>
-        <img className="inf__aspect-ratio__box__in" src={imageSrc} alt={imageAlt}/>
+    <div className="ifx__aspect-ratio__box-wrapper ">
+      <div className={"ifx__aspect-ratio__box " + aspectRatioClass}>
+        <img className="ifx__aspect-ratio__box__in" src={imageSrc} alt={imageAlt}/>
       </div>
     </div>
   )
@@ -70,7 +70,7 @@ const Image = ({ aspectRatio }) => {
 
 export const Carousel = ({ aspectRatio, children, ...props }) => {
   return (
-    <BsCarousel className="inf__carousel" {...props}>
+    <BsCarousel className="ifx__carousel" {...props}>
       <BsCarousel.Item>
         <Image aspectRatio={aspectRatio}/>
         {children}

@@ -5,7 +5,7 @@
   --bs-gutter-x: 0;
 }
 
-.inf {
+.ifx {
   &__image {
     max-width: 100%;
   }
@@ -21,10 +21,10 @@
   }
 }
 
-.inf {
+.ifx {
   &__card-horizontal
   &__aspect-ratio {
-    &__box-wrapper, .inf__img {
+    &__box-wrapper, .ifx__img {
       width: 100%;
     }
 
@@ -60,10 +60,10 @@
   }
 }
 
-.inf {
+.ifx {
   &__card-vertical
   &__aspect-ratio {
-    &__box-wrapper, .inf__img {
+    &__box-wrapper, .ifx__img {
       max-width: 348px;
       width: 100%;
     }
@@ -100,7 +100,7 @@
   }
 }
 
-.inf__card {
+.ifx__card {
   border: 1px solid tokens.$color-info-200;
   border-radius: 1px;
 
@@ -137,7 +137,7 @@
     margin-top: 20px;
   }
 
-  .inf__card-link-wrapper {
+  .ifx__card-link-wrapper {
     margin-top: 16px;
   }
 

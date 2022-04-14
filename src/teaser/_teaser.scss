@@ -1,6 +1,6 @@
 @use "../tokens/tokens";
 
-.inf__teaser {
+.ifx__teaser {
   border-top: 1px solid tokens.$color-info-200;
   border-radius: 1px;
 
@@ -28,28 +28,28 @@
   }
 }
 
-.inf__teaser-vertical {
+.ifx__teaser-vertical {
   max-width: 370px;
 
   .card-img-overlay {
     height: calc(100% - 56px);
   }
 
-  & .inf__card-link-wrapper {
+  & .ifx__card-link-wrapper {
     border-top: 1px solid tokens.$color-info-200;
   }
 }
 
 
-.inf__teaser-horizontal {
+.ifx__teaser-horizontal {
   max-width: 711px;
 
   & img {
     max-width: 100%;
   }
 
-  & .inf__aspect-ratio {
-    &__box-wrapper, .inf__card__img {
+  & .ifx__aspect-ratio {
+    &__box-wrapper, .ifx__card__img {
       max-width: 370px;
       width: 100%;
     }
@@ -86,7 +86,7 @@
   }
 }
 
-.inf__teaser-horizontal {
+.ifx__teaser-horizontal {
   & .card-img-overlay {
     height: calc(100% - 56px);
   }
@@ -95,7 +95,7 @@
     font-size: 28px;
   }
 
-  & .inf__card-link-wrapper {
+  & .ifx__card-link-wrapper {
     border-top: 1px solid tokens.$color-info-200;
   }
 
@@ -105,9 +105,9 @@
   }
 }
 
-.inf__teaser-vertical {
-  & .inf__aspect-ratio {
-    &__box-wrapper, .inf__card__img {
+.ifx__teaser-vertical {
+  & .ifx__aspect-ratio {
+    &__box-wrapper, .ifx__card__img {
       max-width: 370px;
       width: 100%;
     }

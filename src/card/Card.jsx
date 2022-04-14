@@ -64,9 +64,9 @@ const propTypes = {
 
 const Image = ({ aspectRatio }) => {
   const aspectRatioClass = 
-    aspectRatio === "4:3" ? "inf__aspect-ratio--4-3"
-    : aspectRatio === "16:9" ? "inf__aspect-ratio--16-9"
-    : aspectRatio === "1:1" ? "inf__aspect-ratio--1-1"
+    aspectRatio === "4:3" ? "ifx__aspect-ratio--4-3"
+    : aspectRatio === "16:9" ? "ifx__aspect-ratio--16-9"
+    : aspectRatio === "1:1" ? "ifx__aspect-ratio--1-1"
     : "";
 
   const imageSrc =
@@ -83,13 +83,13 @@ const Image = ({ aspectRatio }) => {
 
   if ( aspectRatioClass === "" ) {
     return (
-      <img className="inf__image" src={imageSrc} alt={imageAlt}/>
+      <img className="ifx__image" src={imageSrc} alt={imageAlt}/>
     )
   }
   return (
-    <div className="inf__aspect-ratio__box-wrapper ">
-      <div className={"inf__aspect-ratio__box " + aspectRatioClass}>
-        <img className="inf__aspect-ratio__box__in" src={imageSrc} alt={imageAlt}/>
+    <div className="ifx__aspect-ratio__box-wrapper ">
+      <div className={"ifx__aspect-ratio__box " + aspectRatioClass}>
+        <img className="ifx__aspect-ratio__box__in" src={imageSrc} alt={imageAlt}/>
       </div>
     </div>
   )
@@ -100,7 +100,7 @@ export const Card = ({ image, aspectRatio, direction, imagePosition, children, .
     if (direction === "horizontal") {
       if (imagePosition === "left") {
         return (
-          <BsCard className="inf__card inf__card-horizontal" {...props}>
+          <BsCard className="ifx__card ifx__card-horizontal" {...props}>
             <div className="row no-gutters">
               <div className="col-md-4">
                 <Image aspectRatio={aspectRatio}/>
@@ -113,7 +113,7 @@ export const Card = ({ image, aspectRatio, direction, imagePosition, children, .
         )
       } else {
         return (
-          <BsCard className="inf__card inf__card-horizontal" {...props}>
+          <BsCard className="ifx__card ifx__card-horizontal" {...props}>
             <div className="row no-gutters">
               <div className="col-md-8">
                 {children}
@@ -127,7 +127,7 @@ export const Card = ({ image, aspectRatio, direction, imagePosition, children, .
       }
     } else {
       return (
-        <BsCard className="inf__card inf__card-vertical" {...props}>
+        <BsCard className="ifx__card ifx__card-vertical" {...props}>
           <Image aspectRatio={aspectRatio}/>
           {children}
         </BsCard>
@@ -135,7 +135,7 @@ export const Card = ({ image, aspectRatio, direction, imagePosition, children, .
     }
   } else {
     return (
-      <BsCard className="inf__card inf__card-vertical" {...props}>
+      <BsCard className="ifx__card ifx__card-vertical" {...props}>
         {children}
       </BsCard>
     )

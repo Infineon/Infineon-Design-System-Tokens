@@ -19,8 +19,8 @@ export const SearchBar = ({ size, ...props }) => {
 
   return (
     <BsInputGroup>
-      <BsForm.Control id="inf__inputSearch" type="text" placeholder="Search" size={bsSize} {...props}></BsForm.Control>
-      <span class="inf__search-icon-wrapper">
+      <BsForm.Control id="ifx__inputSearch" type="text" placeholder="Search" size={bsSize} {...props}></BsForm.Control>
+      <span class="ifx__search-icon-wrapper">
         <FontAwesomeIcon icon={["fal", "magnifying-glass"]}/>
       </span>
     </BsInputGroup>    

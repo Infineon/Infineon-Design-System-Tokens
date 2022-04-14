@@ -8,7 +8,7 @@ export default {
 };
 
 const DefaultTemplate = (args) => (
-  <ContentNavigation className="inf__content-nav-default" {...args}>
+  <ContentNavigation className="ifx__content-nav-default" {...args}>
     <BsNav.Item as="li">
       <BsNav.Link href="/home">Link active</BsNav.Link>
     </BsNav.Item>
@@ -60,7 +60,7 @@ const PillsTemplate = (args) => (
 );
 
 const DefaultVerticalTemplate = (args) => (
-  <ContentNavigation className="inf__content-nav-default flex-column" {...args}>
+  <ContentNavigation className="ifx__content-nav-default flex-column" {...args}>
     <BsNav.Item as="li">
       <BsNav.Link href="/home">Link active</BsNav.Link>
     </BsNav.Item>

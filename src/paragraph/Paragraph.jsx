@@ -10,7 +10,7 @@ const propTypes = {
 
 export const Paragraph = ({ children, ...props }) => {
   return (
-    <div className="inf__paragraph" {...props}>
+    <div className="ifx__paragraph" {...props}>
       {children}
     </div>
   )

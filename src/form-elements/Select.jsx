@@ -20,7 +20,7 @@ export const Select = ({ label, size, ...props }) => {
 
   return (
     <BsForm.Group className="mb-3" controlId="inputSelect">
-      <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
+      <BsForm.Label className="ifx__form-label--input">{label}</BsForm.Label>
       <BsForm.Select aria-label="Default select example" size={bsSize} {...props}>
         <option>Select</option>
         <option value="1">One</option>

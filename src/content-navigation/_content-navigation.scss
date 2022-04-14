@@ -1,6 +1,6 @@
 @use "../tokens/tokens";
 
-.inf__content-nav-default {
+.ifx__content-nav-default {
   flex-wrap: nowrap;
   overflow-x: scroll;
   font-size: 13px;
@@ -50,7 +50,7 @@
   }
 }
 
-.inf__content-nav-default:not(.flex-column) {
+.ifx__content-nav-default:not(.flex-column) {
   & .nav-link {
     &.active {
       border-bottom: 4px solid tokens.$color-secondary-500;
@@ -58,7 +58,7 @@
   }
 }
 
-.inf__content-nav-default.flex-column {
+.ifx__content-nav-default.flex-column {
   display: inline-block;
 }
 

@@ -36,7 +36,7 @@
   }
 }
 
-.inf {
+.ifx {
   &__application-name {
     font-size: 20px;
     color: tokens.$color-black;
@@ -44,11 +44,11 @@
   }
 }
 
-.inf__vertical-nav-icons-wrapper {
+.ifx__vertical-nav-icons-wrapper {
   position: relative;
   display: inline-block;
 
-  & .inf__vertical-nav-icons-btn {
+  & .ifx__vertical-nav-icons-btn {
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -57,7 +57,7 @@
     padding: 0 !important;
   }
 
-  & .inf__content-nav__border {
+  & .ifx__content-nav__border {
     display: inline-flex;
     border-right: 2px solid tokens.$color-info-300;
     padding-top: 30px;
@@ -84,7 +84,7 @@
     }
   }
 
-  & .inf__content-nav__divider {
+  & .ifx__content-nav__divider {
     color: tokens.$color-secondary-500;
     text-align: center;
     margin-top: 10px;

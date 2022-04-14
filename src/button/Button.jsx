@@ -48,8 +48,8 @@ export const Button = ({ label, variant, color, size, disabled, icon, iconPositi
     : undefined;
 
   const iconPositionClass =
-    iconPosition === "left" ? "inf__btn-icon--before"
-    : iconPosition === "right" ? "inf__btn-icon--after"
+    iconPosition === "left" ? "ifx__btn-icon--before"
+    : iconPosition === "right" ? "ifx__btn-icon--after"
     : undefined;
 
   const Icon = () => (

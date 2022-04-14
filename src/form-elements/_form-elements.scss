@@ -1,6 +1,6 @@
 @use "../tokens/tokens";
 
-.inf {
+.ifx {
   &__input {
     margin-bottom: 10px;
     
@@ -114,7 +114,7 @@
   color: tokens.$color-black;
 }
 
-.inf__form-label--input {
+.ifx__form-label--input {
   color: tokens.$color-info-500;
   margin-bottom: 4px;
 }
@@ -199,7 +199,7 @@
   color: tokens.$color-black;
 }
 
-.inf__form-label--form-range {
+.ifx__form-label--form-range {
   font-size: 12px;
   color: tokens.$color-black;
   margin-bottom: 5px;
@@ -225,19 +225,19 @@
   border-radius: 1px;
 }
 
-#inf__inputSearch.form-control {
+#ifx__inputSearch.form-control {
   padding: 8px calc(12px + 12px + 20px) 8px 16px;
 }
 
-#inf__inputSearch.form-control-sm {
+#ifx__inputSearch.form-control-sm {
   padding: 8px calc(8px + 8px + 16px) 8px 16px;
 }
 
-#inf__inputSearch.form-control-lg {
+#ifx__inputSearch.form-control-lg {
   padding: 8px calc(12px + 12px + 24px) 8px 16px;
 }
 
-.inf__search-icon-wrapper {
+.ifx__search-icon-wrapper {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -256,7 +256,7 @@
   }
 }
 
-.form-control-sm + .inf__search-icon-wrapper {
+.form-control-sm + .ifx__search-icon-wrapper {
   margin-right: 8px;
   width: 16px;
   height: 16px;
@@ -268,7 +268,7 @@
   }
 }
 
-.form-control-lg + .inf__search-icon-wrapper {
+.form-control-lg + .ifx__search-icon-wrapper {
   margin-right: 12px;
   width: 24px;
   height: 24px;

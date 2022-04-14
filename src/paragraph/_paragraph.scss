@@ -1,8 +1,8 @@
 @use "../tokens/tokens";
 
-.inf {
+.ifx {
   &__paragraph-with-images {
-    & .inf__aspect-ratio {
+    & .ifx__aspect-ratio {
       &__box-wrapper {
         width: 100%;
       }
@@ -38,7 +38,7 @@
       }
     }
 
-    & div + .inf__aspect-ratio__box-wrapper {
+    & div + .ifx__aspect-ratio__box-wrapper {
       margin-top: 8px;
 
       @media (min-width: 768px) { 
@@ -46,7 +46,7 @@
       } 
     }
 
-    &:not(.ifx__image-top) .inf__aspect-ratio__box-wrapper + div {
+    &:not(.ifx__image-top) .ifx__aspect-ratio__box-wrapper + div {
       margin-top: 8px;
 
       @media (min-width: 768px) { 

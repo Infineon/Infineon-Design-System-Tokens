@@ -36,13 +36,13 @@ const DefaultTemplate = (args) => (
       {args.button &&
         <Button color="secondary" variant="outline" href="#">Go somewhere
         {args.buttonIcon &&
-          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
+          <FontAwesomeIcon icon={["fas", "star"]} className="ifx__btn-icon--after"/>
         }
         </Button>
       }
 
       {args.links &&
-        <div className="inf__card-link-wrapper">
+        <div className="ifx__card-link-wrapper">
           <BsCard.Link href="#">Card Link</BsCard.Link>
           <BsCard.Link href="#">Another Link</BsCard.Link>
         </div>
@@ -65,13 +65,13 @@ const CenterTemplate = (args) => (
       {args.button &&
         <Button color="secondary" variant="outline" href="#">Go somewhere
         {args.buttonIcon &&
-          <FontAwesomeIcon icon={["fas", "star"]} className="inf__btn-icon--after"/>
+          <FontAwesomeIcon icon={["fas", "star"]} className="ifx__btn-icon--after"/>
         }
         </Button>
       }
 
       {args.links && 
-        <div className="inf__card-link-wrapper">
+        <div className="ifx__card-link-wrapper">
           <BsCard.Link href="#">Card Link</BsCard.Link>
           <BsCard.Link href="#">Another Link</BsCard.Link>
         </div>

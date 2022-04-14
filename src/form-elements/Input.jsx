@@ -22,13 +22,13 @@ export const Input = ({ label, size, state, children, ...props }) => {
     : undefined;
 
   const stateClass =
-    state === "success" ? "inf__input--success"
-    : state === "error" ? "inf__input--error"
+    state === "success" ? "ifx__input--success"
+    : state === "error" ? "ifx__input--error"
     : "";
 
   return (
     <BsForm.Group className={stateClass} controlId="input">
-      <BsForm.Label className="inf__form-label--input">{label}</BsForm.Label>
+      <BsForm.Label className="ifx__form-label--input">{label}</BsForm.Label>
       <BsForm.Control placeholder="Placeholder" size={bsSize} {...props}></BsForm.Control>
       <div className="form-text">
         Caption text, description, error notification

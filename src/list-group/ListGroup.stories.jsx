@@ -74,8 +74,8 @@ const CustomContentTemplate = (args) => (
   <ListGroup {...args}>
     <BsListGroup.Item active>
       <div className="d-flex justify-content-between align-items-center">
-        <div className="inf__list-group-heading">List group item heading</div>
-        <div className="inf__list-group-date">3 days ago</div>
+        <div className="ifx__list-group-heading">List group item heading</div>
+        <div className="ifx__list-group-date">3 days ago</div>
       </div>
       <div>
         Jelly beans carrot cake cake cupcake sweet topping cookie brownie. Apple pie candy powder gummi bears tootsie roll gummi bears.
@@ -84,8 +84,8 @@ const CustomContentTemplate = (args) => (
     
     <BsListGroup.Item>
       <div className="d-flex justify-content-between align-items-center">
-        <div className="inf__list-group-heading">List group item heading</div>
-        <div className="inf__list-group-date">3 days ago</div>
+        <div className="ifx__list-group-heading">List group item heading</div>
+        <div className="ifx__list-group-date">3 days ago</div>
       </div>
       <div>
         Jelly beans carrot cake cake cupcake sweet topping cookie brownie.
@@ -94,8 +94,8 @@ const CustomContentTemplate = (args) => (
 
     <BsListGroup.Item>
       <div className="d-flex justify-content-between align-items-center">
-        <div className="inf__list-group-heading">List group item heading</div>
-        <div className="inf__list-group-date">3 days ago</div>
+        <div className="ifx__list-group-heading">List group item heading</div>
+        <div className="ifx__list-group-date">3 days ago</div>
       </div>
       <div>
         Content

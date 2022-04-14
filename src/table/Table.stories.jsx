@@ -52,7 +52,7 @@ const DefaultTemplate = (args) => (
 
 const HeaderTemplate = (args) => (
   <Table {...args}>
-    <thead className="inf__thead__background-color">
+    <thead className="ifx__thead__background-color">
       <tr>
         <th>#</th>
         <th>First</th>

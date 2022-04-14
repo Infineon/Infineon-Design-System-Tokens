@@ -40,7 +40,7 @@ const HeaderTemplate = (args) => (
 
 const SearchTemplate = (args) => (
   <Dropdown {...args}>
-    <BsFormControl className="inf__dropdown-search" autoFocus placeholder="Search"></BsFormControl>
+    <BsFormControl className="ifx__dropdown-search" autoFocus placeholder="Search"></BsFormControl>
 
     <BsDropdown.Item href="#/action-1" active>Something else</BsDropdown.Item>
     <BsDropdown.Item href="#/action-2">Hover action</BsDropdown.Item>
@@ -70,7 +70,7 @@ const IconTemplate = (args) => (
 
 const FilterTemplate = (args) => (
   <Dropdown {...args}>
-    <BsForm.Select className="inf__dropdown-select" aria-label="Default select example">
+    <BsForm.Select className="ifx__dropdown-select" aria-label="Default select example">
       <option>Select</option>
       <option value="1">One</option>
       <option value="2">Two</option>

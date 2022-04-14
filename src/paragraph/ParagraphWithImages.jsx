@@ -37,9 +37,9 @@ const propTypes = {
 
 export const ParagraphWithImages = ({ children, aspectRatio, imagePosition, alignItems, ...props }) => {
   const aspectRatioClass = 
-    aspectRatio === "4:3" ? "inf__aspect-ratio--4-3"
-    : aspectRatio === "16:9" ? "inf__aspect-ratio--16-9"
-    : aspectRatio === "1:1" ? "inf__aspect-ratio--1-1"
+    aspectRatio === "4:3" ? "ifx__aspect-ratio--4-3"
+    : aspectRatio === "16:9" ? "ifx__aspect-ratio--16-9"
+    : aspectRatio === "1:1" ? "ifx__aspect-ratio--1-1"
     : "";
 
   const imageSrc =
@@ -59,16 +59,16 @@ export const ParagraphWithImages = ({ children, aspectRatio, imagePosition, alig
     : "";
 
   const Image = () => (
-    <div className="inf__aspect-ratio__box-wrapper">
-      <div className={"inf__aspect-ratio__box " + aspectRatioClass}>
-        <img className="inf__aspect-ratio__box__in" src={imageSrc} alt={imageAlt}/>
+    <div className="ifx__aspect-ratio__box-wrapper">
+      <div className={"ifx__aspect-ratio__box " + aspectRatioClass}>
+        <img className="ifx__aspect-ratio__box__in" src={imageSrc} alt={imageAlt}/>
       </div>
     </div>
   );
 
   if (imagePosition === "left") {
     return (
-      <div className={"inf__paragraph-with-images d-md-flex " + alignItemsClass} {...props}>
+      <div className={"ifx__paragraph-with-images d-md-flex " + alignItemsClass} {...props}>
         {imagePosition === "left"
           ? <><Image/> {children}</>
           : <>{children} <Image/></>        
@@ -77,7 +77,7 @@ export const ParagraphWithImages = ({ children, aspectRatio, imagePosition, alig
     )
   } else if (imagePosition === "right") {
     return (
-      <div className={"inf__paragraph-with-images d-md-flex " + alignItemsClass} {...props}>
+      <div className={"ifx__paragraph-with-images d-md-flex " + alignItemsClass} {...props}>
         {imagePosition === "left"
           ? <><Image/> {children}</>
           : <>{children} <Image/></>        
@@ -86,14 +86,14 @@ export const ParagraphWithImages = ({ children, aspectRatio, imagePosition, alig
     )
   } else if (imagePosition === "top") {
     return (
-      <div className={"inf__paragraph-with-images ifx__image-top " + alignItemsClass} {...props}>
+      <div className={"ifx__paragraph-with-images ifx__image-top " + alignItemsClass} {...props}>
         <Image/>
         {children}
       </div>
     )
   } else if (imagePosition === "bottom") {
     return (
-      <div className={"inf__paragraph-with-images ifx__image-bottom " + alignItemsClass} {...props}>
+      <div className={"ifx__paragraph-with-images ifx__image-bottom " + alignItemsClass} {...props}>
         <div className="ifx__paragraph-without-icon">
           <div className="row justify-content-center">
             <div className="col-10">

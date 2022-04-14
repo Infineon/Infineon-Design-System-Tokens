@@ -23,7 +23,7 @@ const propTypes = {
   aspectRatio: PropTypes.oneOf(["4:3", "16:9", "1:1"]),
 
   /** Specifies the image position */
-  imagePosition: PropTypes.oneOf(["left", "right"]),
+  imagePosition: PropTypes.oneOf(["left", "right", "top", "bottom"]),
 
   /** Specifies text alignment */
   alignItems: PropTypes.oneOf(["center", "top"]),
@@ -66,13 +66,50 @@ export const ParagraphWithImages = ({ children, aspectRatio, imagePosition, alig
     </div>
   );
 
-  return (
-    <div className={"inf__paragraph-horizontal d-flex " + alignItemsClass} {...props}>
-      {imagePosition === "left" 
-        ? <><Image/> {children}</>
-        : <>{children} <Image/></>
-      }
-    </div>
-  )
+  if (imagePosition === "left") {
+    return (
+      <div className={"inf__paragraph-with-images d-md-flex " + alignItemsClass} {...props}>
+        {imagePosition === "left"
+          ? <><Image/> {children}</>
+          : <>{children} <Image/></>        
+        }
+      </div>
+    )
+  } else if (imagePosition === "right") {
+    return (
+      <div className={"inf__paragraph-with-images d-md-flex " + alignItemsClass} {...props}>
+        {imagePosition === "left"
+          ? <><Image/> {children}</>
+          : <>{children} <Image/></>        
+        }
+      </div>
+    )
+  } else if (imagePosition === "top") {
+    return (
+      <div className={"inf__paragraph-with-images ifx__image-top " + alignItemsClass} {...props}>
+        <Image/>
+        {children}
+      </div>
+    )
+  } else if (imagePosition === "bottom") {
+    return (
+      <div className={"inf__paragraph-with-images ifx__image-bottom " + alignItemsClass} {...props}>
+        <div className="ifx__paragraph-without-icon">
+          <div className="row justify-content-center">
+            <div className="col-10">
+              {children}
+              <div className="d-md-flex">
+                <Image/>
+                <div className="d-flex flex-column justify-content-end">
+                  <p className="ifx__image-description">Information Description</p>
+                  <p className="ifx__image-description-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 };
 ParagraphWithImages.propTypes = propTypes;

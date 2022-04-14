@@ -51,6 +51,37 @@ const BulletpointsTemplate = (args) => (
   </ParagraphWithImages>
 );
 
+const ArticleTemplate = (args) => (
+  <ParagraphWithImages {...args}>
+    <p className="ifx__paragraph-without-icon-article-text">Lead But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
+    <p>{args.text}</p>
+  </ParagraphWithImages>
+);
+
+const ImageTopTemplate = (args) => (
+  <ParagraphWithImages {...args}>
+    <div>
+      <p className="ifx__paragraph-category">Category</p>
+      <h3>{args.title}</h3>
+      <p>{args.text}</p>
+      <Button color="primary" href="#">
+        Button
+      </Button>
+    </div>
+  </ParagraphWithImages>
+);
+
 export const Default = DefaultTemplate.bind({});
 
 export const Bulletpoints = BulletpointsTemplate.bind({});
+
+export const Article = ArticleTemplate.bind({});
+Article.args = {
+  text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  imagePosition: "bottom",
+};
+
+export const ImageTop = ImageTopTemplate.bind({});
+ImageTop.args = {
+  imagePosition: "top",
+};

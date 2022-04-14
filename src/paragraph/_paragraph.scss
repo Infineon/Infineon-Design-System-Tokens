@@ -1,11 +1,10 @@
 @use "../tokens/tokens";
 
 .inf {
-  &__paragraph-horizontal {
+  &__paragraph-with-images {
     & .inf__aspect-ratio {
       &__box-wrapper {
         width: 100%;
-        margin-left: 1rem;
       }
 
       &__box {
@@ -39,6 +38,22 @@
       }
     }
 
+    & div + .inf__aspect-ratio__box-wrapper {
+      margin-top: 8px;
+
+      @media (min-width: 768px) { 
+        margin-top: 0;
+      } 
+    }
+
+    &:not(.ifx__image-top) .inf__aspect-ratio__box-wrapper + div {
+      margin-top: 8px;
+
+      @media (min-width: 768px) { 
+        margin-top: 0;
+      } 
+    }
+    
     .ifx__paragraph-category {
       margin-bottom: 16px;
       font-weight: 600;
@@ -48,22 +63,52 @@
       font-size: 36px;
       line-height: 45px;
       font-weight: 600;
-      margin-bottom: 5px;
-
-      @media (min-width: 768px) { 
-        margin-bottom: 16px;
-      } 
+      margin-bottom: 16px;
     }
 
     ul {
       margin-left: 16px;
+      margin-bottom: 0;
 
       svg {
         margin-right: 8px;
       }
     }
 
+    .ifx__image-description {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
 
+      @media (min-width: 768px) { 
+        margin-left: 30px;
+      } 
+    }
+
+    .ifx__image-description-text {
+      font-size: 13px;
+      margin-bottom: 0;
+
+      @media (min-width: 768px) { 
+        margin-left: 30px;
+      } 
+    }
+  }
+}
+
+.ifx__image-top {
+  max-width: 540px;
+
+  .ifx__paragraph-category {
+    margin-top: 24px;
+  }
+}
+
+.ifx__image-bottom {
+  .col-10 {
+    & > div {
+      margin-top: 40px;
+    }
   }
 }
 

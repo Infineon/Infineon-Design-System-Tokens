@@ -34,8 +34,8 @@ const DefaultTemplate = (args) => (
 const MediumTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
-      <div className="d-flex align-items-end ifx__footer-border">
-        <div className="d-flex justify-content-between flex-wrap w-100">
+      <div className="d-flex align-items-end ifx__footer-top">
+        <div className="d-flex justify-content-between align-items-center flex-wrap w-100">
           <img src={image.src} alt={image.alt} width="110" height="48"/>
           <div className='ifx__footer-top__social-media'>
             <a href="">
@@ -80,51 +80,119 @@ const LargeTemplate = (args) => (
   <Footer {...args}>
     <footer className="footer">
       <div className="ifx__footer-top">
-        <div className="row">
-          <div className="col-6 col-md-2">
-            <h5>Mainlink</h5>
-            <ul className="list-unstyled">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-            </ul>
+        <div className="ifx__mobile-show flex-column">
+          <img src={image.src} alt={image.alt} width="110" height="48"/>
+
+          <div className="row">
+            <div className="col-6">
+              <p>Mainlink</p>
+              <ul className="list-unstyled">
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <p>Mainlink</p>
+              <ul className="list-unstyled">
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <p>Mainlink</p>
+              <ul className="list-unstyled">
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+              </ul>
+            </div>
+
+            <div className="col-6">
+              <p>Mainlink</p>
+              <ul className="list-unstyled">
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+              </ul>
+            </div>
           </div>
 
-          <div className="col-6 col-md-2">
-            <h5>Mainlink</h5>
-            <ul className="list-unstyled">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-            </ul>
-          </div>
-
-          <div className="col-6 col-md-2">
-            <h5>Mainlink</h5>
-            <ul className="list-unstyled">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-            </ul>
-          </div>
-
-          <div className="col-6 col-md-2">
-            <h5>Mainlink</h5>
-            <ul className="list-unstyled">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-              <li><a href="#">Link 3</a></li>
-              <li><a href="#">Link 4</a></li>
-            </ul>
+          <div className='ifx__footer-top__social-media'>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "facebook"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "instagram"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "twitter"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "xing"]} />
+            </a>
+            <a href="">
+              <FontAwesomeIcon icon={["fab", "youtube"]} />
+            </a>
           </div>
         </div>
 
-        <div className="d-flex align-items-end ifx__footer-border">
-          <div className="d-flex justify-content-between flex-wrap w-100">
+        <div className="ifx__desktop-show flex-column">
+          <div className="row">
+            <div className="col-6 col-md-2">
+              <p>Mainlink</p>
+              <ul className="list-unstyled">
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+              </ul>
+            </div>
+
+            <div className="col-6 col-md-2">
+              <p>Mainlink</p>
+              <ul className="list-unstyled">
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+              </ul>
+            </div>
+
+            <div className="col-6 col-md-2">
+              <p>Mainlink</p>
+              <ul className="list-unstyled">
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+              </ul>
+            </div>
+
+            <div className="col-6 col-md-2">
+              <p>Mainlink</p>
+              <ul className="list-unstyled">
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+                <li><a href="#">Footer Link</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="ifx__desktop-show justify-content-between align-items-center">
             <img src={image.src} alt={image.alt} width="110" height="48"/>
+
             <div className='ifx__footer-top__social-media'>
               <a href="">
                 <FontAwesomeIcon icon={["fab", "facebook"]} />

@@ -16,7 +16,7 @@ export default {
 
 const DefaultTemplate = (args) => (
   <ParagraphWithImages {...args}>
-    <div>
+    <div className="col-md-5">
       <p className="ifx__paragraph-category">Category</p>
       <h3>{args.title}</h3>
       <p>{args.text}</p>
@@ -29,7 +29,7 @@ const DefaultTemplate = (args) => (
 
 const BulletpointsTemplate = (args) => (
   <ParagraphWithImages {...args}>
-    <div>
+    <div className="col-md-5">
       <p className="ifx__paragraph-category">Category</p>
       <h3>{args.title}</h3>
       <p>{args.text}</p>
@@ -60,7 +60,7 @@ const ArticleTemplate = (args) => (
 
 const ImageTopTemplate = (args) => (
   <ParagraphWithImages {...args}>
-    <div>
+    <div className="col-md-6">
       <p className="ifx__paragraph-category">Category</p>
       <h3>{args.title}</h3>
       <p>{args.text}</p>

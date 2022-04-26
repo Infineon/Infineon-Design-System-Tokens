@@ -32,7 +32,7 @@ const ArticleTemplate = (args) => (
   <Paragraph {...args}>
     <div className="ifx__paragraph-without-icon">
       <div className="row justify-content-center">
-        <div className="col-10">
+        <div className="col-md-10">
           <p className="ifx__paragraph-without-icon-article-text">Lead But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings.</p>
           <p>{args.text}</p>
         </div>

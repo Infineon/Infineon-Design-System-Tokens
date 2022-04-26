@@ -68,27 +68,45 @@ export const ParagraphWithImages = ({ children, aspectRatio, imagePosition, alig
 
   if (imagePosition === "left") {
     return (
-      <div className={"ifx__paragraph-with-images d-md-flex " + alignItemsClass} {...props}>
+      <div className="ifx__paragraph-with-images" {...props}>
         {imagePosition === "left"
-          ? <><Image/> {children}</>
-          : <>{children} <Image/></>        
+          ? <>
+            <div className={"row " + alignItemsClass}>
+              <div className="col-md-7">
+                <Image/>
+              </div>
+              {children}
+            </div>
+          </>
+          : <>{children} <Image/></>
         }
       </div>
     )
   } else if (imagePosition === "right") {
     return (
-      <div className={"ifx__paragraph-with-images d-md-flex " + alignItemsClass} {...props}>
-        {imagePosition === "left"
-          ? <><Image/> {children}</>
-          : <>{children} <Image/></>        
+      <div className="ifx__paragraph-with-images" {...props}>
+        {imagePosition === "right"
+          ? <>
+            <div className={"row " + alignItemsClass}>
+              {children}
+              <div className="col-md-7">
+                <Image/>
+              </div>
+            </div>
+          </>
+          : <>{children} <Image/></>
         }
       </div>
     )
   } else if (imagePosition === "top") {
     return (
-      <div className={"ifx__paragraph-with-images ifx__image-top " + alignItemsClass} {...props}>
-        <Image/>
-        {children}
+      <div className="ifx__paragraph-with-images ifx__image-top" {...props}>
+        <div className={"row " + alignItemsClass}>
+          <div className="col-md-6">
+            <Image/>
+          </div>
+          {children}
+        </div>
       </div>
     )
   } else if (imagePosition === "bottom") {
@@ -96,10 +114,12 @@ export const ParagraphWithImages = ({ children, aspectRatio, imagePosition, alig
       <div className={"ifx__paragraph-with-images ifx__image-bottom " + alignItemsClass} {...props}>
         <div className="ifx__paragraph-without-icon">
           <div className="row justify-content-center">
-            <div className="col-10">
+            <div className="col-md-10">
               {children}
               <div className="d-md-flex">
-                <Image/>
+                <div className="col-md-6">
+                  <Image/>
+                </div>
                 <div className="d-flex flex-column justify-content-end">
                   <p className="ifx__image-description">Information Description</p>
                   <p className="ifx__image-description-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>

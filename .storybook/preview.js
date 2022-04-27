@@ -5,7 +5,6 @@ import { faStar, faCoffee, faMapMarkerAlt, faChartPie, faBell, faCalendar, faArr
 import { faInfoCircle, faCheckCircle, faTriangleExclamation, faCircleExclamation, faXmark, faCheck, faChevronDown, faChevronLeft, faChevronsLeft, faChevronRight, faChevronsRight, faMagnifyingGlass, faUser, faGlobe, faShoppingCart } from '@fortawesome/pro-light-svg-icons'
 import { faFacebook, faInstagram, faLinkedinIn, faTwitter, faXing, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import "./index.scss";
-import "../src/index";
 
 library.add(
   faInfoCircle,

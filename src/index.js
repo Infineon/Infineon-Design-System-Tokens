@@ -1,3 +1,4 @@
 import "bootstrap";
 
-import "./form-elements/form-elements";
+import { initNavBar } from "./nav-bar/nav-bar";
+initNavBar()

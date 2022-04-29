@@ -3,14 +3,15 @@
 .ifx {
   &__thead {    
     &__background-color {
-      background-color: tokens.$color-secondary-500;
-      color: tokens.$color-white;
+      background-color: tokens.$color-info-300;
+      color: tokens.$color-black;
     }
   }
 } 
 
-table {
-  border-top: 1px solid #e6e9e8 !important;
+.table {
+  width: auto;
+  margin-bottom: 0;
 }
 
 .table > :not(:first-child) {
@@ -18,13 +19,39 @@ table {
 }
 
 .table > :not(caption) > * > * {
-  padding: 9px 38px;
+  padding: 6px 24px;
 }
 
 .table-sm > :not(caption) > * > * {
-  padding: 6px 38px;
+  padding: 3px 24px;
+}
+
+thead {
+  border-bottom: 2px solid tokens.$color-info-300;
 }
 
 th {
-  width: 25%;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) > * {
+  --bs-table-accent-bg: transparent;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+2) > * {
+  background-color: var(--bs-table-striped-bg);
+}
+
+.table-hover > tbody > tr:hover > * {
+  --bs-table-accent-bg: var(--bs-table-hover-bg);
+}
+
+td {
+  font-size: 13px;
+}
+
+.table caption {
+  color: tokens.$color-black;
+  padding: 16px 0 0 0;
 }

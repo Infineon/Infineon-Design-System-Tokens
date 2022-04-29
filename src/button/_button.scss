@@ -39,10 +39,6 @@
       border-color: tokens.$color-primary-500;
     }
 
-    &:focus-visible {
-      background-color: tokens.$color-primary-600;
-    }
-
     &:hover {
       background-color: tokens.$color-primary-400;
       border-color: tokens.$color-primary-400;  
@@ -74,10 +70,6 @@
     &:focus {
       background-color: tokens.$color-secondary-500;
       border-color: tokens.$color-secondary-500;
-    }
-
-    &:focus-visible {
-      background-color: tokens.$color-secondary-600;
     }
 
     &:hover {
@@ -113,10 +105,6 @@
       border-color: tokens.$color-success-500;
     }
 
-    &:focus-visible {
-      background-color: tokens.$color-success-600;
-    }
-
     &:hover {
       background-color: tokens.$color-success-400;
       border-color: tokens.$color-success-400;
@@ -128,7 +116,7 @@
     }
   }
 
-  &.btn-outline-success {
+  &.btn-outline-success:not(:disabled, .disabled) {
     color: tokens.$color-black;
 
     &:focus {
@@ -150,10 +138,6 @@
     &:focus {
       background-color: tokens.$color-danger-500;
       border-color: tokens.$color-danger-500;
-    }
-
-    &:focus-visible {
-      background-color: tokens.$color-danger-600;
     }
 
     &:hover {
@@ -188,10 +172,6 @@
       background-color: tokens.$color-warning-500;
       border-color: tokens.$color-warning-500;
     }
-
-    &:focus-visible {
-      background-color: tokens.$color-warning-600;
-    }
     
     &:hover {
       background-color: tokens.$color-warning-400;
@@ -204,7 +184,7 @@
     }
   }
 
-  &.btn-outline-warning {
+  &.btn-outline-warning:not(:disabled, .disabled) {
     color: tokens.$color-black;
 
     &:focus {

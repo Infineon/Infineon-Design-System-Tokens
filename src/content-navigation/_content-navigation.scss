@@ -60,6 +60,12 @@
 
 .ifx__content-nav-default.flex-column {
   display: inline-block;
+
+  & .nav-link {
+    &.active {
+      border-left: 4px solid tokens.$color-secondary-500;
+    }
+  }
 }
 
 .nav-pills {

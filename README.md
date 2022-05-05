@@ -1,4 +1,4 @@
-# Infineon Design System
+# Infineon Design System Tokens
 
 ## Requirements
 

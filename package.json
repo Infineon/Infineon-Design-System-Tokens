@@ -1,18 +1,19 @@
 {
-  "name": "infineon-design-system",
+  "name": "@infineon/design-system-tokens",
   "version": "1.0.0",
   "private": true,
-  "description": "infineon design system",
-  "homepage": "https://github.com/kickstartDS/infineon-design-system#readme",
+  "description": "Infineon design system token definitions",
+  "homepage": "https://github.com/Infineon/IFX-Design-System-Tokens#readme",
   "bugs": {
-    "url": "https://github.com/kickstartDS/infineon-design-system/issues"
+    "url": "https://github.com/Infineon/IFX-Design-System-Tokens/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kickstartDS/infineon-design-system.git"
+    "url": "git+https://github.com/Infineon/IFX-Design-System-Tokens.git"
   },
-  "license": "ISC",
-  "author": "Lukas Mestel",
+  "files": ["dist"],
+  "license": "UNLICENSED",
+  "author": "Jonas Ulrich",
   "scripts": {
     "copy-fonts": "cp -a src/tokens/fonts .storybook",
     "build-storybook": "build-storybook",
@@ -21,12 +22,10 @@
     "watch-storybook": "start-storybook -p 6006",
     "watch-tokens": "chokidar \"src/tokens/*.json\" -c \"yarn build-tokens\" --initial ",
     "start": "yarn copy-fonts && concurrently -r yarn:watch-*",
-    "bundle-css": "sass --style=compressed --no-source-map .storybook/index.scss dist/index.css",
-    "bundle-js": "esbuild src/index.js --outfile=dist/index.js --bundle --platform=browser --minify",
+    "bundle-css": "sass --style=compressed --no-source-map .storybook/fonts.scss dist/fonts.css",
     "bundle-fonts": "cp -a src/tokens/fonts dist",
-    "bundle-assets": "cp -a public/. dist",
-    "bundle": "yarn build-tokens && concurrently -r yarn:bundle-*",
-    "chromatic": "chromatic --build-script-name=build --exit-once-uploaded"
+    "bundle-tokens": "cp src/tokens/_tokens.scss dist/_tokens.scss",
+    "bundle": "yarn build-tokens && concurrently -r yarn:bundle-*"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -35,12 +34,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/pro-light-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.16",
     "bootstrap": "^5.1.3",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-bootstrap": "^2.0.3",
-    "react-dom": "^17.0.2"
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -49,14 +44,12 @@
     "@storybook/addon-links": "^6.4.8",
     "@storybook/builder-webpack5": "^6.4.8",
     "@storybook/manager-webpack5": "^6.4.8",
-    "@storybook/react": "^6.4.8",
-    "@whitespace/storybook-addon-html": "git+https://github.com/lmestel/storybook-addon-html.git",
+    "@storybook/html": "^6.4.8",
     "babel-loader": "^8.2.3",
     "chokidar-cli": "^3.0.0",
-    "chromatic": "^6.2.0",
     "concurrently": "^6.4.0",
     "css-loader": "^6.5.1",
-    "esbuild": "^0.14.25",
+    "esbuild": "^0.14.38",
     "holderjs": "^2.9.9",
     "sass": "^1.44.0",
     "sass-loader": "^12.3.0",

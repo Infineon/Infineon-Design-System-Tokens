@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Infineon/IFX-Design-System-Tokens.git"
   },
+  "files": ["dist"],
   "license": "UNLICENSED",
   "author": "Jonas Ulrich",
   "scripts": {
@@ -21,8 +22,9 @@
     "watch-storybook": "start-storybook -p 6006",
     "watch-tokens": "chokidar \"src/tokens/*.json\" -c \"yarn build-tokens\" --initial ",
     "start": "yarn copy-fonts && concurrently -r yarn:watch-*",
-    "bundle-css": "sass --style=compressed --no-source-map .storybook/index.scss dist/index.css",
+    "bundle-css": "sass --style=compressed --no-source-map .storybook/fonts.scss dist/fonts.css",
     "bundle-fonts": "cp -a src/tokens/fonts dist",
+    "bundle-tokens": "cp src/tokens/_tokens.scss dist/_tokens.scss",
     "bundle": "yarn build-tokens && concurrently -r yarn:bundle-*"
   },
   "dependencies": {

@@ -4,7 +4,7 @@ export default {
   title: "Forms/Select",
   component: Select,
   args: {
-    label: "Default",
+    label: "Label",
     size: "m",
     disabled: false,
   }

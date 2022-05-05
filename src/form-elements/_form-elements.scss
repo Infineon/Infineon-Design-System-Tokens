@@ -111,6 +111,7 @@
 }
 
 .form-check-label {
+  font-weight: 600;
   color: tokens.$color-black;
 }
 
@@ -197,12 +198,6 @@
   margin-top: 4px;
   font-size: 13px;
   color: tokens.$color-black;
-}
-
-.ifx__form-label--form-range {
-  font-size: 12px;
-  color: tokens.$color-black;
-  margin-bottom: 5px;
 }
 
 .form-range::-moz-range-thumb {

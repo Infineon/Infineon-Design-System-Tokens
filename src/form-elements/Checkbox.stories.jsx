@@ -4,7 +4,7 @@ export default {
   title: "Forms/Checkbox",
   component: Checkbox,
   args: {
-    label: "Checkbox",
+    label: "Label",
     disabled: false,
   }
 };

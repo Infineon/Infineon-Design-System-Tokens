@@ -4,7 +4,7 @@ export default {
   title: "Forms/Switch",
   component: Switch,
   args: {
-    label: "Default",
+    label: "Label",
     disabled: false,
   }
 };

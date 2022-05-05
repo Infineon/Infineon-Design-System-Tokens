@@ -4,7 +4,6 @@ export default {
   title: "Forms/Range",
   component: Range,
   args: {
-    label: "Example range",
     disabled: false,
   }
 };

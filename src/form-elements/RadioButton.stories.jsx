@@ -4,7 +4,7 @@ export default {
   title: "Forms/Radio Button",
   component: RadioButton,
   args: {
-    label: "Radio button",
+    label: "Label",
     disabled: false,
   }
 };

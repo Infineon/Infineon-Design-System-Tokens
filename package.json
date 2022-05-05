@@ -21,7 +21,7 @@
     "build-docs": "node tools/createMarkdownStories.js",
     "build-storybook": "build-storybook",
     "build-tokens": "node ./tools/styleDictionary.js",
-    "build": "yarn copy-fonts && yarn build-tokens && yarn build-storybook",
+    "build": "yarn copy-fonts && yarn build-tokens && yarn build-docs && yarn build-storybook",
     "watch-docs": "chokidar \"*.md\" -c \"yarn build-docs\" --initial",
     "watch-storybook": "start-storybook -p 6006",
     "watch-tokens": "chokidar \"src/tokens/*.json\" -c \"yarn build-tokens\" --initial",

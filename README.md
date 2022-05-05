@@ -7,7 +7,7 @@
 
 ## Usage
 
-Add this repository to your dependencies in `package.json`:
+Add this repository to your dependencies in `package.json`, in your terminal:
 ```bash
 npm install --save @infineon/design-system-tokens
 ```
@@ -39,12 +39,14 @@ Include / import `fonts.css` to get the correct font definitions. You'll additio
 
 An import could, depending on your local setup, for example look like this:
 
+*CSS*:
 ```css
 @import "@infineon/design-system-tokens/dist/fonts.css";
 ```
 
 To use the current Design Tokens in SASS import them in your project (in your entry point for SASS, commonly something like `src/index.scss`):
 
+*CSS*:
 ```css
 @import "@infineon/design-system-tokens/dist/fonts.css";
 ```

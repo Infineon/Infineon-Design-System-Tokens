@@ -2,8 +2,7 @@ module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@whitespace/storybook-addon-html",
+    "@storybook/addon-essentials"
   ],
   core: {
     builder: "webpack5",
@@ -11,7 +10,7 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
-  framework: "@storybook/react",
+  framework: "@storybook/html",
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.

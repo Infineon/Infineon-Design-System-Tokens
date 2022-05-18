@@ -1,25 +1,13 @@
 
 // Do not edit directly
-// Generated on Tue, 17 May 2022 18:50:06 GMT
+// Generated on Wed, 18 May 2022 09:33:42 GMT
 
 
 /**
  * @tokens Border: Radius
  * @presenter BorderRadius
  */
-$border-radius-s: 2px;
-
-/**
- * @tokens Border: Radius
- * @presenter BorderRadius
- */
-$border-radius-m: 4px;
-
-/**
- * @tokens Border: Radius
- * @presenter BorderRadius
- */
-$border-radius-l: 8px;
+$border-radius-default: 1px;
 
 /**
  * @tokens Border: Radius
@@ -31,7 +19,7 @@ $border-radius-sharp: 0;
  * @tokens Border: Radius
  * @presenter BorderRadius
  */
-$border-radius-pill: 20px;
+$border-radius-pill: 100px;
 
 /**
  * @tokens Border: Radius

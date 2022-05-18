@@ -1,6 +1,6 @@
 {
   "name": "@infineon/design-system-tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Infineon design system token definitions",
   "homepage": "https://github.com/Infineon/IFX-Design-System-Tokens#readme",
@@ -36,7 +36,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "bootstrap": "^5.1.3",  
+    "bootstrap": "^5.1.3",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "prop-types": "^15.7.2"

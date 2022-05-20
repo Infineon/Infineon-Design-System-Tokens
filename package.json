@@ -27,8 +27,8 @@
     "watch-tokens": "chokidar \"src/tokens/*.json\" -c \"yarn build-tokens\" --initial",
     "start": "yarn copy-fonts && concurrently -r yarn:watch-*",
     "bundle-css": "sass --style=compressed --no-source-map .storybook/fonts.scss dist/fonts.css",
-    "bundle-tokens": "copyfiles -u src/tokens/_tokens.scss dist/_tokens.scss",
-    "bundle-fonts": "copyfiles -u 2 ./src/tokens/fonts/**/* dist",
+    "bundle-tokens": "copyfiles -u 2 ./src/tokens/_tokens.scss ./dist/",
+    "bundle-fonts": "copyfiles -u 2 ./src/tokens/fonts/**/* ./dist/",
     "bundle": "yarn build-tokens && concurrently -r yarn:bundle-*"
   },
   "dependencies": {

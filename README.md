@@ -16,11 +16,8 @@ npm install --save @infineon/design-system-tokens
 yarn add @infineon/design-system-tokens
 ```
 
-<mark>Warning: while not published on npm, yet, use `ssh://git@github.com:Infineon/IFX-Design-System-Tokens.git` instead of `@infineon/design-system-tokens`. You need access to that repository, though!</mark>
-
 Now you can import the assets you need to consume. This currently includes:
 ```bash
-.
 ├── fonts
 │   └── source-sans-pro-v18-latin
 │       ├── source-sans-pro-v18-latin-600.woff
@@ -31,8 +28,6 @@ Now you can import the assets you need to consume. This currently includes:
 │       └── source-sans-pro-v18-latin-regular.woff2
 ├── fonts.css
 └── _tokens.scss
-
-2 directories, 8 files
 ```
 
 Include / import `fonts.css` to get the correct font definitions. You'll additionally have to copy the fonts assets (`fonts/`) themselves to your publicly available root folder (often times it's called `static/` or `public/`).
@@ -41,17 +36,17 @@ An import could, depending on your local setup, for example look like this:
 
 *CSS*:
 ```css
-@import "@infineon/design-system-tokens/dist/fonts.css";
+@import "./node_modules/@infineon/design-system-tokens/dist/fonts.css";
 ```
 
 To use the current Design Tokens in SASS import them in your project (in your entry point for SASS, commonly something like `src/index.scss`):
 
-*CSS*:
-```css
-@import "@infineon/design-system-tokens/dist/fonts.css";
+*SCSS*:
+```scss
+@import "./node_modules/@infineon/design-system-tokens/dist/tokens";
 ```
 
-## Development
+## Local Development
 
 ### Installation
 
@@ -69,5 +64,3 @@ Generate a bundle that can be published on `npm`, adds result in `dist/` folder:
 ```bash
 yarn bundle
 ```
-
-<mark>Warning: while not published on npm, yet, the `dist/` folder is removed from the `.gitignore` to make testing the npm integration through Github-URLs work. Those files would otherwise be excluded from being committed. This needs to be removed when publishing is established.</mark>

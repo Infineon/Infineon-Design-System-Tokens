@@ -23,18 +23,8 @@
       }
     },
     "width": {
-      "s": {
-        "value": "1.5px",
-        "type": "borderWidth",
-        "docblock": ["@tokens Border: Width", "@presenter Border"]
-      },
-      "m": {
+      "default": {
         "value": "2px",
-        "type": "borderWidth",
-        "docblock": ["@tokens Border: Width", "@presenter Border"]
-      },
-      "l": {
-        "value": "2.5px",
         "type": "borderWidth",
         "docblock": ["@tokens Border: Width", "@presenter Border"]
       }

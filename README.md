@@ -62,23 +62,6 @@ Install all needed dependencies with:
 yarn install
 ```
 
-### Start Storybook
-
-Start Storybook in local dev mode, including file watchers to hot-reload on code change:
-
-```bash
-yarn start
-```
-
-### Build Storybook
-
-Build the static Storybook, ready to be hosted / deployed.  
-Result gets added in `storybook-static/`:
-
-```bash
-yarn build-storybook
-```
-
 ### Bundle
 
 Generate a bundle that can be published on `npm`, adds result in `dist/` folder: 

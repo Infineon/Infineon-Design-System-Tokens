@@ -5,6 +5,7 @@ src/*/_*-tokens.scss
 storybook-static
 .storybook/fonts
 tmp/
+dist/
 
 # Logs
 logs

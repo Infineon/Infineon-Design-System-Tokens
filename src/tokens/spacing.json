@@ -21,22 +21,22 @@
       "docblock": ["@tokens Spacing", "@presenter Spacing"]
     },
     "l": {
-      "value": "32px",
+      "value": "24px",
       "type": "spacing",
       "docblock": ["@tokens Spacing", "@presenter Spacing"]
     },
     "xl": {
-      "value": "64px",
+      "value": "32px",
       "type": "spacing",
       "docblock": ["@tokens Spacing", "@presenter Spacing"]
     },
     "xxl": {
-      "value": "128px",
+      "value": "64px",
       "type": "spacing",
       "docblock": ["@tokens Spacing", "@presenter Spacing"]
     },
     "xxxl": {
-      "value": "256px",
+      "value": "128px",
       "type": "spacing",
       "docblock": ["@tokens Spacing", "@presenter Spacing"]
     }

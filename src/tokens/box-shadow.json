@@ -1,38 +1,7 @@
 {
   "box-shadow": {
-    "s": {
-      "value": {
-        "x": "1",
-        "y": "1",
-        "blur": "10",
-        "spread": "0",
-        "color": "rgba(0, 0, 0, 0.2)",
-        "type": "dropShadow"
-      },
-      "type": "boxShadow",
-      "docblock": ["@tokens Box-shadows", "@presenter Shadow"]
-    },
-    "m": {
-      "value": {
-        "x": "1",
-        "y": "1",
-        "blur": "10",
-        "spread": "0",
-        "color": "rgba(0, 0, 0, 0.2)",
-        "type": "dropShadow"
-      },
-      "type": "boxShadow",
-      "docblock": ["@tokens Box-shadows", "@presenter Shadow"]
-    },
-    "l": {
-      "value": {
-        "x": "1",
-        "y": "1",
-        "blur": "10",
-        "spread": "0",
-        "color": "rgba(0, 0, 0, 0.2)",
-        "type": "dropShadow"
-      },
+    "default": {
+      "value": "0px 10px 40px rgba(0, 0, 0, 0.05)",
       "type": "boxShadow",
       "docblock": ["@tokens Box-shadows", "@presenter Shadow"]
     }

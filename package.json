@@ -1,6 +1,6 @@
 {
   "name": "@infineon/design-system-tokens",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "Infineon design system token definitions",
   "homepage": "https://github.com/Infineon/IFX-Design-System-Tokens#readme",
@@ -25,8 +25,7 @@
     "bundle-fonts": "copyfiles -u 2 ./src/tokens/fonts/**/* ./dist/",
     "bundle": "yarn build && concurrently -r yarn:bundle-*"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "chokidar-cli": "^3.0.0",

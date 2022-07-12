@@ -2,7 +2,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-As part of the Infineon brand guidelines, the Infineon Digital Design System supports designers, developers and project managers to build user interfaces faster and better – with the ultimate goal to create a coherent and optimal user journey across all internal and external Infineon digital touchpoints.
+As part of the Infineon brand guidelines, the Infineon Digital Design System supports designers, developers and project managers to build user interfaces faster and better – with the ultimate goal to create a coherent and optimal user journey across all internal and external Infineon digital touchpoints. 
 
 This repository contains our design Tokens - so called Atoms.
 

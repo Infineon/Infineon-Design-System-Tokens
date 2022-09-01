@@ -1,6 +1,6 @@
 {
   "name": "@infineon/design-system-tokens",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
   "description": "Infineon design system token definitions",
   "homepage": "https://github.com/Infineon/IFX-Design-System-Tokens#readme",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "auto": "^10.37.4",
     "chokidar-cli": "^3.0.0",
-    "concurrently": "^6.4.0", 
+    "concurrently": "^6.4.0",
     "copyfiles": "^2.4.1",
     "sass": "^1.44.0",
     "style-dictionary": "^3.0.3"

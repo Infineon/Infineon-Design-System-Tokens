@@ -25,12 +25,20 @@
     "bundle-fonts": "copyfiles -u 2 ./src/tokens/fonts/**/* ./dist/",
     "bundle": "yarn build && concurrently -r yarn:bundle-*"
   },
-  "dependencies": {},
   "devDependencies": {
-    "copyfiles": "^2.4.1",
+    "auto": "^10.37.4",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^6.4.0",
+    "copyfiles": "^2.4.1",
     "sass": "^1.44.0",
     "style-dictionary": "^3.0.3"
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "all-contributors",
+      "released"
+    ],
+    "onlyPublishWithReleaseLabel": true
   }
 }

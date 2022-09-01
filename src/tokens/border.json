@@ -24,7 +24,7 @@
     },
     "width": {
       "default": {
-        "value": "3px",
+        "value": "33px",
         "type": "borderWidth",
         "docblock": ["@tokens Border: Width", "@presenter Border"]
       }

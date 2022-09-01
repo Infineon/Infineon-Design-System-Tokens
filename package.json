@@ -26,6 +26,7 @@
     "bundle": "yarn build && concurrently -r yarn:bundle-*"
   },
   "devDependencies": {
+    "auto": "^10.37.4",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^6.4.0", 
     "copyfiles": "^2.4.1",

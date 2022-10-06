@@ -3,13 +3,13 @@
   "version": "1.0.7",
   "private": false,
   "description": "Infineon design system token definitions",
-  "homepage": "https://github.com/Infineon/IFX-Design-System-Tokens#readme",
+  "homepage": "https://github.com/Infineon/Infineon-Design-System-Tokens#readme",
   "bugs": {
-    "url": "https://github.com/Infineon/IFX-Design-System-Tokens/issues"
+    "url": "https://github.com/Infineon/Infineon-Design-System-Tokens/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Infineon/IFX-Design-System-Tokens.git"
+    "url": "git+https://github.com/Infineon/Infineon-Design-System-Tokens.git"
   },
   "files": [
     "dist"
@@ -18,17 +18,16 @@
   "author": "Infineon Technologies AG",
   "scripts": {
     "build": "node ./tools/styleDictionary.js",
-    "watch-tokens": "chokidar \"src/tokens/*.json\" -c \"yarn build\" --initial",
-    "start": "concurrently -r yarn:watch-*",
+    "watch-tokens": "chokidar \"src/tokens/*.json\" -c \"npm run build\" --initial",
     "bundle-css": "sass --style=compressed --no-source-map src/tokens/_fonts.scss dist/fonts.css",
     "bundle-tokens": "copyfiles -u 2 ./src/tokens/_tokens.scss ./dist/",
     "bundle-fonts": "copyfiles -u 2 ./src/tokens/fonts/**/* ./dist/",
-    "bundle": "yarn build && concurrently -r yarn:bundle-*"
+    "bundle": "npm run build && npm run bundle-css && npm run bundle-tokens && npm run bundle-fonts"
   },
   "devDependencies": {
     "auto": "^10.37.4",
     "chokidar-cli": "^3.0.0",
-    "concurrently": "^6.4.0", 
+    "concurrently": "^6.4.0",
     "copyfiles": "^2.4.1",
     "sass": "^1.44.0",
     "style-dictionary": "^3.0.3"
@@ -37,7 +36,6 @@
     "plugins": [
       "npm",
       "released"
-    ],
-    "onlyPublishWithReleaseLabel": true
+    ]
   }
 }

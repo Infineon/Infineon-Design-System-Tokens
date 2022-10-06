@@ -11,17 +11,13 @@ These tokens are transformed into scss and are available at NPM @infineon/design
 ## Requirements
 
 - [Node](https://nodejs.org/en/) >= v14 – if you have [nvm](https://github.com/creationix/nvm#node-version-manager---) installed, you can just run `nvm use` to select the right node version.
-- [Yarn](https://classic.yarnpkg.com/en/) >= `1.22.10` or [npm](https://www.npmjs.com/) >= `6.14.13`
+- [npm](https://www.npmjs.com/) >= `6.14.13`
 
 ## Usage
 
 Add this repository to your dependencies in `package.json`, in your terminal:
 ```bash
 npm install --save @infineon/design-system-tokens
-```
-
-```bash
-yarn add @infineon/design-system-tokens
 ```
 
 Now you can import the assets you need to consume. This currently includes:
@@ -58,11 +54,11 @@ To use the current Design Tokens in SASS import them in your project (in your en
 
 ### Installation
 
-This project itself is developed with `yarn`.  
+This project itself is developed with `npm`.  
 Install all needed dependencies with:
 
 ```bash
-yarn install
+npm install
 ```
 
 ### Bundle
@@ -70,5 +66,5 @@ yarn install
 Generate a bundle that can be published on `npm`, adds result in `dist/` folder: 
 
 ```bash
-yarn bundle
+npm run bundle
 ```

@@ -3,13 +3,13 @@
   "version": "1.0.7",
   "private": false,
   "description": "Infineon design system token definitions",
-  "homepage": "https://github.com/Infineon/IFX-Design-System-Tokens#readme",
+  "homepage": "https://github.com/Infineon/Infineon-Design-System-Tokens#readme",
   "bugs": {
-    "url": "https://github.com/Infineon/IFX-Design-System-Tokens/issues"
+    "url": "https://github.com/Infineon/Infineon-Design-System-Tokens/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Infineon/IFX-Design-System-Tokens.git"
+    "url": "git+https://github.com/Infineon/Infineon-Design-System-Tokens.git"
   },
   "files": [
     "dist"
@@ -28,7 +28,7 @@
   "devDependencies": {
     "auto": "^10.37.4",
     "chokidar-cli": "^3.0.0",
-    "concurrently": "^6.4.0", 
+    "concurrently": "^6.4.0",
     "copyfiles": "^2.4.1",
     "sass": "^1.44.0",
     "style-dictionary": "^3.0.3"

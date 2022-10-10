@@ -1,191 +1,108 @@
 {
   "color": {
-    "primary": {
-      "400": {
-        "value": "#BF3E88",
-        "type": "color",
-        "docblock": ["@tokens Colors: Brand", "@presenter Color"]
-      },
+    "default": {
       "500": {
-        "value": "#AB377A",
-        "type": "color",
-        "docblock": ["@tokens Colors: Brand", "@presenter Color"]
+        "value": "#378375"
       },
       "600": {
-        "value": "#99316D",
-        "type": "color",
-        "docblock": ["@tokens Colors: Brand", "@presenter Color"]
+        "value": "#2D6357"
+      },
+      "700": {
+        "value": "#28594E"
       }
     },
 
-    "secondary": {
-      "400": {
-        "value": "#48A093",
-        "type": "color",
-        "docblock": ["@tokens Colors: Brand", "@presenter Color"]
-      },
+    "highlight": {
       "500": {
-        "value": "#378375",
-        "type": "color",
-        "docblock": ["@tokens Colors: Brand", "@presenter Color"]
+        "value": "#AB377A"
       },
       "600": {
-        "value": "#2D6357",
-        "type": "color",
-        "docblock": ["@tokens Colors: Brand", "@presenter Color"]
+        "value": "#99316D"
+      },
+      "700": {
+        "value": "#822060"
       }
     },
 
     "danger": {
-      "400": {
-        "value": "#E61433",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
-      },
       "500": {
-        "value": "#CD002F",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+        "value": "#CD002F"
       },
       "600": {
-        "value": "#BF0023",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+        "value": "#BF0023"
+      },
+      "700": {
+        "value": "#900021"
       }
     },
 
     "warning": {
-      "400": {
-        "value": "#F28F4E",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
-      },
       "500": {
-        "value": "#F07F3C",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+        "value": "#F07F3C"
       },
       "600": {
-        "value": "#D97336",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+        "value": "#D97336"
+      },
+      "700": {
+        "value": "#CC6E33"
       }
     },
 
     "success": {
-      "400": {
-        "value": "#BFCD87",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
-      },
       "500": {
-        "value": "#AEC067",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+        "value": "#AEC067"
       },
       "600": {
-        "value": "#91A646",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
-      }
-    },
-
-    "info": {
-      "100": {
-        "value": "#FAFAFA",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+        "value": "#91A646"
       },
-      "200": {
-        "value": "#EBE9E9",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
-      },
-      "300": {
-        "value": "#DCD5D7",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
-      },
-      "400": {
-        "value": "#C5BBBD",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
-      },
-      "500": {
-        "value": "#7D6F72",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
-      },
-      "600": {
-        "value": "#665B5D",
-        "type": "color",
-        "docblock": ["@tokens Colors: Semantic", "@presenter Color"]
+      "700": {
+        "value": "#7D933C"
       }
     },
 
     "white": {
-      "value": "#fff",
-      "type": "color",
-      "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      "value": "#FFFFFF"
     },
 
     "black": {
-      "value": "#1D1D1D",
-      "type": "color",
-      "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+      "value": "#1D1D1D"
+    },
+
+    "bg" : { 
+      "white" : {
+        "value": "#FFFFFF"
+      },
+      "gray" : {
+        "value": "#F3F3F3"
+      },
+      "darken" : {
+        "value": "#1D1D1D1A"
+      }
     },
 
     "gray": {
       "100": {
-        "value": "#FAFAFA",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+        "value": "#FAFAFA"
       },
       "200": {
-        "value": "#EBE9E9",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+        "value": "#EBE9E9"
       },
       "300": {
-        "value": "#E3E1E1",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+        "value": "#DCD5D7"
       },
       "400": {
-        "value": "#DCD5D7",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+        "value": "#C5BBBD"
       },
       "500": {
-        "value": "#C5BBBD",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+        "value": "#7D6F72"
       },
       "600": {
-        "value": "#A6989A",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
-      },
-      "700": {
-        "value": "#928285",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
-      },
-      "800": {
-        "value": "#7D6F72",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
-      },
-      "900": {
-        "value": "#665B5D",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
-      },
-      "1000": {
-        "value": "#4E4647",
-        "type": "color",
-        "docblock": ["@tokens Colors: Shades", "@presenter Color"]
+        "value": "#665B5D"
       }
+    },
+
+    "focus": {
+      "value": "#B4DDD8"
     }
   }
 }

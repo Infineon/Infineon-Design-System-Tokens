@@ -60,12 +60,14 @@
       }
     },
 
-    "white": {
-      "value": "#FFFFFF"
-    },
-
-    "black": {
-      "value": "#1D1D1D"
+    "text" : {
+      "white": {
+        "value": "#FFFFFF"
+      },
+  
+      "black": {
+        "value": "#1D1D1D"
+      }
     },
 
     "bg" : { 

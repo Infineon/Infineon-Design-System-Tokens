@@ -1,3 +1,15 @@
+# v2.0.0 (Mon Oct 17 2022)
+
+#### 💥 Breaking Change
+
+- updated colors to match figma designs [#22](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/22) ([@tishoyanchev](https://github.com/tishoyanchev))
+
+#### Authors: 1
+
+- Tisho Yanchev ([@tishoyanchev](https://github.com/tishoyanchev))
+
+---
+
 # v1.0.9 (Thu Oct 13 2022)
 
 #### ⚠️ Pushed to `master`

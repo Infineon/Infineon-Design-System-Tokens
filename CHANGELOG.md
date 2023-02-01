@@ -1,3 +1,15 @@
+# v2.0.2 (Wed Feb 01 2023)
+
+#### 🐛 Bug Fix
+
+- new fonts [#26](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/26) ([@tishoyanchev](https://github.com/tishoyanchev))
+
+#### Authors: 1
+
+- Tisho Yanchev ([@tishoyanchev](https://github.com/tishoyanchev))
+
+---
+
 # v2.0.1 (Wed Oct 19 2022)
 
 #### 🐛 Bug Fix

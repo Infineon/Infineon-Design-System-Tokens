@@ -1,3 +1,15 @@
+# v2.0.3 (Thu Mar 23 2023)
+
+#### ⚠️ Pushed to `master`
+
+- Adding global tokens based on Tokens Studio ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+#### Authors: 1
+
+- Benedikt Kaemmerer ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+---
+
 # v2.0.2 (Wed Feb 01 2023)
 
 #### 🐛 Bug Fix

@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  source: ["src/tokens/*.json"],
+  source: ["src/tokens/global.json"],
   platforms: {
     scss: {
       transformGroup: "scss",

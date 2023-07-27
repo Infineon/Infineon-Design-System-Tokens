@@ -7,7 +7,7 @@ StyleDictionary.extend(config)
   .registerFormat({
     name: "scss/variables-with-docblock",
     formatter({ dictionary, options, file }) {
-      const { outputReferences, themeable = false } = options;
+      const { outputReferences = true, themeable = false } = options;
 
       // https://github.com/amzn/style-dictionary/blob/main/lib/common/formatHelpers/formattedVariables.js#L42
       let { allTokens } = dictionary;

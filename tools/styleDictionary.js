@@ -19,11 +19,9 @@ StyleDictionary.extend(config)
       // We also need to account for nested references, a -> b -> c. They
       // need to be defined in reverse order: c, b, a so that the reference always
       // comes after the definition
-      if (outputReferences) {
         // note: using the spread operator here so we get a new array rather than
         // mutating the original
         allTokens = [...allTokens].sort(sortByReference(dictionary));
-      }
 
       const defaultScssFormater = createPropertyFormatter({
         outputReferences,

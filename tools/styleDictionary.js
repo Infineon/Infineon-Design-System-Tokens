@@ -25,6 +25,12 @@ StyleDictionary.extend(config)
         allTokens = [...allTokens].sort(sortByReference(dictionary));
       }
 
+      // Check if 'baseTypo' exists in the dictionary
+      if (allTokens.allProperties && allTokens.allProperties.some(prop => prop.name === 'baseTypo')) {
+        console.log('baseTypo exists in the dictionary');
+      } else {
+        console.log('baseTypo does not exist in the dictionary');
+      }
       const defaultScssFormater = createPropertyFormatter({
         outputReferences,
         dictionary,

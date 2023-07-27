@@ -4,7 +4,7 @@ const StyleDictionary = require('style-dictionary');
 registerTransforms(StyleDictionary);
 
 StyleDictionary.registerTransform({
-  excludeParentKeys: true
+  excludeParentKeys: "true",
 })
 
 const sd = StyleDictionary.extend({

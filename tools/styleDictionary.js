@@ -1,5 +1,11 @@
 const config = require("../config.js");
+const { registerTransforms } = require('@tokens-studio/sd-transforms');
 const StyleDictionary = require("style-dictionary");
+
+// will register them on StyleDictionary object
+// that is installed as a dependency of this package.
+registerTransforms(StyleDictionary);
+
 const { fileHeader, createPropertyFormatter, sortByReference } =
   StyleDictionary.formatHelpers;
 
@@ -25,12 +31,6 @@ StyleDictionary.extend(config)
         allTokens = [...allTokens].sort(sortByReference(dictionary));
       }
 
-      // Check if 'baseTypo' exists in the dictionary
-      if (allTokens.allProperties && allTokens.allProperties.some(prop => prop.name === 'baseTypo')) {
-        console.log('baseTypo exists in the dictionary');
-      } else {
-        console.log('baseTypo does not exist in the dictionary');
-      }
       const defaultScssFormater = createPropertyFormatter({
         outputReferences,
         dictionary,

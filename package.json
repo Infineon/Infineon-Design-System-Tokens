@@ -30,12 +30,15 @@
     "concurrently": "^6.4.0",
     "copyfiles": "^2.4.1",
     "sass": "^1.44.0",
-    "style-dictionary": "^3.0.3"
+    "style-dictionary": "^3.8.0"
   },
   "auto": {
     "plugins": [
       "npm",
       "released"
     ]
+  },
+  "dependencies": {
+    "@tokens-studio/sd-transforms": "^0.10.5"
   }
 }

@@ -6,8 +6,8 @@ const { fileHeader, createPropertyFormatter, sortByReference } =
 StyleDictionary.extend(config)
   .registerFormat({
     name: "scss/variables-with-docblock",
-    formatter({ dictionary, options, file }) {
-      const { outputReferences = true, themeable = false } = options;
+    formatter({ dictionary, options = {outputReferences: true}, file }) {
+      const { outputReferences, themeable = false } = options;
 
       // https://github.com/amzn/style-dictionary/blob/main/lib/common/formatHelpers/formattedVariables.js#L42
       let { allTokens } = dictionary;

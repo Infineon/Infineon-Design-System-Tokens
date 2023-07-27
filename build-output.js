@@ -2,7 +2,8 @@ const { registerTransforms } = require('@tokens-studio/sd-transforms');
 const StyleDictionary = require('style-dictionary');
 
 registerTransforms(StyleDictionary);
-registerTransforms({
+
+StyleDictionary.registerTransforms({
   excludeParentKeys: true,
 });
 

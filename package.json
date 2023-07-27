@@ -18,7 +18,7 @@
   "author": "Infineon Technologies AG",
   "scripts": {
     "build": "node .build-output.js",
-    "watch-tokens": "chokidar \"src/tokens/global.json\" -c \"npm run build\" --initial",
+    "watch-tokens": "chokidar \"src/tokens/global.json\" -c \"npm run build\" --initial"
   },
   "devDependencies": {
     "auto": "^10.37.4",

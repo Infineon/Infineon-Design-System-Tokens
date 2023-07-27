@@ -3,7 +3,7 @@ const StyleDictionary = require('style-dictionary');
 
 registerTransforms(StyleDictionary);
 
-StyleDictionary.registerTransforms({
+registerTransforms({
   excludeParentKeys: true,
 })
 

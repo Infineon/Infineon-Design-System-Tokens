@@ -150,13 +150,19 @@
           "value": "#1D1D1D33",
           "type": "color"
         }
+      },
+      "shadow": {
+        "default": {
+          "value": "#1D1D1D1F",
+          "type": "color"
+        }
       }
     },
     "shadow": {
       "100": {
         "value": [
           {
-            "color": "#3b28cc1a",
+            "color": "{color.shadow.default}",
             "type": "dropShadow",
             "x": "0",
             "y": "1",
@@ -164,7 +170,7 @@
             "spread": "0"
           },
           {
-            "color": "#3b28cc0d",
+            "color": "{color.shadow.default}",
             "type": "dropShadow",
             "x": "0",
             "y": "0",
@@ -177,7 +183,7 @@
       "200": {
         "value": [
           {
-            "color": "#3b28cc1a",
+            "color": "{color.shadow.default}",
             "type": "dropShadow",
             "x": "0",
             "y": "2",
@@ -185,7 +191,7 @@
             "spread": "0"
           },
           {
-            "color": "#3b28cc0d",
+            "color": "{color.shadow.default}",
             "type": "dropShadow",
             "x": "0",
             "y": "0",
@@ -198,7 +204,7 @@
       "300": {
         "value": [
           {
-            "color": "#3b28cc1a",
+            "color": "{color.shadow.default}",
             "type": "dropShadow",
             "x": "0",
             "y": "4",
@@ -206,7 +212,7 @@
             "spread": "0"
           },
           {
-            "color": "#3b28cc0d",
+            "color": "{color.shadow.default}",
             "type": "dropShadow",
             "x": "0",
             "y": "0",
@@ -1222,6 +1228,32 @@
           "paragraphIndent": "{paragraphIndent.default}"
         },
         "type": "typography"
+      }
+    },
+    "breakpoint": {
+      "xs": {
+        "value": "576px",
+        "type": "other"
+      },
+      "s": {
+        "value": "576px",
+        "type": "other"
+      },
+      "m": {
+        "value": "768px",
+        "type": "other"
+      },
+      "l": {
+        "value": "992px",
+        "type": "other"
+      },
+      "xl": {
+        "value": "1200px",
+        "type": "other"
+      },
+      "xxl": {
+        "value": "1400px",
+        "type": "other"
       }
     }
   },

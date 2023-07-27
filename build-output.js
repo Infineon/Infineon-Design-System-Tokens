@@ -3,9 +3,9 @@ const StyleDictionary = require('style-dictionary');
 
 registerTransforms(StyleDictionary);
 
-StyleDictionary.registerTransforms({
-  excludeParentKeys: true,
-});
+StyleDictionary.registerTransform({
+  excludeParentKeys: true
+})
 
 const sd = StyleDictionary.extend({
   source: ['src/tokens/global.json'],

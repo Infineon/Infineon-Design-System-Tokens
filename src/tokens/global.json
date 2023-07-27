@@ -1256,28 +1256,5 @@
         "type": "other"
       }
     }
-  },
-  "$themes": [
-    {
-      "id": "7347fd90e502aaece9e7cf40f79f188b93485a2a",
-      "name": "default - light",
-      "selectedTokenSets": {
-        "global": "enabled"
-      },
-      "$figmaStyleReferences": {}
-    },
-    {
-      "id": "3302a6ab13541c7c09e7a82868ef83ef0e4e27d3",
-      "name": "default - dark",
-      "selectedTokenSets": {
-        "global": "enabled"
-      },
-      "$figmaStyleReferences": {}
-    }
-  ],
-  "$metadata": {
-    "tokenSetOrder": [
-      "global"
-    ]
   }
 }

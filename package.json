@@ -17,7 +17,7 @@
   "license": "MIT",
   "author": "Infineon Technologies AG",
   "scripts": {
-    "build": "node .build-output.js",
+    "build": "node build-output.js",
     "watch-tokens": "chokidar \"src/tokens/global.json\" -c \"npm run build\" --initial"
   },
   "devDependencies": {

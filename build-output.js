@@ -1,12 +1,7 @@
 const { registerTransforms } = require('@tokens-studio/sd-transforms');
 const StyleDictionary = require('style-dictionary');
 
-StyleDictionary.registerTransform({
-  excludeParentKeys: true,
-})
-
-registerTransforms(StyleDictionary);
-
+registerTransforms(StyleDictionary, { excludeParentKeys: true });
 
 const sd = StyleDictionary.extend({
   source: ['src/tokens/global.json'],

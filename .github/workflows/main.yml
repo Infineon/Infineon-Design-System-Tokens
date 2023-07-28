@@ -32,9 +32,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm config set '//npm.fontawesome.com/:_authToken' "${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}" 
           npm install
-          npm run build
+          npm run bundle
           auto shipit
       - name: Switch registry to npmjs.org
         uses: actions/setup-node@v1

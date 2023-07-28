@@ -12,7 +12,7 @@ const sd = StyleDictionary.extend({
       buildPath: 'build/css/',
       files: [
         {
-          destination: 'variables.css',
+          destination: 'tokens.css',
           format: 'css/variables',
         },
       ],

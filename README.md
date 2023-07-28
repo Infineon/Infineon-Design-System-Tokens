@@ -38,7 +38,7 @@ Now you can import the assets you need to consume. This currently includes:
 └── _tokens.scss
 ```
 
-Include / import `fonts.css` to get the correct font definitions. You'll additionally have to copy the fonts assets (`fonts/`) themselves to your publicly available root folder (often times it's called `static/` or `public/`).
+Include / import `fonts.scss` to get the correct font definitions. You'll additionally have to copy the fonts assets (`fonts/`) themselves to your publicly available root folder (often times it's called `static/` or `public/`).
 
 An import could, depending on your local setup, for example look like this:
 

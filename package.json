@@ -19,10 +19,9 @@
   "scripts": {
     "build": "node build-output.js",
     "watch-tokens": "chokidar \"src/tokens/global.json\" -c \"npm run build\" --initial",
-    "bundle-css": "sass --style=compressed --no-source-map src/fonts/_fonts.scss dist/fonts.css",
-    "bundle-tokens": "copyfiles -u 2 ./src/tokens/_tokens.scss ./dist/",
-    "bundle-fonts": "copyfiles -u 2 ./src/tokens/fonts/**/* ./dist/",
-    "bundle": "npm run build && npm run bundle-css && npm run bundle-tokens && npm run bundle-fonts"
+    "bundle-tokens": "copyfiles -u 2 ./build/scss/_tokens.scss ./dist/",
+    "bundle-fonts": "copyfiles -u 2 ./src/fonts/**/* ./dist/",
+    "bundle": "npm run build && npm run bundle-tokens && npm run bundle-fonts"
   },
   "devDependencies": {
     "auto": "^10.37.4",

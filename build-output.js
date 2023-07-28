@@ -6,14 +6,14 @@ registerTransforms(StyleDictionary, { excludeParentKeys: true });
 const sd = StyleDictionary.extend({
   source: ['src/tokens/global.json'],
   platforms: {
-    css: {
+    scss: {
       transformGroup: 'tokens-studio',
       prefix: "ifx",
-      buildPath: 'build/css/',
+      buildPath: 'build/scss/',
       files: [
         {
-          destination: 'tokens.css',
-          format: 'css/variables',
+          destination: 'tokens.scss',
+          format: 'scss/variables',
         },
       ],
     },

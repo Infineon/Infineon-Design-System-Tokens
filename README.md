@@ -27,15 +27,15 @@ yarn add @infineon/design-system-tokens
 Now you can import the assets you need to consume. This currently includes:
 ```bash
 ├── fonts
-│   ├── source-sans-3
-│   │   ├── SourceSans3-It.ttf.woff
-│   │   ├── SourceSans3-It.ttf.woff2
-│   │   ├── SourceSans3-Regular.ttf.woff
-│   │   ├── SourceSans3-Regular.ttf.woff2
-│   │   ├── SourceSans3-Semibold.ttf.woff
-│   │   └── SourceSans3-Semibold.ttf.woff2
-│   └── font.scss
-└── tokens.scss
+│   └── source-sans-3
+│       ├── SourceSans3-It.ttf.woff
+│       ├── SourceSans3-It.ttf.woff2
+│       ├── SourceSans3-Regular.ttf.woff
+│       ├── SourceSans3-Regular.ttf.woff2
+│       ├── SourceSans3-Semibold.ttf.woff
+│       └── SourceSans3-Semibold.ttf.woff2
+├── _fonts.scss
+└── _tokens.scss
 ```
 
 Include / import `fonts.css` to get the correct font definitions. You'll additionally have to copy the fonts assets (`fonts/`) themselves to your publicly available root folder (often times it's called `static/` or `public/`).

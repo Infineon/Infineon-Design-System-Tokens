@@ -20,8 +20,9 @@
     "build": "node build-output.js",
     "watch-tokens": "chokidar \"src/tokens/global.json\" -c \"npm run build\" --initial",
     "bundle-tokens": "copyfiles -u 2 ./build/scss/_tokens.scss ./dist/",
-    "bundle-fonts": "copyfiles -u 2 ./src/fonts/**/* ./dist/",
-    "bundle": "npm run build && npm run bundle-tokens && npm run bundle-fonts"
+    "bundle-fonts": "copyfiles -u 2 ./src/fonts/**/* ./dist/fonts/",
+    "bundle-scss": "copyfiles -u 2 ./src/scss/_fonts.scss ./dist/",
+    "bundle": "npm run build && npm run bundle-tokens && npm run bundle-fonts && npm run bundle-scss"
   },
   "devDependencies": {
     "auto": "^10.37.4",

@@ -1,7 +1,6 @@
 .vscode
 .DS_Store
-src/tokens/_tokens.scss
-src/*/_*-tokens.scss
+build/
 storybook-static
 .storybook/fonts
 tmp/

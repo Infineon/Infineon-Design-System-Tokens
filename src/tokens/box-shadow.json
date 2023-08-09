@@ -1,9 +1,0 @@
-{
-  "box-shadow": {
-    "default": {
-      "value": "0px 10px 40px rgba(0, 0, 0, 0.05)",
-      "type": "boxShadow",
-      "docblock": ["@tokens Box-shadows", "@presenter Shadow"]
-    }
-  }
-}

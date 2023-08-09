@@ -27,31 +27,31 @@ yarn add @infineon/design-system-tokens
 Now you can import the assets you need to consume. This currently includes:
 ```bash
 ├── fonts
-│   └── source-sans-pro-v18-latin
-│       ├── source-sans-pro-v18-latin-600.woff
-│       ├── source-sans-pro-v18-latin-600.woff2
-│       ├── source-sans-pro-v18-latin-700.woff
-│       ├── source-sans-pro-v18-latin-700.woff2
-│       ├── source-sans-pro-v18-latin-regular.woff
-│       └── source-sans-pro-v18-latin-regular.woff2
-├── fonts.css
+│   └── source-sans-3
+│       ├── SourceSans3-It.ttf.woff
+│       ├── SourceSans3-It.ttf.woff2
+│       ├── SourceSans3-Regular.ttf.woff
+│       ├── SourceSans3-Regular.ttf.woff2
+│       ├── SourceSans3-Semibold.ttf.woff
+│       └── SourceSans3-Semibold.ttf.woff2
+├── _fonts.scss
 └── _tokens.scss
 ```
 
-Include / import `fonts.css` to get the correct font definitions. You'll additionally have to copy the fonts assets (`fonts/`) themselves to your publicly available root folder (often times it's called `static/` or `public/`).
+Include / import `fonts.scss` to get the correct font definitions. You'll additionally have to copy the fonts assets (`fonts/`) themselves to your publicly available root folder (often times it's called `static/` or `public/`).
 
 An import could, depending on your local setup, for example look like this:
 
-*CSS*:
-```css
-@import "./node_modules/@infineon/design-system-tokens/dist/fonts.css";
+*SCSS*:
+```scss
+@import "./node_modules/@infineon/design-system-tokens/dist/fonts.scss";
 ```
 
 To use the current Design Tokens in SASS import them in your project (in your entry point for SASS, commonly something like `src/index.scss`):
 
 *SCSS*:
 ```scss
-@import "./node_modules/@infineon/design-system-tokens/dist/tokens";
+@import "./node_modules/@infineon/design-system-tokens/dist/tokens.scss";
 ```
 
 ## Local Development

@@ -1,3 +1,15 @@
+# v3.0.0 (Wed Aug 09 2023)
+
+#### 💥 Breaking Change
+
+- new tokens added [#27](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/27) ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+#### Authors: 1
+
+- Benedikt Kaemmerer ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+---
+
 # v2.0.3 (Thu Mar 23 2023)
 
 #### ⚠️ Pushed to `master`

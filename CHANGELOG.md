@@ -1,3 +1,15 @@
+# v3.0.1 (Wed Aug 23 2023)
+
+#### 🐛 Bug Fix
+
+- Added missing sizes and spacings [#28](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/28) ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+#### Authors: 1
+
+- Benedikt Kaemmerer ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+---
+
 # v3.0.0 (Wed Aug 09 2023)
 
 #### 💥 Breaking Change

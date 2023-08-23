@@ -329,6 +329,18 @@
         "value": "{base}*12",
         "type": "spacing"
       },
+      "1300": {
+        "value": "{base}*13",
+        "type": "spacing"
+      },
+      "1400": {
+        "value": "{base}*14",
+        "type": "spacing"
+      },
+      "1500": {
+        "value": "{base}*15",
+        "type": "spacing"
+      },
       "1600": {
         "value": "{base}*16",
         "type": "spacing"
@@ -469,8 +481,16 @@
         "value": "{base}*12",
         "type": "sizing"
       },
+      "1300": {
+        "value": "{base}*13",
+        "type": "sizing"
+      },
       "1400": {
         "value": "{base}*14",
+        "type": "sizing"
+      },
+      "1500": {
+        "value": "{base}*15",
         "type": "sizing"
       },
       "1600": {

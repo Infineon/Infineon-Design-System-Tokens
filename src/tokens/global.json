@@ -325,6 +325,10 @@
         "value": "{base}*10",
         "type": "spacing"
       },
+      "1100": {
+        "value": "{base}*11",
+        "type": "spacing"
+      },
       "1200": {
         "value": "{base}*12",
         "type": "spacing"

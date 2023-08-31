@@ -1,3 +1,15 @@
+# v3.1.0 (Thu Aug 31 2023)
+
+#### 🚀 Enhancement
+
+- Minor fixes of fonts and spacing [#29](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/29) ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+#### Authors: 1
+
+- Benedikt Kaemmerer ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+---
+
 # v3.0.1 (Wed Aug 23 2023)
 
 #### 🐛 Bug Fix

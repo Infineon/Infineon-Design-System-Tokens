@@ -612,7 +612,7 @@
         "type": "fontSizes"
       },
       "s": {
-        "value": "{baseTypo}*0.8125",
+        "value": "{baseTypo}*0.875",
         "type": "fontSizes"
       },
       "m": {
@@ -666,7 +666,7 @@
     },
     "lineHeight": {
       "xxs": {
-        "value": "{baseTypo}*0.8125",
+        "value": "{baseTypo}*0.875",
         "type": "lineHeights"
       },
       "xs": {

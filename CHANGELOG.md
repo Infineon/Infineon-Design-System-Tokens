@@ -1,3 +1,15 @@
+# v3.2.0 (Wed Sep 20 2023)
+
+#### 🚀 Enhancement
+
+- fix font path [#30](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/30) ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+#### Authors: 1
+
+- Benedikt Kaemmerer ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+---
+
 # v3.1.0 (Thu Aug 31 2023)
 
 #### 🚀 Enhancement

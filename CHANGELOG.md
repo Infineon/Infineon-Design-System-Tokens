@@ -1,3 +1,15 @@
+# v3.3.1 (Wed Sep 20 2023)
+
+#### 🐛 Bug Fix
+
+- Fix build process for missing fonts [#32](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/32) ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+#### Authors: 1
+
+- Benedikt Kaemmerer ([@benedikt-ifx](https://github.com/benedikt-ifx))
+
+---
+
 # v3.3.0 (Wed Sep 20 2023)
 
 #### 🚀 Enhancement

@@ -10,7 +10,7 @@ const destDir = './dist/fonts/';
 sass.render({ file: srcFile }, (err, result) => {
   if (err) throw err;
 
-  const destPath = path.join(destDir, '_fonts.css');
+  const destPath = path.join(destDir, 'ifx-fonts.css');
   fs.writeFile(destPath, result.css, err => {
     if (err) throw err;
 

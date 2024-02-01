@@ -21,7 +21,7 @@
     "watch-tokens": "chokidar \"src/tokens/global.json\" -c \"npm run build\" --initial",
     "bundle-tokens": "copyfiles -u 2 ./build/scss/_tokens.scss ./dist/",
     "bundle-fonts": "copyfiles -u 2 ./src/fonts/**/* ./dist/fonts/",
-    "bundle-scss": "copyfiles -u 2 ./src/scss/_fonts.scss ./dist/",
+    "bundle-scss": "node compile-fonts-scss.js",
     "bundle": "npm run build && npm run bundle-tokens && npm run bundle-fonts && npm run bundle-scss"
   },
   "devDependencies": {
@@ -39,6 +39,7 @@
     ]
   },
   "dependencies": {
-    "@tokens-studio/sd-transforms": "^0.10.5"
+    "@tokens-studio/sd-transforms": "^0.10.5",
+    "node-sass": "^9.0.0"
   }
 }

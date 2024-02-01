@@ -1,3 +1,16 @@
+# v3.3.2 (Thu Feb 01 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix: changed to absolute path to import fonts files [#35](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/35) (lechneve@ISCN5CG1201S7M.infineon.com [@verena-ifx](https://github.com/verena-ifx))
+
+#### Authors: 2
+
+- [@verena-ifx](https://github.com/verena-ifx)
+- verena-ifx (lechneve@ISCN5CG1201S7M.infineon.com)
+
+---
+
 # v3.3.1 (Wed Sep 20 2023)
 
 #### 🐛 Bug Fix

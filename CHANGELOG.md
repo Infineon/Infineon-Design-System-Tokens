@@ -1,3 +1,15 @@
+# v3.3.3 (Fri Sep 06 2024)
+
+#### 🐛 Bug Fix
+
+- Bugfix: replaced node-sass with sass [#39](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/39) ([@verena-ifx](https://github.com/verena-ifx))
+
+#### Authors: 1
+
+- [@verena-ifx](https://github.com/verena-ifx)
+
+---
+
 # v3.3.2 (Thu Feb 01 2024)
 
 #### 🐛 Bug Fix

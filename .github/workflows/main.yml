@@ -21,12 +21,6 @@ jobs:
         with:
           fetch-depth: 0 # fetch all tags for ship-it
 
-      - name: Set up remote tracking branch
-        run: |
-          BRANCH_NAME=${GITHUB_HEAD_REF}
-          echo "Branch name is: $BRANCH_NAME"
-          git checkout -b $BRANCH_NAME origin/$BRANCH_NAME
-
       - name: download + setup auto
         uses: auto-it/setup-auto@v1
 
@@ -36,18 +30,32 @@ jobs:
           node-version: 16
           registry-url: "https://registry.npmjs.org"
 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
       - name: Install dependencies
         run: npm install
 
-      - name: Bump version and create release
-        id: bump_version
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Determine next version using auto shipit --dry-run
+        id: next_version
         run: |
-          npm run bundle
-          auto version
+          VERSION=$(npx auto shipit --dry-run --quiet | grep "New Release:" | awk '{print $3}')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "::set-output name=version::$VERSION"
+
+      - name: Update package.json with next version
+        run: |
+          jq --arg version "${{ steps.next_version.outputs.version }}" '.version = $version' package.json > package.json.tmp && mv package.json.tmp package.json
+          cat package.json
+
+      - name: Commit updated package.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add package.json
-          git commit -m "ci: bump version [skip ci]" || echo "No changes to commit"
+          git commit -m "ci: bump version to ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
           git push origin HEAD:${{ github.head_ref }}
 
       - name: Replace version in _fonts.scss
@@ -58,16 +66,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add -f src/fonts/_fonts.scss dist/
-          git commit -m "ci: update fonts with new version [skip ci]" || echo "No changes to commit"
+          git commit -m "ci: update fonts with new version ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
           git push origin HEAD:${{ github.head_ref }}
 
       - name: Create Release
-        if: steps.bump_version.outputs.status == 'success'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           auto changelog
           auto release
+
       # - name: Switch registry to npmjs.org
       #   uses: actions/setup-node@v1
       #   with:

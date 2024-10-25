@@ -60,18 +60,11 @@ jobs:
           git commit -m "ci: bump version to ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
           git push origin HEAD:${{ github.head_ref }}
 
+      - name: build 
+        run: npm run bundle
+        
       - name: Replace version in _fonts.scss
         run: node replace-version.js
-
-      - name: Temporarily remove dist/ from .gitignore
-        run: |
-          sed -i '/^dist\//d' .gitignore
-
-      - name: Ensure dist directory exists and add files
-        run: |
-          mkdir -p dist/  # Ensure dist directory exists
-          git add -f src/scss/_fonts.scss dist/
-          ls -al dist/
 
       - name: Restore .gitignore
         run: |
@@ -84,11 +77,15 @@ jobs:
           git commit -m "ci: update fonts with new version ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
           git push origin HEAD:${{ github.head_ref }}
 
-      - name: Create Release
+      - name: Publish to npm with conditional tagging
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm publish --tag canary
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            npm publish --tag canary
+          elif [[ "${{ github.ref }}" == "refs/heads/master" ]]; then
+            npm publish
+          fi
 
       # - name: Switch registry to npmjs.org
       #   uses: actions/setup-node@v1

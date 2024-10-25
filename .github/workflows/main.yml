@@ -21,6 +21,12 @@ jobs:
         with:
           fetch-depth: 0 # fetch all tags for ship-it
 
+      - name: Set up remote tracking branch
+        run: |
+          BRANCH_NAME=${GITHUB_HEAD_REF}
+          echo "Branch name is: $BRANCH_NAME"
+          git checkout -b $BRANCH_NAME origin/$BRANCH_NAME
+
       - name: download + setup auto
         uses: auto-it/setup-auto@v1
 
@@ -42,7 +48,7 @@ jobs:
           auto version
           git add package.json
           git commit -m "ci: bump version [skip ci]" || echo "No changes to commit"
-          git push origin master
+          git push origin HEAD:${{ github.head_ref }}
 
       - name: Replace version in _fonts.scss
         run: node replace-version.js
@@ -53,7 +59,7 @@ jobs:
         run: |
           git add -f src/fonts/_fonts.scss dist/
           git commit -m "ci: update fonts with new version [skip ci]" || echo "No changes to commit"
-          git push origin master
+          git push origin HEAD:${{ github.head_ref }}
 
       - name: Create Release
         if: steps.bump_version.outputs.status == 'success'

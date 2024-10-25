@@ -88,7 +88,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          auto shipit
+          npm publish --tag canary
 
       # - name: Switch registry to npmjs.org
       #   uses: actions/setup-node@v1

@@ -11,32 +11,85 @@ on:
 
 jobs:
   release:
+    outputs:
+      VERSION: ${{ steps.next_version.outputs.VERSION }}
     runs-on: ubuntu-latest
     if: >-
       (github.event_name == 'push' && !contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')) ||
       (github.event_name == 'pull_request' && !contains(github.event.pull_request.title, 'ci skip') && !contains(github.event.pull_request.title, 'skip ci'))    
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # fetch all tags for ship-it
 
       - name: download + setup auto
         uses: auto-it/setup-auto@v1
 
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
           registry-url: "https://registry.npmjs.org"
 
-      - name: Create Release 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Determine next version using auto shipit --dry-run
+        id: next_version
+        run: |
+          VERSION=$(auto shipit --dry-run --quiet)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Update package.json with next version
+        run: |
+          jq --arg version "${{ steps.next_version.outputs.version }}" '.version = $version' package.json > package.json.tmp && mv package.json.tmp package.json
+          cat package.json
+
+      - name: Commit updated package.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add package.json
+          git commit -m "ci: bump version to ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
+          git push origin HEAD:${{ github.head_ref }}
+
+      - name: Replace version in _fonts.scss
+        run: node replace-version.js
+
+      - name: Temporarily remove dist/ from .gitignore
+        run: |
+          sed -i '/^dist\//d' .gitignore
+
+      - name: Ensure dist directory exists and add files
+        run: |
+          mkdir -p dist/  # Ensure dist directory exists
+          git add -f src/scss/_fonts.scss dist/
+          ls -al dist/
+
+      - name: Restore .gitignore
+        run: |
+          git checkout .gitignore
+
+      - name: Commit and push changes to _fonts.scss and dist directory
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git commit -m "ci: update fonts with new version ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
+          git push origin HEAD:${{ github.head_ref }}
+
+      - name: Create Release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm install
-          npm run bundle
-          auto shipit
+          npm publish --tag canary
+
       # - name: Switch registry to npmjs.org
       #   uses: actions/setup-node@v1
       #   with:

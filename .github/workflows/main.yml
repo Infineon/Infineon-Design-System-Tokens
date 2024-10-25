@@ -30,13 +30,52 @@ jobs:
           node-version: 16
           registry-url: "https://registry.npmjs.org"
 
-      - name: Create Release 
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Determine next version using auto shipit --dry-run
+        id: next_version
+        run: |
+          VERSION=$(npx auto shipit --dry-run --quiet | grep "New Release:" | awk '{print $3}')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "::set-output name=version::$VERSION"
+
+      - name: Update package.json with next version
+        run: |
+          jq --arg version "${{ steps.next_version.outputs.version }}" '.version = $version' package.json > package.json.tmp && mv package.json.tmp package.json
+          cat package.json
+
+      - name: Commit updated package.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add package.json
+          git commit -m "ci: bump version to ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
+          git push origin HEAD:${{ github.head_ref }}
+
+      - name: Replace version in _fonts.scss
+        run: node replace-version.js
+
+      - name: Commit and push changes to _fonts.scss and dist directory
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add -f src/fonts/_fonts.scss dist/
+          git commit -m "ci: update fonts with new version ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
+          git push origin HEAD:${{ github.head_ref }}
+
+      - name: Create Release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm install
-          npm run bundle
-          auto shipit
+          auto changelog
+          auto release
+
       # - name: Switch registry to npmjs.org
       #   uses: actions/setup-node@v1
       #   with:

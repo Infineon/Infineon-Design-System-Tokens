@@ -11,13 +11,15 @@ on:
 
 jobs:
   release:
+    outputs:
+      VERSION: ${{ steps.next_version.outputs.VERSION }}
     runs-on: ubuntu-latest
     if: >-
       (github.event_name == 'push' && !contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')) ||
       (github.event_name == 'pull_request' && !contains(github.event.pull_request.title, 'ci skip') && !contains(github.event.pull_request.title, 'skip ci'))    
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # fetch all tags for ship-it
 
@@ -39,9 +41,9 @@ jobs:
       - name: Determine next version using auto shipit --dry-run
         id: next_version
         run: |
-          VERSION=$(npx auto shipit --dry-run --quiet | grep "New Release:" | awk '{print $3}')
+          VERSION=$(auto shipit --dry-run --quiet)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "::set-output name=version::$VERSION"
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Update package.json with next version
         run: |

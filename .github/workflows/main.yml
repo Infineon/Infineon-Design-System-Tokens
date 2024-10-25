@@ -24,10 +24,10 @@ jobs:
       - name: download + setup auto
         uses: auto-it/setup-auto@v1
 
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
           registry-url: "https://registry.npmjs.org"
 
       - name: Install jq
@@ -86,8 +86,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          auto changelog
-          auto release
+          auto shipit
 
       # - name: Switch registry to npmjs.org
       #   uses: actions/setup-node@v1

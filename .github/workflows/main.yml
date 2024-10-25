@@ -60,15 +60,11 @@ jobs:
           git commit -m "ci: bump version to ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
           git push origin HEAD:${{ github.head_ref }}
 
-      - name: build 
-        run: npm run bundle
-        
       - name: Replace version in _fonts.scss
         run: node replace-version.js
 
-      - name: Restore .gitignore
-        run: |
-          git checkout .gitignore
+      - name: build 
+        run: npm run bundle
 
       - name: Commit and push changes to _fonts.scss and dist directory
         env:

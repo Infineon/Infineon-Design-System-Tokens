@@ -58,8 +58,11 @@ jobs:
           git config user.email "github-actions@github.com"
           git add package.json
           git commit -m "ci: bump version to ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
-          git push origin HEAD:${{ github.head_ref }}
-
+          if [[ "${{ github.ref }}" == "refs/heads/master" ]]; then
+            git push origin HEAD:master
+          else
+            git push origin HEAD:${{ github.head_ref }}
+          fi
       - name: Replace version in _fonts.scss
         run: node replace-version.js
 
@@ -71,8 +74,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git commit -m "ci: update fonts with new version ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
-          git push origin HEAD:${{ github.head_ref }}
-
+          if [[ "${{ github.ref }}" == "refs/heads/master" ]]; then
+            git push origin HEAD:master
+          else
+            git push origin HEAD:${{ github.head_ref }}
+          fi
       - name: Publish to npm with conditional tagging
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

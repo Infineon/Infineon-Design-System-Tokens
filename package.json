@@ -1,6 +1,6 @@
 {
   "name": "@infineon/design-system-tokens",
-  "version": "4.0.0",
+  "version": "4.0.1--canary.48.6828ff6f102e4e48ad1d55bb9418a8525882d35c.0",
   "private": false,
   "description": "Infineon design system token definitions",
   "homepage": "https://github.com/Infineon/Infineon-Design-System-Tokens#readme",

@@ -7,7 +7,7 @@ const version = packageJson.version;
 const filePath = path.resolve(__dirname, 'src/scss/_fonts.scss');
 let fileContent = fs.readFileSync(filePath, 'utf8');
 
-fileContent = fileContent.replace(/@VERSION/g, `@${version}`);
+fileContent = fileContent.replace(/@[\w.-]+/, `@${version}`);
 
 fs.writeFileSync(filePath, fileContent);
 

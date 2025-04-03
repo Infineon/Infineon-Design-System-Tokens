@@ -710,7 +710,7 @@
         "type": "lineHeights"
       },
       "7xl": {
-        "value": "{baseTypo}*3.5",
+        "value": "{baseTypo}*3.25",
         "type": "lineHeights"
       },
       "8xl": {

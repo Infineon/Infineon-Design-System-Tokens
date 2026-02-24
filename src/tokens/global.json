@@ -1256,7 +1256,7 @@
     },
     "breakpoint": {
       "xs": {
-        "value": "576px",
+        "value": "375px",
         "type": "other"
       },
       "s": {

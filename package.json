@@ -18,6 +18,7 @@
   "author": "Infineon Technologies AG",
   "scripts": {
     "build": "node build-output.js",
+    "test": "node tests/regression.js",
     "watch-tokens": "chokidar \"src/tokens/global.json\" -c \"npm run build\" --initial",
     "bundle-tokens": "copyfiles -u 2 ./build/scss/_tokens.scss ./dist/",
     "bundle-fonts": "copyfiles -u 2 ./src/fonts/**/* ./dist/fonts/",
@@ -25,11 +26,11 @@
     "bundle": "npm run build && npm run bundle-tokens && npm run bundle-fonts && npm run bundle-scss"
   },
   "devDependencies": {
-    "auto": "^10.37.4",
+    "auto": "^10.46.0",
     "chokidar-cli": "^3.0.0",
-    "concurrently": "^6.4.0",
+    "concurrently": "^6.5.1",
     "copyfiles": "^2.4.1",
-    "style-dictionary": "^3.8.0"
+    "style-dictionary": "^3.9.2"
   },
   "auto": {
     "plugins": [
@@ -39,6 +40,6 @@
   },
   "dependencies": {
     "@tokens-studio/sd-transforms": "^0.10.5",
-    "sass": "^1.78.0"
+    "sass": "^1.98.0"
   }
 }

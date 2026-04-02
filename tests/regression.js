@@ -3,7 +3,7 @@ const path = require('path');
 const { execFileSync } = require('child_process');
 
 const repoRoot = path.resolve(__dirname, '..');
-const buildScript = path.join(repoRoot, 'build-output.js');
+const buildScript = path.join(repoRoot, 'build-output.mjs');
 const actualPath = path.join(repoRoot, 'build', 'scss', '_tokens.scss');
 const expectedPath = path.join(__dirname, 'fixtures', '_tokens.scss');
 

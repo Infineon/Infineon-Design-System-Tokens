@@ -9,83 +9,44 @@ on:
     branches:
       - master
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   release:
     permissions:
       contents: write
+      pull-requests: write
+      issues: write
       id-token: write
-    outputs:
-      VERSION: ${{ steps.next_version.outputs.VERSION }}
     runs-on: ubuntu-latest
     if: >-
       (github.event_name == 'push' && !contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')) ||
-      (github.event_name == 'pull_request' && !contains(github.event.pull_request.title, 'ci skip') && !contains(github.event.pull_request.title, 'skip ci'))    
+      (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && !contains(github.event.pull_request.title, 'ci skip') && !contains(github.event.pull_request.title, 'skip ci'))
     steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # fetch all tags for ship-it
 
-      - name: download + setup auto
-        uses: auto-it/setup-auto@v1
-
       - name: Use Node.js 24.x
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-          registry-url: "https://registry.npmjs.org"
-
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
+          node-version: '24.11.1'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Determine next version using auto shipit --dry-run
-        id: next_version
-        run: |
-          VERSION=$(auto shipit --dry-run --quiet)
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+      - name: build
+        run: npm run bundle
 
-      - name: Update package.json with next version
-        run: |
-          jq --arg version "${{ steps.next_version.outputs.version }}" '.version = $version' package.json > package.json.tmp && mv package.json.tmp package.json
-          cat package.json
-
-      - name: Commit updated package.json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Configure git for Auto
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add package.json
-          git commit -m "ci: bump version to ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
-          if [[ "${{ github.ref }}" == "refs/heads/master" ]]; then
-            git push origin HEAD:master
-          else
-            git push origin HEAD:${{ github.head_ref }}
-          fi
-      - name: Replace version in _fonts.scss
-        run: node replace-version.js
 
-      - name: build 
-        run: npm run bundle
-
-      - name: Commit and push changes to _fonts.scss and dist directory
+      - name: Publish with Auto
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git commit -m "ci: update fonts with new version ${{ steps.next_version.outputs.version }} [skip ci]" || echo "No changes to commit"
-          if [[ "${{ github.ref }}" == "refs/heads/master" ]]; then
-            git push origin HEAD:master
-          else
-            git push origin HEAD:${{ github.head_ref }}
-          fi
-      - name: Publish to npm with conditional tagging
-        run: |
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            npm publish --tag canary
-          elif [[ "${{ github.ref }}" == "refs/heads/master" ]]; then
-            npm publish
-          fi
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx --no-install auto shipit

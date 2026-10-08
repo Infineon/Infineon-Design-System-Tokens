@@ -23,6 +23,7 @@
     "bundle-fonts": "copyfiles -u 2 ./src/fonts/**/* ./dist/fonts/",
     "bundle-scss": "node compile-fonts-scss.js",
     "bundle": "npm run build && npm run bundle-tokens && npm run bundle-fonts && npm run bundle-scss",
+    "prepublishOnly": "node replace-version.js && npm run bundle",
     "test": "node tests/regression.js"
   },
   "devDependencies": {
@@ -34,7 +35,7 @@
   },
   "auto": {
     "plugins": [
-      "npm",
+      ["npm", { "setRcToken": false }],
       "released"
     ]
   },

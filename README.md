@@ -72,3 +72,18 @@ Generate a bundle that can be published on `npm`, adds result in `dist/` folder:
 ```bash
 yarn bundle
 ```
+
+## Publishing
+
+The release workflow uses the project-local Auto CLI's `shipit` command to manage
+versioning and publishing. Pull requests from this repository publish canary
+versions with PR comments. Pushes to `master` publish releases selected by Auto;
+the `released` plugin comments on released PRs and issues and adds release labels.
+
+Publishing uses npm trusted publishing, not an npm token. Configure the package's
+trusted publisher on npm for GitHub Actions, repository
+`Infineon/Infineon-Design-System-Tokens`, and workflow `main.yml`, without an
+environment. The workflow requires Node.js 22.14+ and npm 11.5.1+ for OIDC.
+
+The `prepublishOnly` hook rebuilds the bundle using the updated package version,
+so published font URLs reference that version.

@@ -1,3 +1,24 @@
+# v7.1.0 (Thu Oct 08 2026)
+
+#### 🚀 Enhancement
+
+- Feat: Fix shadow100 and remove other shadow tokens [#55](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/55) ([@pfafffabian-ifx](https://github.com/pfafffabian-ifx))
+
+#### 🐛 Bug Fix
+
+- ci: align release automation with dds-stencil repository [#57](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/57) ([@pfafffabian-ifx](https://github.com/pfafffabian-ifx))
+- ci: enable trusted publishing [#56](https://github.com/Infineon/Infineon-Design-System-Tokens/pull/56) ([@pfafffabian-ifx](https://github.com/pfafffabian-ifx))
+
+#### ⚠️ Pushed to `master`
+
+- chore: update version for auto release ([@pfafffabian-ifx](https://github.com/pfafffabian-ifx))
+
+#### Authors: 1
+
+- Fabian Pfaff ([@pfafffabian-ifx](https://github.com/pfafffabian-ifx))
+
+---
+
 # v3.3.3 (Fri Sep 06 2024)
 
 #### 🐛 Bug Fix

@@ -38,6 +38,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate package version
+        run: |
+          node -e '
+            const { version } = require("./package.json");
+            if (!require("semver").valid(version)) {
+              console.error("::error::package.json must contain a valid release version before running Auto.");
+              process.exit(1);
+            }
+          '
+
       - name: build
         run: npm run bundle
 
